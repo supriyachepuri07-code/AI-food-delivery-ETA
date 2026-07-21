@@ -14,3 +14,60 @@ Existing food delivery platforms provide estimated delivery times, but these est
 These inaccurate ETAs can lead to customer dissatisfaction, order cancellations, refund requests, and inefficient coordination between restaurants and delivery partners.
 
 Our goal is to build an AI-powered ETA prediction system that combines historical delivery data with operational and environmental factors to provide more accurate delivery time estimates than traditional methods.
+## 3. Objective
+
+The objective of this project is to develop an AI-powered Food Delivery ETA Prediction System that accurately estimates the delivery time for every customer order.
+
+The system will analyze historical delivery records along with operational and environmental factors such as restaurant preparation time, driver information, delivery distance, traffic conditions, weather, and order details to generate reliable ETA predictions.
+
+By providing more accurate delivery estimates, the system aims to improve customer satisfaction, reduce order cancellations and refund requests, and help restaurants and delivery partners coordinate their operations more effectively.
+
+The project will also demonstrate the complete lifecycle of a production-ready AI application, including data engineering, feature engineering, model training, API development, workflow automation, CI/CD, containerization, and cloud deployment.
+## 4. Stakeholders
+
+The AI Food Delivery ETA Prediction System benefits multiple stakeholders across the food delivery ecosystem.
+
+### 1. Customers
+Customers receive more accurate delivery time estimates, improving their overall experience and reducing uncertainty while waiting for their orders.
+
+### 2. Delivery Partners
+Delivery partners benefit from improved scheduling, reduced waiting time at restaurants, and better route planning, leading to increased efficiency.
+
+### 3. Restaurants
+Restaurants can better coordinate food preparation with driver arrival, minimizing delays and ensuring food quality.
+
+### 4. Operations Team
+The operations team can monitor delivery performance more effectively, reduce customer complaints, and improve overall delivery operations.
+
+### 5. Business Management
+Business management benefits from improved customer satisfaction, reduced refund requests, increased operational efficiency, and stronger customer retention.
+## 5. Machine Learning Problem
+
+The AI Food Delivery ETA Prediction System is designed as a **Supervised Machine Learning** problem because historical delivery records contain both the input features and the actual delivery time.
+
+The objective of the model is to predict the **Delivery_Time_Minutes**, which is the target variable.
+
+Since the target variable is a continuous numerical value, this project is a **Regression** problem.
+
+### Input Features
+
+The model will learn from various operational and environmental features, including:
+
+- Restaurant preparation time
+- Driver information
+- Driver distance to the restaurant
+- Customer location
+- Delivery distance
+- Traffic conditions
+- Weather conditions
+- Order time
+- Day of the week
+- Holiday information
+- Restaurant rating
+- Order value
+
+### Target Variable
+
+**Delivery_Time_Minutes**
+
+The trained model will estimate the expected delivery time for each incoming food order.
