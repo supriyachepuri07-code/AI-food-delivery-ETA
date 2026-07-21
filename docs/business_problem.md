@@ -132,3 +132,14 @@ The system will expose prediction results through a FastAPI-based REST API, enab
 By improving the accuracy of delivery estimates, the solution is expected to enhance customer satisfaction, reduce order cancellations and refund requests, improve coordination between restaurants and delivery partners, and support more efficient business operations.
 
 The project will also serve as a production-ready reference implementation demonstrating the complete Machine Learning lifecycle, including data engineering, model development, MLOps, CI/CD, containerization, workflow automation, and cloud deployment.
+## 9. Assumptions
+
+The first version of the AI Food Delivery ETA Prediction System is designed based on the following assumptions:
+
+- Historical food delivery data is available for model training.
+- Driver location information is available and reasonably accurate.
+- Restaurant information and average food preparation time are available.
+- Traffic and weather information can be obtained from external services or simulated during development.
+- The incoming prediction requests contain all required input features.
+- Data collected from different sources is reliable and consistent.
+- The prediction model will be retrained periodically as new delivery data becomes available.
