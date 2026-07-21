@@ -145,3 +145,31 @@ The AI Food Delivery ETA Prediction System integrates with several external serv
 - External services are accessed through dedicated service layers rather than directly by the machine learning model.
 - The prediction service validates responses from external services before using them.
 - The system should log integration failures and implement fallback strategies where possible to maintain service availability.
+## 8. Deployment Architecture
+
+The AI Food Delivery ETA Prediction System follows a containerized and cloud-native deployment architecture to ensure scalability, portability, and maintainability.
+
+### Deployment Workflow
+
+1. Developers push code changes to the GitHub repository.
+2. GitHub Actions automatically executes the CI/CD pipeline.
+3. Automated tests and code quality checks are performed.
+4. A Docker image is built for the application.
+5. The Docker image is pushed to a container registry.
+6. The application is deployed to Google Cloud Platform (GCP).
+7. FastAPI serves prediction requests, while Airflow manages scheduled workflows.
+8. PostgreSQL stores operational data, and MLflow manages model versions and experiment tracking.
+
+### Deployment Components
+
+| Component | Purpose |
+|-----------|---------|
+| GitHub | Source code management |
+| GitHub Actions | CI/CD automation |
+| Docker | Containerization |
+| Container Registry | Store Docker images |
+| Google Cloud Platform | Production hosting |
+| FastAPI | Real-time prediction service |
+| Airflow | Workflow orchestration |
+| PostgreSQL | Data storage |
+| MLflow | Model management |
