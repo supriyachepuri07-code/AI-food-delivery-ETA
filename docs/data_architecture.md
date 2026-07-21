@@ -14,3 +14,17 @@ The platform continuously collects and processes data from multiple sources, inc
 The system distinguishes between operational data used for business transactions and analytical data used for machine learning. Operational data supports order management, driver assignment, and delivery tracking, while analytical data supports feature engineering, model training, performance evaluation, and prediction services.
 
 The overall data architecture is designed to ensure data quality, consistency, scalability, and reproducibility across both the training and prediction pipelines.
+## 2. Data Sources
+
+The ETA prediction platform collects data from multiple internal and external sources. Each source provides specific information required for business operations, machine learning training, or real-time prediction.
+
+| Data Source | Category | Data Provided | Access Method | Update Frequency |
+|-------------|----------|---------------|---------------|------------------|
+| Customer Service | Internal | Customer profile and delivery address | PostgreSQL | Real-time |
+| Restaurant Service | Internal | Restaurant information, preparation time, location | PostgreSQL | Real-time |
+| Driver Service | Internal | Driver information, availability, GPS location | PostgreSQL | Real-time |
+| Order Service | Internal | Order status, timestamps, order details | PostgreSQL | Real-time |
+| Historical Delivery Dataset | Internal | Historical delivery records for model training | CSV / Data Lake | Batch |
+| Google Maps API | External | Distance, route information, traffic conditions | REST API | Real-time |
+| Weather API | External | Weather conditions, temperature, rainfall | REST API | Real-time |
+| MLflow | Internal | Model metadata, experiment tracking, model versions | MLflow API | On-demand |
