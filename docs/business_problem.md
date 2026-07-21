@@ -123,3 +123,12 @@ The primary business success metrics include:
 - Enhance overall trust in the food delivery platform.
 
 These metrics will help evaluate whether the AI system provides measurable value to the business and its stakeholders.
+## 8. Expected Outcome
+
+The AI Food Delivery ETA Prediction System will provide accurate delivery time predictions for every incoming food order by analyzing historical and operational data.
+
+The system will expose prediction results through a FastAPI-based REST API, enabling other applications to request ETA predictions in real time.
+
+By improving the accuracy of delivery estimates, the solution is expected to enhance customer satisfaction, reduce order cancellations and refund requests, improve coordination between restaurants and delivery partners, and support more efficient business operations.
+
+The project will also serve as a production-ready reference implementation demonstrating the complete Machine Learning lifecycle, including data engineering, model development, MLOps, CI/CD, containerization, workflow automation, and cloud deployment.
