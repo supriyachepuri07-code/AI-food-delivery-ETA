@@ -108,3 +108,18 @@ The first version will not include:
 - Driver assignment system
 
 These features can be developed in future versions after the ETA prediction system is successfully deployed.
+## 7. Business Success Metrics
+
+The success of the AI Food Delivery ETA Prediction System will be measured using business-oriented outcomes that demonstrate improvements in customer experience and operational efficiency.
+
+The primary business success metrics include:
+
+- Reduce the average delivery time prediction error.
+- Improve customer satisfaction by providing more accurate ETAs.
+- Reduce order cancellations caused by inaccurate delivery estimates.
+- Reduce refund and compensation requests related to delivery delays.
+- Improve coordination between restaurants and delivery partners.
+- Increase delivery efficiency and resource utilization.
+- Enhance overall trust in the food delivery platform.
+
+These metrics will help evaluate whether the AI system provides measurable value to the business and its stakeholders.
