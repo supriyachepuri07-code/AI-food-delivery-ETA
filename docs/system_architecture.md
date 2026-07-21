@@ -100,3 +100,29 @@ Register the selected model in MLflow with version information, evaluation metri
 
 #### 8. Deployment Preparation
 Prepare the approved model artifact for use by the online prediction service.
+## 6. Prediction Pipeline
+
+The Prediction Pipeline is responsible for generating real-time ETA predictions for incoming customer orders. Unlike the training pipeline, this workflow does not retrain the model. Instead, it loads the latest approved model and uses it to serve prediction requests through the FastAPI service.
+
+### Prediction Pipeline Stages
+
+#### 1. Prediction Request
+Receive a prediction request from the application after the restaurant accepts the order and a delivery partner is assigned.
+
+#### 2. Input Validation
+Validate that all required input fields are present and contain valid values before processing the request.
+
+#### 3. Feature Collection
+Collect the operational information required for prediction, including restaurant details, driver information, customer location, traffic conditions, weather information, and delivery distance.
+
+#### 4. Feature Engineering
+Apply the same preprocessing and feature engineering transformations that were used during model training.
+
+#### 5. Model Loading
+Load the latest production-ready model from the Model Registry.
+
+#### 6. ETA Prediction
+Generate the estimated delivery time using the trained regression model.
+
+#### 7. API Response
+Return the predicted ETA to the requesting application as a JSON response.
