@@ -198,3 +198,16 @@ The following events are logged:
 - Deployment events
 
 Logs help developers identify issues, troubleshoot failures, and improve system reliability.
+## 10. Security Considerations
+
+The system follows basic security best practices to protect application data, machine learning models, and cloud resources.
+
+### Security Principles
+
+- Store API keys and database credentials securely using environment variables or secret management services.
+- Authenticate requests before allowing access to prediction endpoints.
+- Encrypt communication using HTTPS.
+- Restrict access to cloud resources using Identity and Access Management (IAM).
+- Regularly back up databases and model artifacts.
+- Validate all API inputs before processing requests.
+- Record security-related events in application logs.
