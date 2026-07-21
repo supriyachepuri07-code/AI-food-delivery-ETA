@@ -28,3 +28,19 @@ The ETA prediction platform collects data from multiple internal and external so
 | Google Maps API | External | Distance, route information, traffic conditions | REST API | Real-time |
 | Weather API | External | Weather conditions, temperature, rainfall | REST API | Real-time |
 | MLflow | Internal | Model metadata, experiment tracking, model versions | MLflow API | On-demand |
+## 3. Core Entities
+
+The ETA prediction platform is built around a set of core business entities that represent the primary objects managed by the system. These entities capture operational information required for business transactions and machine learning.
+
+| Entity | Description |
+|---------|-------------|
+| Customer | Represents users who place food delivery orders. |
+| Restaurant | Represents restaurants that prepare customer orders. |
+| Driver | Represents delivery partners responsible for delivering orders. |
+| Order | Represents a food order placed by a customer and accepted by a restaurant. |
+| Delivery | Represents the complete delivery process from restaurant pickup to customer delivery. |
+| Weather | Represents weather conditions associated with a delivery request. |
+| Traffic | Represents traffic conditions affecting travel time. |
+| ETA Prediction | Represents machine learning generated delivery time predictions and related metadata. |
+
+These entities form the foundation of the operational database and provide the information required for machine learning feature engineering and ETA prediction.
