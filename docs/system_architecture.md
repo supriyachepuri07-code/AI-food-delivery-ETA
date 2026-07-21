@@ -41,3 +41,33 @@ The AI Food Delivery ETA Prediction System consists of the following major compo
 | Docker | Packages the application and its dependencies into portable containers. |
 | GitHub Actions | Automates testing, building, and deployment using CI/CD pipelines. |
 | Google Cloud Platform (GCP) | Hosts the application, APIs, and machine learning services in the cloud. |
+## 4. Data Flow
+
+The system contains two independent data flows: the Offline Training Data Flow and the Online Prediction Data Flow.
+
+### 4.1 Offline Training Data Flow
+
+The offline training pipeline is responsible for preparing historical delivery data and training machine learning models.
+
+**Flow:**
+
+1. Collect historical delivery data.
+2. Validate the data for quality and schema consistency.
+3. Clean and preprocess the validated dataset.
+4. Perform feature engineering to create machine learning features.
+5. Train regression models using the processed dataset.
+6. Evaluate multiple models using predefined metrics.
+7. Register the best-performing model in the Model Registry (MLflow).
+
+### 4.2 Online Prediction Data Flow
+
+The online prediction pipeline is responsible for generating ETA predictions for incoming customer orders.
+
+**Flow:**
+
+1. Receive prediction requests through the FastAPI service.
+2. Collect the required operational data, including restaurant, driver, customer, traffic, and weather information.
+3. Apply the same feature engineering transformations used during training.
+4. Load the latest production-ready model.
+5. Generate the ETA prediction.
+6. Return the prediction to the requesting application as a JSON response.
