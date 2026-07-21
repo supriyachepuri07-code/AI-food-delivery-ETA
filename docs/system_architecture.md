@@ -126,3 +126,22 @@ Generate the estimated delivery time using the trained regression model.
 
 #### 7. API Response
 Return the predicted ETA to the requesting application as a JSON response.
+## 7. External Integrations
+
+The AI Food Delivery ETA Prediction System integrates with several external services to enrich prediction data, automate workflows, and support production deployment.
+
+| External Service | Purpose | Data Provided |
+|------------------|---------|---------------|
+| Google Maps API | Calculate delivery distance, route information, and traffic conditions | Distance, travel time, traffic |
+| Weather API | Retrieve current weather information affecting delivery | Temperature, rainfall, weather condition, wind speed |
+| PostgreSQL | Store operational and historical business data | Orders, restaurants, drivers, delivery records |
+| MLflow | Track machine learning experiments and store model versions | Model artifacts, metrics, parameters |
+| GitHub | Source code version control | Project source code |
+| GitHub Actions | Continuous Integration and Continuous Deployment (CI/CD) | Automated testing and deployment |
+| Google Cloud Platform (GCP) | Host the production environment | APIs, containers, databases, workflow services |
+
+### Integration Principles
+
+- External services are accessed through dedicated service layers rather than directly by the machine learning model.
+- The prediction service validates responses from external services before using them.
+- The system should log integration failures and implement fallback strategies where possible to maintain service availability.
