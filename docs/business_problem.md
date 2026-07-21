@@ -71,3 +71,40 @@ The model will learn from various operational and environmental features, includ
 **Delivery_Time_Minutes**
 
 The trained model will estimate the expected delivery time for each incoming food order.
+## 6. Project Scope
+
+The first version of the project focuses on building a production-ready AI-powered ETA prediction system rather than a complete food delivery application.
+
+### In Scope
+
+The project will include:
+
+- Historical data collection and analysis
+- Data validation and preprocessing
+- Feature engineering
+- Machine learning model development
+- Model evaluation and experiment tracking
+- REST API development using FastAPI
+- Workflow automation using Apache Airflow
+- Containerization using Docker
+- CI/CD using GitHub Actions
+- Deployment on Google Cloud Platform (GCP)
+- Logging and monitoring
+- Project documentation
+
+### Out of Scope
+
+The first version will not include:
+
+- Customer mobile application
+- Driver mobile application
+- Restaurant management application
+- Payment gateway integration
+- Authentication and authorization
+- Real-time GPS tracking
+- Push notifications
+- Live order management
+- Dynamic pricing
+- Driver assignment system
+
+These features can be developed in future versions after the ETA prediction system is successfully deployed.
