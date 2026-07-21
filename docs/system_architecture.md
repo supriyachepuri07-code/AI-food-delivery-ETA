@@ -71,3 +71,32 @@ The online prediction pipeline is responsible for generating ETA predictions for
 4. Load the latest production-ready model.
 5. Generate the ETA prediction.
 6. Return the prediction to the requesting application as a JSON response.
+## 5. Training Pipeline
+
+The Training Pipeline is responsible for building, evaluating, and preparing machine learning models for production deployment. The pipeline is executed through Apache Airflow and follows a sequence of well-defined stages.
+
+### Training Pipeline Stages
+
+#### 1. Data Ingestion
+Collect historical delivery data and supporting datasets from configured data sources.
+
+#### 2. Data Validation
+Validate schema, data quality, missing values, duplicate records, and business rules before processing.
+
+#### 3. Data Preprocessing
+Clean the validated dataset by handling missing values, removing duplicates, standardizing formats, and preparing the data for feature engineering.
+
+#### 4. Feature Engineering
+Transform raw attributes into machine learning features such as delivery distance, peak-hour indicators, meal-time categories, and encoded categorical variables.
+
+#### 5. Model Training
+Train multiple regression algorithms using the engineered feature dataset.
+
+#### 6. Model Evaluation
+Evaluate the trained models using predefined regression metrics and select the best-performing model.
+
+#### 7. Model Registry
+Register the selected model in MLflow with version information, evaluation metrics, and metadata for future deployment.
+
+#### 8. Deployment Preparation
+Prepare the approved model artifact for use by the online prediction service.
