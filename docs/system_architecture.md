@@ -173,3 +173,28 @@ The AI Food Delivery ETA Prediction System follows a containerized and cloud-nat
 | Airflow | Workflow orchestration |
 | PostgreSQL | Data storage |
 | MLflow | Model management |
+## 9. Monitoring and Logging
+
+The system continuously monitors application health, machine learning performance, and infrastructure to ensure reliable operation.
+
+### Monitoring Objectives
+
+- Monitor API availability and response times.
+- Monitor Airflow workflow execution.
+- Monitor model prediction performance.
+- Track data quality issues.
+- Detect pipeline failures.
+- Monitor cloud resource utilization.
+
+### Logging
+
+The following events are logged:
+
+- API requests and responses
+- Model prediction events
+- Training pipeline execution
+- Data validation errors
+- Application exceptions
+- Deployment events
+
+Logs help developers identify issues, troubleshoot failures, and improve system reliability.
