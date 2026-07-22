@@ -26,3 +26,14 @@ Food delivery platforms strive to provide customers with accurate Estimated Time
 Inaccurate ETA predictions lead to customer dissatisfaction, increased order cancellations, refund requests, negative reviews, inefficient driver utilization, and reduced trust in the platform. They also make it difficult for restaurants to manage food preparation and delivery coordination effectively.
 
 The business requires an intelligent, data-driven ETA prediction system capable of continuously analyzing historical delivery patterns and real-time operational data to generate more accurate delivery time estimates. By improving ETA accuracy, the platform aims to enhance customer satisfaction, optimize delivery operations, reduce operational costs, and build long-term customer trust.
+## 2.2 Machine Learning Problem
+
+The objective of the machine learning system is to develop a supervised regression model that accurately predicts the Estimated Time of Arrival (ETA) for food deliveries before the delivery process is completed.
+
+The model learns from historical delivery data and utilizes real-time operational information, including order details, restaurant characteristics, driver information, traffic conditions, weather conditions, and geographical distances, to estimate the expected delivery duration.
+
+The machine learning system must generate predictions using only the information available at the time of prediction, ensuring that no future information is used during inference. This prevents data leakage and allows the model to make reliable real-time predictions.
+
+The trained model should continuously improve as new delivery data becomes available. By leveraging periodic retraining, model monitoring, and version control, the system aims to maintain high prediction accuracy despite changing traffic patterns, seasonal variations, restaurant performance, and driver behavior.
+
+The machine learning solution is designed to operate as a production-grade AI service that supports scalable, low-latency inference through FastAPI while maintaining reproducibility using MLflow, Airflow, Docker, GitHub Actions, and GCP.
