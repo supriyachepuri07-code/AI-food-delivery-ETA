@@ -427,3 +427,54 @@ The data collection process follows these principles:
 ### Data Storage Flow
 
 Raw operational data is first stored in the operational database. After validation and preprocessing, the data is transformed into structured machine learning datasets and stored in cloud storage for model training. Each dataset version is tracked to ensure reproducibility and support continuous model improvement.
+## 3.5 Dataset Splitting Strategy
+
+The machine learning dataset is divided into separate subsets for training, validation, and testing. This ensures that the model is trained, tuned, and evaluated on different data, allowing an unbiased assessment of its performance before deployment.
+
+Since food delivery data is generated continuously over time, the dataset is split chronologically rather than randomly. This approach better reflects real-world production scenarios, where the model is trained on historical deliveries and used to predict future deliveries.
+
+### Dataset Split
+
+| Dataset | Purpose | Percentage |
+|----------|----------|------------|
+| Training Dataset | Model Training | 70% |
+| Validation Dataset | Hyperparameter Tuning and Model Selection | 15% |
+| Test Dataset | Final Performance Evaluation | 15% |
+
+### Splitting Strategy
+
+The dataset is divided based on delivery timestamps:
+
+- The oldest historical records are used for training.
+- More recent records are used for validation.
+- The latest records are reserved for final testing.
+
+This chronological approach prevents future information from leaking into the training process and provides a realistic estimate of production performance.
+
+### Dataset Splitting Workflow
+
+1. Collect completed delivery records.
+2. Sort the dataset by delivery timestamp.
+3. Create the training dataset from the earliest records.
+4. Create the validation dataset from the next set of records.
+5. Reserve the most recent records as the test dataset.
+6. Store each dataset version separately for reproducibility.
+
+### Data Leakage Prevention
+
+The following practices are followed to prevent data leakage:
+
+- No future delivery information is included in the training dataset.
+- The target variable (Actual ETA) is never used as an input feature.
+- Training and inference use the same preprocessing and feature engineering pipeline.
+- Validation and test datasets remain unseen during model training.
+
+### Benefits
+
+This strategy:
+
+- Simulates real-world production conditions.
+- Produces reliable model evaluation results.
+- Supports reproducible experiments.
+- Reduces the risk of overly optimistic performance estimates.
+- Enables fair comparison between different model versions.
