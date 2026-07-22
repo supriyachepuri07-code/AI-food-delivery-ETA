@@ -327,3 +327,58 @@ To maintain data quality, every data source is monitored for:
 - Missing or delayed records
 
 Any unavailable external service should trigger fallback mechanisms or data quality alerts before the data is used for model training or inference.
+## 3.3 Dataset Composition
+
+The training dataset is a structured tabular dataset where each row represents a single completed food delivery. Every record combines historical delivery information with operational and environmental data available during the delivery process.
+
+The dataset is organized into multiple feature groups, with each group representing a specific aspect of the delivery lifecycle. These features are combined to create a comprehensive representation of each delivery before being used for machine learning model training.
+
+### Dataset Structure
+
+| Feature Group | Description |
+|--------------|-------------|
+| Order Features | Information related to customer orders |
+| Restaurant Features | Restaurant details and food preparation information |
+| Driver Features | Driver profile, availability, and location information |
+| Traffic Features | Real-time traffic conditions and travel estimates |
+| Weather Features | Environmental conditions during delivery |
+| Distance Features | Geographic distances between delivery points |
+| Time Features | Date and time-based information |
+| Engineered Features | Features created during feature engineering |
+| Target Variable | Actual ETA (Minutes) |
+
+### Example Dataset Schema
+
+| Feature Category | Example Columns |
+|------------------|-----------------|
+| Order Features | Order ID, Order Time, Order Value, Number of Items |
+| Restaurant Features | Restaurant ID, Cuisine Type, Restaurant Rating, Average Preparation Time |
+| Driver Features | Driver ID, Driver Rating, Driver Experience, Driver Availability |
+| Traffic Features | Congestion Level, Estimated Travel Time |
+| Weather Features | Temperature, Humidity, Rainfall, Weather Condition |
+| Distance Features | Driver-to-Restaurant Distance, Restaurant-to-Customer Distance |
+| Time Features | Hour of Day, Day of Week, Weekend Indicator |
+| Engineered Features | Peak Hour Indicator, Estimated Restaurant Delay, Total Estimated Route Time |
+| Target Variable | Actual ETA |
+
+### Dataset Characteristics
+
+| Property | Value |
+|----------|-------|
+| Record Granularity | One Completed Delivery |
+| Feature Types | Numerical, Categorical, Boolean, Datetime |
+| Target Type | Continuous Numerical |
+| Missing Values | Handled during preprocessing |
+| Duplicate Records | Removed during validation |
+| Feature Engineering | Applied before model training |
+
+### Dataset Design Principles
+
+The dataset is designed to:
+
+- Represent the complete delivery process.
+- Capture operational, geographical, and environmental factors.
+- Include only features available at prediction time.
+- Support scalable feature engineering.
+- Maintain consistency between training and inference datasets.
+- Prevent data leakage by excluding post-delivery information except for the target variable.
