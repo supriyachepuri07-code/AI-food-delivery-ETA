@@ -61,3 +61,27 @@ The core business entities are interconnected to support order processing, deliv
 | Traffic | Delivery | One Traffic record can be associated with multiple Deliveries |
 
 These relationships ensure that business operations remain consistent while providing complete historical information for machine learning model training and performance analysis.
+## 5. Logical Database Design
+
+The ETA prediction platform uses a relational database to store operational business data. Each table has a single responsibility and represents one core business entity.
+
+### Database Tables
+
+| Table | Purpose | Data Owner |
+|--------|---------|------------|
+| customers | Stores customer profile and delivery address information. | Customer Service |
+| restaurants | Stores restaurant details, location, and preparation-related information. | Restaurant Service |
+| drivers | Stores delivery partner details, vehicle information, and availability. | Driver Service |
+| orders | Stores customer order information and order lifecycle events. | Order Service |
+| deliveries | Stores pickup, transit, and delivery execution details. | Delivery Service |
+| weather | Stores weather snapshots associated with delivery locations and times. | Weather Service |
+| traffic | Stores traffic conditions and route-related information. | Google Maps Service |
+| eta_predictions | Stores ETA predictions, prediction timestamps, confidence scores, model versions, and actual delivery outcomes for monitoring and analysis. | AI Prediction Service |
+
+### Design Principles
+
+- Each table represents a single business entity.
+- Data duplication is minimized through normalization.
+- Relationships between tables are maintained using primary and foreign keys.
+- Operational data and machine learning prediction data are logically separated.
+- The schema is designed to support both transactional operations and analytical workloads.
