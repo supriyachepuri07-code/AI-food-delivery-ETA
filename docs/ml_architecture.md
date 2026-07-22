@@ -382,3 +382,48 @@ The dataset is designed to:
 - Support scalable feature engineering.
 - Maintain consistency between training and inference datasets.
 - Prevent data leakage by excluding post-delivery information except for the target variable.
+## 3.4 Data Collection Strategy
+
+The AI Food Delivery ETA Prediction system collects data from multiple internal services and external providers to build a comprehensive machine learning dataset. Data collection is designed to ensure that every completed delivery contributes to improving future ETA predictions.
+
+The data collection process combines batch and real-time ingestion mechanisms. Operational data generated during the delivery lifecycle is continuously captured and stored in the operational database, while external APIs provide dynamic information such as traffic conditions, weather, and route details.
+
+### Data Collection Workflow
+
+1. A customer places a food order.
+2. The order is stored in the Order Management System.
+3. A driver is assigned to the delivery.
+4. Driver location, restaurant information, and order details are recorded.
+5. Real-time traffic and weather information are retrieved using external APIs.
+6. Delivery events are tracked until the order is completed.
+7. The completed delivery record is stored in the historical delivery database.
+8. Airflow periodically extracts newly completed delivery records.
+9. The extracted data is validated, cleaned, and transformed into a training-ready dataset.
+10. The processed dataset is versioned and stored for future model training.
+
+### Data Collection Frequency
+
+| Data Source | Collection Frequency |
+|-------------|----------------------|
+| Order Data | Real-Time |
+| Driver Data | Real-Time |
+| GPS Location | Real-Time |
+| Restaurant Data | Real-Time / Event-Based |
+| Traffic Information | Real-Time |
+| Weather Information | Real-Time |
+| Historical Deliveries | Batch (Periodic) |
+
+### Data Collection Principles
+
+The data collection process follows these principles:
+
+- Capture only reliable and validated data.
+- Preserve historical delivery records for future retraining.
+- Synchronize data from multiple sources using timestamps and unique identifiers.
+- Maintain data consistency across all systems.
+- Handle missing or delayed data gracefully.
+- Log all ingestion activities for auditing and troubleshooting.
+
+### Data Storage Flow
+
+Raw operational data is first stored in the operational database. After validation and preprocessing, the data is transformed into structured machine learning datasets and stored in cloud storage for model training. Each dataset version is tracked to ensure reproducibility and support continuous model improvement.
