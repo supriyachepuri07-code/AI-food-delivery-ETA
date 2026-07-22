@@ -446,3 +446,17 @@ The platform defines retention policies to balance operational needs, regulatory
 - Model artifacts remain available through MLflow.
 - Old logs are compressed and archived.
 - Archived data remains read-only.
+## 14. Future Data Sources
+
+The current platform focuses on ETA prediction. Future enhancements may integrate additional data sources to improve prediction accuracy.
+
+Potential future integrations include:
+
+- Live GPS streaming
+- Restaurant kitchen event systems
+- Festival and holiday calendars
+- Road closure notifications
+- Fuel price information
+- Driver behavior analytics
+- Customer feedback
+- Real-time event data
