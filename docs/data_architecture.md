@@ -305,3 +305,37 @@ The machine learning model does not consume raw database fields directly. Instea
 - Normalize or encode features where appropriate.
 - Avoid data leakage by excluding information unavailable at prediction time.
 - Version feature engineering logic alongside model versions.
+## 9. Data Validation Rules
+
+To ensure high-quality machine learning predictions and reliable business operations, all incoming data must pass validation before being stored or used for model training and inference.
+
+### Validation Principles
+
+- Mandatory fields must not be null.
+- Numeric values must fall within acceptable ranges.
+- Timestamp fields must follow logical chronological order.
+- Categorical values must match predefined allowed values.
+- Geographic coordinates must be valid.
+- Invalid records should be logged for investigation.
+
+### Example Validation Rules
+
+| Data Field | Validation Rule |
+|------------|-----------------|
+| Latitude | Must be between -90 and 90 |
+| Longitude | Must be between -180 and 180 |
+| Restaurant Rating | Must be between 0 and 5 |
+| Driver Rating | Must be between 0 and 5 |
+| Order Amount | Must be greater than 0 |
+| Average Preparation Time | Must be greater than 0 |
+| Temperature | Must be within a realistic range |
+| Humidity | Must be between 0 and 100 |
+| Delivery Time | Must occur after Pickup Time |
+| Actual ETA | Must be greater than 0 |
+
+### Validation Failure Handling
+
+- Reject invalid records from the prediction pipeline.
+- Log validation failures for monitoring.
+- Notify upstream services if critical validation errors occur.
+- Maintain validation reports for auditing and troubleshooting.
