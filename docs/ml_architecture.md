@@ -263,3 +263,67 @@ The dataset is designed according to the following principles:
 - Preserve consistency between training and inference data.
 - Support scalability for increasing delivery volumes.
 - Enable integration with Airflow, MLflow, and cloud storage.
+## 3.2 Dataset Sources
+
+The ETA prediction model is trained using data collected from multiple internal systems and external services. Each data source contributes unique information required to accurately estimate food delivery time.
+
+The machine learning dataset is created by integrating operational business data with real-time environmental data and historical delivery records.
+
+### Internal Data Sources
+
+| Source | Description | Example Features |
+|---------|-------------|------------------|
+| Customer Service | Customer order information | Customer ID, Order Value, Number of Items |
+| Order Management System | Order lifecycle events | Order Time, Order Status, Payment Status |
+| Restaurant Management System | Restaurant information | Restaurant ID, Cuisine Type, Restaurant Rating, Average Preparation Time |
+| Driver Management System | Driver information | Driver ID, Driver Rating, Driver Availability, Experience |
+| Delivery Tracking System | Historical delivery information | Pickup Time, Delivery Time, Actual ETA |
+| GPS Tracking System | Driver location updates | Driver Latitude, Driver Longitude |
+
+### External Data Sources
+
+| Source | Description | Example Features |
+|---------|-------------|------------------|
+| Google Maps API | Route and distance information | Route Distance, Estimated Travel Time |
+| Traffic API | Live traffic conditions | Congestion Level, Road Incidents |
+| Weather API | Current weather conditions | Temperature, Rainfall, Humidity, Weather Condition |
+| Calendar Service | Date-related information | Weekend Indicator, Public Holiday, Festival |
+
+### Future Data Sources
+
+The platform is designed to support additional data sources as the business grows.
+
+Potential future integrations include:
+
+- Live restaurant kitchen status
+- Road closure notifications
+- City event schedules
+- Fuel price information
+- Driver behavior analytics
+- Customer feedback
+- Demand forecasting systems
+
+### Data Integration Strategy
+
+The training dataset is created by joining data from multiple sources using common business identifiers such as:
+
+- Order ID
+- Driver ID
+- Restaurant ID
+- Customer ID
+- Delivery ID
+
+External data is synchronized using timestamps and geographical coordinates to ensure that traffic and weather conditions correspond to the actual delivery period.
+
+### Source Reliability
+
+To maintain data quality, every data source is monitored for:
+
+- Availability
+- Data completeness
+- Data freshness
+- Schema consistency
+- API response status
+- Missing or delayed records
+
+Any unavailable external service should trigger fallback mechanisms or data quality alerts before the data is used for model training or inference.
