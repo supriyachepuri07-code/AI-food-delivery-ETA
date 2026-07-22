@@ -363,3 +363,35 @@ The ETA prediction platform uses multiple storage systems, each optimized for a 
 - Prediction logs are retained for model monitoring and auditing.
 - Operational data and analytical data are stored independently where appropriate.
 - Cloud storage is used for scalable and durable data persistence.
+## 11. Data Versioning & Lineage
+
+To ensure reproducibility, traceability, and reliable model management, the ETA prediction platform maintains version information for datasets, feature engineering pipelines, trained models, and prediction outputs.
+
+### Versioning Strategy
+
+| Component | Versioning Method |
+|-----------|-------------------|
+| Source Code | Git & GitHub |
+| Datasets | Versioned snapshots stored in GCP Cloud Storage |
+| Feature Engineering | Git version control with tagged releases |
+| Machine Learning Models | MLflow Model Registry |
+| Configuration Files | Git version control |
+| API Releases | Git tags and CI/CD deployment versions |
+
+### Data Lineage
+
+Each prediction should be traceable through the complete machine learning lifecycle.
+
+Prediction Request
+→ Model Version
+→ Feature Engineering Version
+→ Dataset Version
+→ Source Data
+
+### Guiding Principles
+
+- Never overwrite historical datasets.
+- Every trained model must reference the dataset version used for training.
+- Feature engineering logic must be version-controlled.
+- Production models must be reproducible using the same code, configuration, and data versions.
+- Prediction records should include the model version used during inference.
