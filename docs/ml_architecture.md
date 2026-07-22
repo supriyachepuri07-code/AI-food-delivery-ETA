@@ -478,3 +478,64 @@ This strategy:
 - Supports reproducible experiments.
 - Reduces the risk of overly optimistic performance estimates.
 - Enables fair comparison between different model versions.
+## 3.6 Dataset Versioning
+
+To ensure reproducibility and traceability, every dataset used for machine learning is assigned a unique version. Dataset versioning allows the team to reproduce experiments, compare model performance across different datasets, and maintain a complete history of data used for training.
+
+Each dataset version represents a snapshot of historical delivery data collected at a specific point in time. Once a dataset version is created, it remains immutable and is never modified.
+
+### Versioning Strategy
+
+Each dataset version includes:
+
+- Dataset Version ID
+- Creation Timestamp
+- Data Collection Period
+- Number of Records
+- Feature Schema Version
+- Data Validation Report
+- Feature Engineering Version
+- Source System Information
+
+### Dataset Version Metadata
+
+| Metadata | Description |
+|----------|-------------|
+| Dataset Version | Unique dataset identifier |
+| Creation Date | Date and time the dataset was generated |
+| Record Count | Total number of delivery records |
+| Feature Count | Number of input features |
+| Target Variable | Actual ETA |
+| Data Sources | Internal systems and external APIs |
+| Validation Status | Passed / Failed |
+| Storage Location | Cloud Storage Path |
+
+### Dataset Lifecycle
+
+1. Historical delivery data is collected.
+2. Data validation and preprocessing are performed.
+3. Feature engineering is applied.
+4. A new dataset version is generated.
+5. The dataset is stored in cloud storage.
+6. Metadata is registered for reproducibility.
+7. The dataset is used for model training.
+
+### Versioning Principles
+
+The dataset versioning process follows these principles:
+
+- Every training dataset has a unique version.
+- Dataset versions are immutable after creation.
+- Training, validation, and test datasets belong to the same version.
+- Each model version is linked to the exact dataset version used for training.
+- Previous dataset versions are retained for auditing and experiment reproduction.
+
+### Benefits
+
+Dataset versioning provides:
+
+- Reproducible machine learning experiments.
+- Reliable model comparison.
+- Easier debugging of model performance.
+- Complete audit history.
+- Support for continuous retraining and rollback if required.
