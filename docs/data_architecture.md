@@ -426,3 +426,23 @@ The platform follows security and governance practices to protect business and c
 - Maintain data lineage for traceability.
 - Retain logs for monitoring and auditing.
 - Follow the principle of least privilege when granting access.
+## 13. Data Retention & Archival
+
+The platform defines retention policies to balance operational needs, regulatory compliance, and storage costs.
+
+| Data Type | Retention Policy |
+|-----------|------------------|
+| Customer Orders | 5 Years |
+| Delivery Records | 5 Years |
+| Prediction Logs | 2 Years |
+| Training Datasets | Permanent (Versioned) |
+| ML Models | Permanent (Versioned) |
+| API Logs | 90 Days |
+| Airflow Logs | 30 Days |
+
+### Archival Strategy
+
+- Historical datasets are archived in GCP Cloud Storage.
+- Model artifacts remain available through MLflow.
+- Old logs are compressed and archived.
+- Archived data remains read-only.
