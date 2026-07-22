@@ -339,3 +339,27 @@ To ensure high-quality machine learning predictions and reliable business operat
 - Log validation failures for monitoring.
 - Notify upstream services if critical validation errors occur.
 - Maintain validation reports for auditing and troubleshooting.
+## 10. Data Storage Strategy
+
+The ETA prediction platform uses multiple storage systems, each optimized for a specific purpose. This separation improves scalability, maintainability, and operational efficiency.
+
+### Storage Components
+
+| Storage System | Purpose |
+|----------------|---------|
+| PostgreSQL | Stores operational business data such as customers, restaurants, drivers, orders, deliveries, weather snapshots, traffic snapshots, and prediction records. |
+| Local Development Storage | Stores datasets during local development and experimentation. |
+| GCP Cloud Storage | Stores raw datasets, processed datasets, feature datasets, archived data, and model artifacts. |
+| MLflow Model Registry | Stores trained models, experiment metadata, metrics, and model versions. |
+| GitHub Repository | Stores source code, documentation, configuration files, and CI/CD workflows. |
+| Airflow Metadata Database | Stores DAG execution history, task status, and scheduling metadata. |
+| Application Logs | Stores API logs, validation logs, prediction logs, and error logs for monitoring and debugging. |
+
+### Data Storage Principles
+
+- Raw data is stored separately from processed data.
+- Processed datasets are immutable once generated.
+- Trained models are versioned using MLflow.
+- Prediction logs are retained for model monitoring and auditing.
+- Operational data and analytical data are stored independently where appropriate.
+- Cloud storage is used for scalable and durable data persistence.
