@@ -395,3 +395,34 @@ Prediction Request
 - Feature engineering logic must be version-controlled.
 - Production models must be reproducible using the same code, configuration, and data versions.
 - Prediction records should include the model version used during inference.
+## 12. Data Security & Governance
+
+The platform follows security and governance practices to protect business and customer data throughout its lifecycle.
+
+### Security Principles
+
+- Authenticate all users and services before granting access.
+- Authorize users based on roles and responsibilities.
+- Encrypt sensitive data during transmission (HTTPS/TLS).
+- Encrypt sensitive data at rest where applicable.
+- Store secrets such as API keys and database credentials securely using environment variables or a secret manager.
+- Maintain audit logs for important business operations and prediction requests.
+
+### Access Control
+
+| Role | Permissions |
+|------|-------------|
+| Customer | Access own orders and ETA |
+| Restaurant | Access restaurant orders only |
+| Driver | Access assigned deliveries only |
+| Admin | Full platform access |
+| ML Engineer | Access training datasets and models |
+| Data Engineer | Access ingestion pipelines and data storage |
+
+### Data Governance Principles
+
+- Ensure data accuracy through validation.
+- Track dataset and model versions.
+- Maintain data lineage for traceability.
+- Retain logs for monitoring and auditing.
+- Follow the principle of least privilege when granting access.
