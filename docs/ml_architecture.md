@@ -37,3 +37,27 @@ The machine learning system must generate predictions using only the information
 The trained model should continuously improve as new delivery data becomes available. By leveraging periodic retraining, model monitoring, and version control, the system aims to maintain high prediction accuracy despite changing traffic patterns, seasonal variations, restaurant performance, and driver behavior.
 
 The machine learning solution is designed to operate as a production-grade AI service that supports scalable, low-latency inference through FastAPI while maintaining reproducibility using MLflow, Airflow, Docker, GitHub Actions, and GCP.
+## 2.3 Problem Type
+
+The AI Food Delivery ETA Prediction system is designed as a supervised machine learning regression problem. The model learns from historical delivery records containing input features and the corresponding actual delivery times.
+
+### Problem Classification
+
+| Category | Description |
+|----------|-------------|
+| Learning Type | Supervised Learning |
+| Problem Type | Regression |
+| Prediction Target | Estimated Time of Arrival (ETA) in minutes |
+| Target Variable | Continuous Numerical Value |
+| Prediction Mode | Real-Time Online Prediction |
+| Inference Type | Single Prediction per Delivery Request |
+| Learning Approach | Batch Training with Periodic Retraining |
+| Model Output | Predicted ETA (minutes) |
+
+### Characteristics
+
+- The model predicts a continuous numerical value representing the expected delivery time.
+- Predictions are generated when a driver accepts a delivery request.
+- The model is retrained periodically using newly collected historical delivery data.
+- Training and inference use identical preprocessing and feature engineering pipelines to ensure consistency.
+- The system is designed for low-latency predictions suitable for production deployment.
