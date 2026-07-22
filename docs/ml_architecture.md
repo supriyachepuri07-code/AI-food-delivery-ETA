@@ -61,3 +61,43 @@ The AI Food Delivery ETA Prediction system is designed as a supervised machine l
 - The model is retrained periodically using newly collected historical delivery data.
 - Training and inference use identical preprocessing and feature engineering pipelines to ensure consistency.
 - The system is designed for low-latency predictions suitable for production deployment.
+## 2.4 Target Variable
+
+The target variable represents the value that the machine learning model is trained to predict. In this project, the target is the **Actual Estimated Time of Arrival (Actual ETA)** expressed in minutes.
+
+### Target Definition
+
+The Actual ETA is calculated as the total time elapsed between the moment an order is successfully placed and the moment it is delivered to the customer.
+
+**Formula**
+
+Actual ETA = Delivered Time − Order Time
+
+### Target Characteristics
+
+| Property | Description |
+|----------|-------------|
+| Target Name | Actual ETA |
+| Data Type | Continuous Numerical Value |
+| Unit | Minutes |
+| Problem Type | Regression |
+| Source | Delivery Service |
+| Availability | Available only after delivery completion |
+
+### Business Significance
+
+Accurately predicting the Actual ETA enables the platform to:
+
+- Provide reliable delivery estimates to customers.
+- Improve customer satisfaction and trust.
+- Reduce order cancellations and refund requests.
+- Optimize restaurant preparation and driver scheduling.
+- Improve overall delivery efficiency.
+
+### Data Leakage Consideration
+
+The Actual ETA is used **only during model training and evaluation**.
+
+During real-time prediction, the model cannot access the actual delivery time because it has not yet occurred. Therefore, the model uses only the information available at the prediction timestamp, such as order details, driver information, traffic conditions, weather conditions, and restaurant preparation estimates.
+
+This approach prevents data leakage and ensures realistic production predictions.
