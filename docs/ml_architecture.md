@@ -101,3 +101,88 @@ The Actual ETA is used **only during model training and evaluation**.
 During real-time prediction, the model cannot access the actual delivery time because it has not yet occurred. Therefore, the model uses only the information available at the prediction timestamp, such as order details, driver information, traffic conditions, weather conditions, and restaurant preparation estimates.
 
 This approach prevents data leakage and ensures realistic production predictions.
+## 2.5 Input Features
+
+The ETA prediction model uses a combination of historical delivery data and real-time operational information available at the moment of prediction. These features represent different aspects of the delivery process and are grouped into logical categories.
+
+### 2.5.1 Feature Categories
+
+#### Order Features
+- Order ID
+- Order Timestamp
+- Day of Week
+- Hour of Day
+- Order Value
+- Number of Items
+
+#### Restaurant Features
+- Restaurant ID
+- Restaurant Location
+- Restaurant Rating
+- Average Food Preparation Time
+- Cuisine Type
+
+#### Driver Features
+- Driver ID
+- Driver Location
+- Driver Rating
+- Driver Experience
+- Driver Availability Status
+
+#### Traffic Features
+- Traffic Congestion Level
+- Estimated Travel Time
+- Road Condition
+- Traffic Incidents
+
+#### Weather Features
+- Weather Condition
+- Temperature
+- Rainfall
+- Humidity
+- Wind Speed
+
+#### Distance Features
+- Driver to Restaurant Distance
+- Restaurant to Customer Distance
+- Total Estimated Route Distance
+
+### 2.5.2 Raw Features
+
+Raw features are collected directly from operational systems or external APIs without modification.
+
+Examples:
+- Driver GPS Coordinates
+- Restaurant Coordinates
+- Customer Coordinates
+- Weather API Response
+- Traffic API Response
+- Order Timestamp
+
+### 2.5.3 Engineered Features
+
+Engineered features are derived from raw data to improve model performance.
+
+Examples:
+- Peak Hour Indicator
+- Weekend Indicator
+- Meal Time Category
+- Estimated Restaurant Delay
+- Driver Arrival Time
+- Total Estimated Travel Time
+- Historical Average Delivery Time
+- Distance Buckets
+
+### 2.5.4 Excluded Features
+
+The following information must not be used during prediction because it is unavailable before delivery completion or would introduce data leakage.
+
+- Delivered Time
+- Actual ETA
+- Customer Rating
+- Delivery Completion Status
+- Final Delivery Duration
+
+### 2.5.5 Feature Availability
+
+Only features available at the prediction timestamp are used during inference. Training and inference pipelines use identical preprocessing and feature engineering logic to ensure consistency and prevent training-serving skew.
