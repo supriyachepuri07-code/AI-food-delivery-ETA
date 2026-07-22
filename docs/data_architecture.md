@@ -85,3 +85,164 @@ The ETA prediction platform uses a relational database to store operational busi
 - Relationships between tables are maintained using primary and foreign keys.
 - Operational data and machine learning prediction data are logically separated.
 - The schema is designed to support both transactional operations and analytical workloads.
+## 6. Physical Database Design
+
+The AI Food Delivery ETA Prediction System uses PostgreSQL as the primary relational database for storing operational data. The database schema is designed to support business operations, machine learning workflows, and future scalability.
+
+---
+
+### 6.1 Customers Table
+
+**Purpose**
+
+Stores customer profile information and delivery location details.
+
+| Column | Data Type | Constraints | Description |
+|---------|-----------|------------|-------------|
+| customer_id | UUID | Primary Key | Unique customer identifier |
+| full_name | VARCHAR(100) | NOT NULL | Customer full name |
+| phone_number | VARCHAR(15) | UNIQUE, NOT NULL | Customer mobile number |
+| email | VARCHAR(100) | UNIQUE | Customer email address |
+| latitude | DECIMAL(9,6) | NOT NULL | Current latitude |
+| longitude | DECIMAL(9,6) | NOT NULL | Current longitude |
+| created_at | TIMESTAMP | NOT NULL | Registration timestamp |
+
+---
+
+### 6.2 Restaurants Table
+
+**Purpose**
+
+Stores restaurant information and preparation-related details.
+
+| Column | Data Type | Constraints | Description |
+|---------|-----------|------------|-------------|
+| restaurant_id | UUID | Primary Key | Unique restaurant identifier |
+| restaurant_name | VARCHAR(150) | NOT NULL | Restaurant name |
+| cuisine_type | VARCHAR(50) | NOT NULL | Cuisine category |
+| latitude | DECIMAL(9,6) | NOT NULL | Restaurant latitude |
+| longitude | DECIMAL(9,6) | NOT NULL | Restaurant longitude |
+| average_preparation_time | INTEGER | NOT NULL | Average preparation time (minutes) |
+| restaurant_rating | DECIMAL(2,1) | | Average customer rating |
+| created_at | TIMESTAMP | NOT NULL | Record creation timestamp |
+
+---
+
+### 6.3 Drivers Table
+
+**Purpose**
+
+Stores delivery partner information.
+
+| Column | Data Type | Constraints | Description |
+|---------|-----------|------------|-------------|
+| driver_id | UUID | Primary Key | Unique driver identifier |
+| full_name | VARCHAR(100) | NOT NULL | Driver name |
+| phone_number | VARCHAR(15) | UNIQUE | Driver phone number |
+| vehicle_type | VARCHAR(30) | NOT NULL | Bike, Scooter, Car |
+| driver_rating | DECIMAL(2,1) | | Driver rating |
+| current_latitude | DECIMAL(9,6) | | Current latitude |
+| current_longitude | DECIMAL(9,6) | | Current longitude |
+| availability_status | BOOLEAN | DEFAULT TRUE | Driver availability |
+| created_at | TIMESTAMP | NOT NULL | Registration timestamp |
+
+---
+
+### 6.4 Orders Table
+
+**Purpose**
+
+Stores customer order information.
+
+| Column | Data Type | Constraints | Description |
+|---------|-----------|------------|-------------|
+| order_id | UUID | Primary Key | Unique order identifier |
+| customer_id | UUID | Foreign Key | References Customers |
+| restaurant_id | UUID | Foreign Key | References Restaurants |
+| order_amount | DECIMAL(10,2) | NOT NULL | Total order value |
+| payment_method | VARCHAR(30) | | Payment type |
+| payment_status | VARCHAR(30) | | Paid / Pending |
+| order_status | VARCHAR(30) | | Placed / Preparing / Cancelled |
+| order_time | TIMESTAMP | NOT NULL | Order placement time |
+
+---
+
+### 6.5 Deliveries Table
+
+**Purpose**
+
+Tracks the delivery lifecycle.
+
+| Column | Data Type | Constraints | Description |
+|---------|-----------|------------|-------------|
+| delivery_id | UUID | Primary Key | Unique delivery identifier |
+| order_id | UUID | Foreign Key | References Orders |
+| driver_id | UUID | Foreign Key | References Drivers |
+| assigned_time | TIMESTAMP | | Driver assignment time |
+| driver_arrival_time | TIMESTAMP | | Driver reaches restaurant |
+| pickup_time | TIMESTAMP | | Food pickup time |
+| delivered_time | TIMESTAMP | | Delivery completion time |
+| delivery_status | VARCHAR(30) | | Assigned / Picked / Delivered |
+
+---
+
+### 6.6 Weather Table
+
+**Purpose**
+
+Stores weather conditions used for ETA prediction.
+
+| Column | Data Type | Constraints | Description |
+|---------|-----------|------------|-------------|
+| weather_id | UUID | Primary Key | Weather record identifier |
+| temperature | DECIMAL(5,2) | | Temperature (°C) |
+| humidity | DECIMAL(5,2) | | Humidity (%) |
+| rainfall | DECIMAL(5,2) | | Rainfall (mm) |
+| wind_speed | DECIMAL(5,2) | | Wind speed |
+| weather_condition | VARCHAR(50) | | Sunny, Rainy, Cloudy |
+| observation_time | TIMESTAMP | NOT NULL | Weather observation time |
+
+---
+
+### 6.7 Traffic Table
+
+**Purpose**
+
+Stores traffic conditions for delivery routes.
+
+| Column | Data Type | Constraints | Description |
+|---------|-----------|------------|-------------|
+| traffic_id | UUID | Primary Key | Traffic record identifier |
+| congestion_level | VARCHAR(20) | | Low / Medium / High |
+| estimated_travel_time | INTEGER | | Travel time (minutes) |
+| distance_km | DECIMAL(6,2) | | Route distance |
+| observation_time | TIMESTAMP | NOT NULL | Observation timestamp |
+
+---
+
+### 6.8 ETA Predictions Table
+
+**Purpose**
+
+Stores machine learning predictions and actual outcomes.
+
+| Column | Data Type | Constraints | Description |
+|---------|-----------|------------|-------------|
+| prediction_id | UUID | Primary Key | Prediction identifier |
+| delivery_id | UUID | Foreign Key | References Deliveries |
+| model_version | VARCHAR(30) | NOT NULL | ML model version |
+| predicted_eta_minutes | INTEGER | NOT NULL | Predicted delivery time |
+| actual_eta_minutes | INTEGER | | Actual delivery time |
+| prediction_error_minutes | INTEGER | | Difference between prediction and actual |
+| prediction_timestamp | TIMESTAMP | NOT NULL | Prediction generation time |
+
+---
+
+### Design Standards
+
+- All primary keys use UUIDs.
+- Foreign keys maintain referential integrity.
+- Timestamps are stored in UTC.
+- Nullable fields are used only when information is unavailable during earlier stages of the delivery lifecycle.
+- Business entities are normalized to reduce data duplication.
+- The schema is designed to support both operational workloads and machine learning analytics.
