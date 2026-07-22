@@ -186,3 +186,80 @@ The following information must not be used during prediction because it is unava
 ### 2.5.5 Feature Availability
 
 Only features available at the prediction timestamp are used during inference. Training and inference pipelines use identical preprocessing and feature engineering logic to ensure consistency and prevent training-serving skew.
+# 3. Dataset Strategy
+
+## 3.1 Dataset Overview
+
+The performance of the ETA prediction model depends on the quality, diversity, and completeness of the training dataset. The dataset is designed to represent the complete food delivery lifecycle by combining historical delivery records with operational and environmental information collected during each delivery.
+
+Each record in the dataset represents a single completed delivery and contains all the information available before or during the delivery process, along with the actual delivery time used as the target variable for supervised learning.
+
+The dataset is continuously updated as new deliveries are completed, enabling the model to learn from recent delivery patterns and adapt to changing business conditions.
+
+### Dataset Characteristics
+
+| Property | Description |
+|----------|-------------|
+| Dataset Type | Structured Tabular Dataset |
+| Learning Type | Supervised Learning |
+| Problem Type | Regression |
+| Target Variable | Actual ETA (Minutes) |
+| Record Level | One Record per Completed Delivery |
+| Data Sources | Internal Databases + External APIs |
+| Update Frequency | Continuous Data Collection |
+| Usage | Model Training, Validation, Testing, and Monitoring |
+
+### Objectives of the Dataset
+
+The dataset is designed to:
+
+- Capture historical delivery patterns.
+- Represent real-world delivery scenarios.
+- Support accurate ETA prediction.
+- Enable feature engineering for machine learning.
+- Provide sufficient diversity for model generalization.
+- Support continuous model retraining as new delivery data becomes available.
+
+### Dataset Lifecycle
+
+The dataset follows a structured lifecycle throughout the machine learning pipeline.
+
+```
+Historical Delivery Data
+        │
+        ▼
+Data Collection
+        │
+        ▼
+Data Validation
+        │
+        ▼
+Data Cleaning
+        │
+        ▼
+Feature Engineering
+        │
+        ▼
+Training Dataset
+        │
+        ▼
+Model Training
+        │
+        ▼
+Model Evaluation
+        │
+        ▼
+Production Deployment
+```
+
+### Design Principles
+
+The dataset is designed according to the following principles:
+
+- Ensure data quality through validation and preprocessing.
+- Include only features available at prediction time to prevent data leakage.
+- Maintain dataset versioning for reproducibility.
+- Store historical datasets for future retraining.
+- Preserve consistency between training and inference data.
+- Support scalability for increasing delivery volumes.
+- Enable integration with Airflow, MLflow, and cloud storage.
