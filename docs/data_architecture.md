@@ -44,3 +44,20 @@ The ETA prediction platform is built around a set of core business entities that
 | ETA Prediction | Represents machine learning generated delivery time predictions and related metadata. |
 
 These entities form the foundation of the operational database and provide the information required for machine learning feature engineering and ETA prediction.
+## 4. Entity Relationships
+
+The core business entities are interconnected to support order processing, delivery operations, and machine learning predictions.
+
+### Relationship Summary
+
+| Parent Entity | Child Entity | Relationship |
+|---------------|--------------|--------------|
+| Customer | Order | One Customer can place many Orders |
+| Restaurant | Order | One Restaurant can receive many Orders |
+| Driver | Delivery | One Driver can complete many Deliveries |
+| Order | Delivery | One Order has one Delivery |
+| Delivery | ETA Prediction | One Delivery has one ETA Prediction record |
+| Weather | Delivery | One Weather record can be associated with multiple Deliveries |
+| Traffic | Delivery | One Traffic record can be associated with multiple Deliveries |
+
+These relationships ensure that business operations remain consistent while providing complete historical information for machine learning model training and performance analysis.
