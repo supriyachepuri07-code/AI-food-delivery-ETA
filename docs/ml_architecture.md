@@ -2921,3 +2921,143 @@ Historical delivery features provide:
 - More stable predictions.
 - Better adaptation to recurring operational patterns.
 - Improved robustness across different delivery scenarios.
+## 5.11 Demand and Volume Features
+
+Demand and volume features represent the operational workload of the food delivery platform at the time of prediction. These features help the ETA prediction model understand how order volume, driver availability, restaurant workload, and market demand influence delivery duration.
+
+By capturing real-time and historical demand patterns, the model can better estimate delays caused by operational congestion rather than travel conditions alone.
+
+### Objectives
+
+Demand and volume features aim to:
+
+- Measure current platform workload.
+- Capture restaurant order pressure.
+- Understand driver availability.
+- Represent supply and demand balance.
+- Improve ETA prediction during busy periods.
+
+---
+
+### Demand Feature Categories
+
+#### Platform Demand Features
+
+These features describe overall platform activity.
+
+Examples:
+
+| Feature | Description |
+|---------|-------------|
+| Active Orders | Number of ongoing deliveries |
+| Orders Per Minute | Incoming order rate |
+| Platform Load Score | Overall operational workload |
+| Peak Demand Indicator | Indicates high-demand periods |
+
+---
+
+#### Restaurant Demand Features
+
+These features represent workload at the restaurant.
+
+Examples:
+
+| Feature | Description |
+|---------|-------------|
+| Current Order Queue | Orders waiting for preparation |
+| Kitchen Load | Estimated kitchen workload |
+| Average Queue Time | Waiting time before preparation starts |
+| Restaurant Demand Level | Low, Medium, High |
+
+---
+
+#### Driver Supply Features
+
+These features describe driver availability.
+
+Examples:
+
+| Feature | Description |
+|---------|-------------|
+| Available Drivers | Number of nearby available drivers |
+| Driver Utilization Rate | Percentage of drivers currently occupied |
+| Average Driver Response Time | Time required to assign a driver |
+| Driver Supply Score | Overall driver availability |
+
+---
+
+#### Supply-Demand Balance Features
+
+These features measure the relationship between orders and available drivers.
+
+Examples:
+
+| Feature | Description |
+|---------|-------------|
+| Supply-Demand Ratio | Active orders divided by available drivers |
+| Driver Shortage Indicator | Identifies insufficient driver supply |
+| Assignment Difficulty Score | Difficulty of assigning a driver |
+| Dispatch Efficiency Score | Efficiency of the dispatch process |
+
+---
+
+### Feature Generation Examples
+
+Raw Data
+
+```
+Active Orders = 240
+
+Available Drivers = 80
+
+Restaurant Queue = 18
+```
+
+Generated Features
+
+```
+Supply-Demand Ratio = 3.0
+
+Platform Load = High
+
+Driver Availability = Medium
+
+Restaurant Workload = High
+```
+
+---
+
+### Feature Calculation Principles
+
+Demand features are generated using:
+
+- Real-time order management data.
+- Driver availability information.
+- Restaurant operational status.
+- Historical demand trends.
+
+Only information available at prediction time is used to prevent data leakage.
+
+---
+
+### Real-Time Usage
+
+During prediction:
+
+1. Retrieve current platform statistics.
+2. Calculate restaurant workload.
+3. Determine nearby driver availability.
+4. Compute supply-demand metrics.
+5. Generate demand features.
+6. Pass features to the ETA prediction model.
+
+---
+
+### Benefits
+
+Demand and volume features provide:
+
+- Better prediction during busy periods.
+- Improved understanding of operational delays.
+- More accurate dispatch-aware ETA estimates.
+- Better scalability across different demand levels.
