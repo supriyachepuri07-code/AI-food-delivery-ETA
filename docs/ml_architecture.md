@@ -687,3 +687,49 @@ The dataset quality assurance process provides:
 - Early detection of data issues.
 - Reduced operational risk.
 - Greater confidence in production deployments.
+# 4. Data Preprocessing Pipeline
+
+## 4.1 Preprocessing Overview
+
+The Data Preprocessing Pipeline is responsible for transforming raw operational data into a clean, consistent, and machine learning-ready dataset. The preprocessing stage ensures that the input data is suitable for feature engineering and model training while maintaining consistency between the training and inference environments.
+
+The preprocessing pipeline operates after data validation and before feature engineering. It applies a sequence of standardized transformations to improve data quality, remove inconsistencies, and prepare features for downstream machine learning tasks.
+
+### Objectives
+
+The preprocessing pipeline aims to:
+
+- Improve data quality.
+- Remove invalid or inconsistent records.
+- Handle missing values.
+- Remove duplicate records.
+- Standardize data formats.
+- Prepare numerical and categorical features.
+- Process temporal and geographical data.
+- Ensure reproducibility across training and inference.
+
+### Pipeline Stages
+
+The preprocessing pipeline consists of the following stages:
+
+1. Data Cleaning
+2. Missing Value Handling
+3. Duplicate Removal
+4. Data Type Validation
+5. Outlier Detection
+6. Categorical Encoding
+7. Numerical Scaling
+8. Date and Time Processing
+9. Geospatial Data Processing
+10. Preprocessed Dataset Generation
+
+### Design Principles
+
+The preprocessing pipeline follows these principles:
+
+- Maintain consistency between training and inference.
+- Prevent information leakage.
+- Preserve important business information.
+- Support modular and reusable preprocessing components.
+- Produce reproducible results.
+- Integrate seamlessly with Airflow and ML pipelines.
