@@ -539,3 +539,77 @@ Dataset versioning provides:
 - Easier debugging of model performance.
 - Complete audit history.
 - Support for continuous retraining and rollback if required.
+## 3.7 Dataset Storage
+
+The ETA prediction platform stores datasets at different stages of the machine learning lifecycle. Separating raw, processed, feature-engineered, and versioned datasets improves data organization, reproducibility, scalability, and maintainability.
+
+The storage architecture is designed to support efficient data retrieval, model training, continuous retraining, and auditing while ensuring that historical datasets remain available for future experimentation.
+
+### Storage Layers
+
+| Storage Layer | Purpose |
+|--------------|---------|
+| Raw Data Storage | Stores data collected directly from operational systems and external APIs |
+| Processed Data Storage | Stores validated and cleaned datasets |
+| Feature Store | Stores engineered features used for model training and inference |
+| Versioned Dataset Storage | Stores immutable versions of training datasets |
+| Model Registry | Stores trained model artifacts and metadata |
+
+### Storage Technologies
+
+| Component | Technology |
+|-----------|------------|
+| Operational Database | PostgreSQL |
+| Raw Dataset Storage | GCP Cloud Storage |
+| Processed Dataset Storage | GCP Cloud Storage |
+| Feature Datasets | GCP Cloud Storage |
+| Dataset Metadata | PostgreSQL |
+| Model Metadata | MLflow |
+| Pipeline Logs | Cloud Logging / Log Files |
+
+### Dataset Organization
+
+Datasets are organized into logical directories based on their processing stage.
+
+```
+datasets/
+│
+├── raw/
+├── processed/
+├── features/
+├── training/
+├── validation/
+├── testing/
+└── archived/
+```
+
+### Storage Principles
+
+The storage strategy follows these principles:
+
+- Preserve raw data without modification.
+- Store processed datasets separately from raw datasets.
+- Maintain immutable dataset versions.
+- Enable efficient access for Airflow pipelines.
+- Support reproducible machine learning experiments.
+- Retain historical datasets for auditing and retraining.
+
+### Data Retention
+
+The platform maintains historical datasets to:
+
+- Retrain machine learning models.
+- Compare model performance over time.
+- Support auditing and compliance.
+- Reproduce previous experiments.
+- Recover from pipeline failures if necessary.
+
+### Security and Access Control
+
+Dataset storage should ensure:
+
+- Secure access to sensitive business data.
+- Role-based access control for datasets.
+- Encryption of stored data.
+- Backup and disaster recovery mechanisms.
+- Audit logging for dataset access and modifications.
