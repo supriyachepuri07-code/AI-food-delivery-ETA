@@ -613,3 +613,77 @@ Dataset storage should ensure:
 - Encryption of stored data.
 - Backup and disaster recovery mechanisms.
 - Audit logging for dataset access and modifications.
+## 3.8 Dataset Quality Assurance
+
+High-quality data is essential for building accurate and reliable machine learning models. Before any dataset is used for training or inference, it must pass a series of automated data quality checks to ensure completeness, consistency, accuracy, and validity.
+
+The quality assurance process is integrated into the data pipeline and executed automatically during data ingestion and preprocessing.
+
+### Data Quality Objectives
+
+The quality assurance process aims to:
+
+- Ensure data completeness.
+- Validate data formats and schemas.
+- Detect missing or duplicate records.
+- Identify invalid or inconsistent values.
+- Detect statistical anomalies and outliers.
+- Prevent data leakage.
+- Improve overall dataset reliability.
+
+### Data Validation Checks
+
+| Validation Check | Description |
+|------------------|-------------|
+| Schema Validation | Verify column names, data types, and required fields |
+| Missing Value Check | Detect null or empty values in critical columns |
+| Duplicate Record Check | Identify duplicate delivery records |
+| Range Validation | Ensure numerical values fall within expected ranges |
+| Categorical Validation | Verify allowed category values |
+| Timestamp Validation | Ensure chronological consistency of delivery events |
+| GPS Validation | Verify valid latitude and longitude coordinates |
+| Target Validation | Ensure Actual ETA is positive and reasonable |
+
+### Data Quality Metrics
+
+The platform continuously monitors:
+
+- Percentage of missing values
+- Duplicate record rate
+- Invalid record rate
+- Feature completeness
+- Data freshness
+- Dataset size
+- Schema compliance
+
+### Automated Quality Assurance Workflow
+
+1. Load newly collected data.
+2. Validate dataset schema.
+3. Check for missing values.
+4. Detect duplicate records.
+5. Validate feature values.
+6. Detect outliers and anomalies.
+7. Generate a data quality report.
+8. Approve or reject the dataset for downstream processing.
+
+### Pipeline Failure Policy
+
+If critical validation checks fail:
+
+- The pipeline is stopped.
+- The failed dataset is quarantined for investigation.
+- Error logs are generated.
+- Alerts are sent to the operations team.
+- The last validated dataset remains available for model training and inference.
+
+### Benefits
+
+The dataset quality assurance process provides:
+
+- Reliable model training.
+- Improved prediction accuracy.
+- Consistent data across environments.
+- Early detection of data issues.
+- Reduced operational risk.
+- Greater confidence in production deployments.
