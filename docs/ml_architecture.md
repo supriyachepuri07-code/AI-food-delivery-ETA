@@ -2219,3 +2219,171 @@ Customer location features provide:
 - Improved accuracy across different areas.
 - Identification of high-delay zones.
 - Better customer experience.
+## 5.6 Distance and Route Features
+
+Distance and route features represent the geographical and transportation factors that influence delivery travel time.
+
+These features help the ETA prediction model understand travel complexity by considering distance, route characteristics, and expected movement time between driver, restaurant, and customer locations.
+
+### Objectives
+
+Distance and route features aim to:
+
+- Measure delivery travel requirements.
+- Capture route complexity.
+- Estimate transportation difficulty.
+- Improve travel time prediction.
+- Represent real-world movement patterns.
+
+### Distance Feature Categories
+
+#### Driver to Restaurant Features
+
+These features represent the pickup journey.
+
+Examples:
+
+| Feature | Description |
+|---------|-------------|
+| Driver-Restaurant Distance | Distance from driver location to restaurant |
+| Estimated Pickup Time | Expected time to reach restaurant |
+| Pickup Route Duration | Travel time to restaurant |
+| Pickup Route Complexity | Difficulty of pickup route |
+
+---
+
+#### Restaurant to Customer Features
+
+These features represent the delivery journey.
+
+Examples:
+
+| Feature | Description |
+|---------|-------------|
+| Restaurant-Customer Distance | Distance from restaurant to customer |
+| Delivery Route Duration | Expected travel time |
+| Route Distance | Actual road distance |
+| Delivery Route Complexity | Difficulty of delivery route |
+
+---
+
+#### Combined Route Features
+
+These features represent the complete delivery journey.
+
+Examples:
+
+| Feature | Description |
+|---------|-------------|
+| Total Delivery Distance | Complete travel distance |
+| Total Route Duration | Expected total travel time |
+| Number of Route Segments | Number of route changes |
+| Route Efficiency Score | Difference between shortest and actual route |
+
+---
+
+### Distance Calculation Methods
+
+Distance features can be generated using:
+
+- Haversine distance calculation.
+- Mapping service route distance.
+- Road network distance.
+- Historical travel distance.
+
+Road network distance is preferred because it represents actual driving conditions.
+
+---
+
+### Route Complexity Features
+
+Route complexity is affected by:
+
+- Number of turns.
+- Road conditions.
+- Traffic density.
+- Road accessibility.
+- Area type.
+
+Examples:
+
+```
+High Route Complexity:
+- Multiple turns
+- Narrow roads
+- High congestion
+
+Low Route Complexity:
+- Straight roads
+- Open routes
+- Low traffic
+```
+
+---
+
+### Feature Generation Examples
+
+Raw Data:
+
+```
+Driver → Restaurant Distance = 2 km
+
+Restaurant → Customer Distance = 6 km
+
+Route Duration = 25 minutes
+```
+
+Generated Features:
+
+```
+Total Distance = 8 km
+
+Route Complexity Score = Medium
+
+Travel Efficiency Score = High
+```
+
+---
+
+### Data Leakage Prevention
+
+Only information available before delivery completion is used.
+
+Valid:
+
+```
+Current driver location
+Current route estimate
+Historical route patterns
+```
+
+Invalid:
+
+```
+Actual completed delivery route time
+```
+
+because it becomes available only after the delivery is completed.
+
+---
+
+### Real-Time Usage
+
+During prediction:
+
+1. Order is created.
+2. Driver location is collected.
+3. Restaurant and customer locations are retrieved.
+4. Route features are generated.
+5. Features are sent to the ETA prediction model.
+
+---
+
+### Benefits
+
+Distance and route features provide:
+
+- More accurate travel time estimation.
+- Better understanding of route difficulty.
+- Improved handling of different delivery scenarios.
+- More reliable ETA predictions.
