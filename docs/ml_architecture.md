@@ -1816,3 +1816,135 @@ A well-defined feature category structure provides:
 - Improved model interpretability.
 - Simplified debugging.
 - Scalable feature expansion.
+## 5.3 Driver Behavior Features
+
+Driver behavior features represent the impact of driver characteristics, experience, availability, and historical performance on delivery completion time.
+
+The objective of these features is to help the ETA prediction model understand how driver-related factors influence delivery speed, pickup efficiency, and overall delivery reliability.
+
+### Objectives
+
+Driver behavior features aim to:
+
+- Capture driver delivery performance.
+- Measure driver reliability.
+- Understand driver efficiency.
+- Improve ETA prediction accuracy.
+- Represent driver-specific delivery patterns.
+
+### Driver Feature Categories
+
+#### Driver Performance Features
+
+These features represent historical driver efficiency.
+
+Examples:
+
+| Feature | Description |
+|---------|-------------|
+| Average Delivery Time | Average time taken by driver for previous deliveries |
+| Average Delay Time | Historical delay compared with expected ETA |
+| On-Time Delivery Rate | Percentage of deliveries completed within expected time |
+| Completed Deliveries Count | Total successfully completed orders |
+| Cancellation Rate | Percentage of cancelled deliveries |
+
+---
+
+#### Driver Experience Features
+
+These features represent driver familiarity and experience.
+
+Examples:
+
+| Feature | Description |
+|---------|-------------|
+| Driver Experience Duration | Time since driver joined platform |
+| Total Deliveries Completed | Experience based on delivery volume |
+| Area Familiarity Score | Previous delivery experience in the current zone |
+
+---
+
+#### Driver Availability Features
+
+These features represent current driver conditions.
+
+Examples:
+
+| Feature | Description |
+|---------|-------------|
+| Current Availability Status | Whether driver is available |
+| Active Order Count | Number of current assigned deliveries |
+| Distance to Restaurant | Driver travel distance to pickup location |
+| Current Location | Real-time driver position |
+
+---
+
+#### Driver Reliability Features
+
+Derived features are created to measure driver consistency.
+
+Examples:
+
+| Feature | Description |
+|---------|-------------|
+| Driver Reliability Score | Overall driver performance score |
+| Pickup Efficiency Score | Time taken from assignment to pickup |
+| Delivery Efficiency Score | Delivery completion performance |
+
+---
+
+### Feature Generation Examples
+
+Raw Data:
+
+```
+Completed Deliveries = 2500
+Late Deliveries = 100
+Average Delivery Time = 28 minutes
+```
+
+Generated Features:
+
+```
+On-Time Delivery Rate = 96%
+
+Driver Reliability Score = High
+
+Historical Delay Factor = Low
+```
+
+---
+
+### Feature Calculation Principles
+
+Driver features are calculated using:
+
+- Historical delivery records.
+- Current driver status.
+- Previous performance metrics.
+- Location-based delivery history.
+
+Only information available before the current prediction time is used to prevent data leakage.
+
+---
+
+### Real-Time Usage
+
+During prediction:
+
+1. Customer places an order.
+2. Driver is assigned.
+3. Current driver information is collected.
+4. Historical driver features are retrieved.
+5. Features are passed to the ETA prediction model.
+
+---
+
+### Benefits
+
+Driver behavior features provide:
+
+- Better ETA personalization.
+- Improved prediction accuracy.
+- Understanding of driver performance impact.
+- More reliable delivery estimates.
