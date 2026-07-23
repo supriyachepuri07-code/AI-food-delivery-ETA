@@ -1734,3 +1734,85 @@ Feature engineering helps the model understand complex relationships such as:
 - Peak hours increasing overall delivery duration.
 
 The quality of engineered features directly impacts the accuracy, reliability, and business value of the ETA prediction system.
+## 5.2 Feature Categories
+
+Feature categories define the major groups of machine learning features used by the ETA prediction system.
+
+Each feature category represents a specific business factor that influences delivery duration. Combining multiple feature categories allows the model to understand the complete delivery lifecycle from order placement to final customer delivery.
+
+### Feature Category Overview
+
+The ETA prediction system uses the following feature categories:
+
+| Feature Category | Description | Examples |
+|-----------------|-------------|----------|
+| Driver Features | Represents driver behavior, availability, and efficiency | Driver rating, experience, historical delivery performance |
+| Restaurant Features | Represents restaurant preparation and operational behavior | Preparation time, order load, average delay |
+| Customer Location Features | Represents delivery area characteristics | Delivery zone, location density, distance |
+| Distance and Route Features | Represents travel complexity | Route distance, route duration, number of route segments |
+| Traffic Features | Represents road and congestion impact | Traffic level, congestion score, estimated delay |
+| Weather Features | Represents environmental impact | Rain intensity, temperature, weather condition |
+| Time-Based Features | Represents temporal delivery patterns | Peak hour, weekday, holiday indicator |
+| Historical Delivery Features | Represents previous delivery behavior | Average ETA, past delays, area delivery trends |
+| Demand Features | Represents order volume and workload | Active orders, restaurant workload, demand level |
+
+---
+
+## Feature Category Design Principles
+
+Feature categories are designed based on real-world factors affecting delivery time.
+
+The feature engineering process follows these principles:
+
+- Capture important business drivers.
+- Avoid redundant features.
+- Create meaningful predictive signals.
+- Balance real-time and historical information.
+- Prevent data leakage.
+- Support both training and real-time prediction.
+
+---
+
+## Feature Generation Sources
+
+Features are generated from multiple data sources:
+
+| Data Source | Feature Categories Generated |
+|------------|------------------------------|
+| Order Database | Order, customer, and demand features |
+| Driver Tracking System | Driver and route features |
+| Restaurant System | Restaurant performance features |
+| Mapping Services | Distance and route features |
+| Traffic APIs | Traffic impact features |
+| Weather APIs | Weather impact features |
+| Historical Data Warehouse | Historical delivery features |
+
+---
+
+## Feature Usage Across ML Lifecycle
+
+The same feature categories are used during:
+
+### Model Training
+
+Historical data is transformed into features to train the ETA prediction model.
+
+### Model Validation
+
+The same feature transformation logic is applied to validation and testing datasets.
+
+### Real-Time Prediction
+
+Live order, driver, traffic, and weather information are converted into features before generating ETA predictions.
+
+---
+
+## Benefits
+
+A well-defined feature category structure provides:
+
+- Better feature organization.
+- Easier feature maintenance.
+- Improved model interpretability.
+- Simplified debugging.
+- Scalable feature expansion.
