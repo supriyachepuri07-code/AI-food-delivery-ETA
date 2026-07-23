@@ -2627,3 +2627,144 @@ Weather impact features provide:
 - Improved handling of severe weather events.
 - More reliable delivery estimates.
 - Better customer communication during adverse conditions.
+## 5.9 Time-Based Features
+
+Time-based features capture temporal patterns that influence food delivery performance. While the preprocessing stage extracts date and time components, the feature engineering stage derives business-oriented features that help the model understand recurring demand, traffic, and operational behaviors.
+
+These engineered features enable the ETA prediction model to learn how delivery times vary based on different times of the day, days of the week, holidays, and seasonal trends.
+
+### Objectives
+
+Time-based features aim to:
+
+- Capture daily delivery patterns.
+- Identify peak demand periods.
+- Learn weekday and weekend behavior.
+- Represent seasonal trends.
+- Improve ETA prediction during recurring business events.
+
+---
+
+### Time Feature Categories
+
+#### Delivery Period Features
+
+These features identify the period of the day.
+
+Examples:
+
+| Feature | Description |
+|---------|-------------|
+| Meal Period | Breakfast, Lunch, Evening, Dinner |
+| Peak Hour Indicator | Whether the order is placed during a peak period |
+| Rush Hour Indicator | Indicates heavy traffic periods |
+| Night Delivery Flag | Identifies late-night deliveries |
+
+---
+
+#### Calendar Features
+
+These features describe calendar-based patterns.
+
+Examples:
+
+| Feature | Description |
+|---------|-------------|
+| Day of Week | Monday through Sunday |
+| Weekend Indicator | Whether the order is placed on a weekend |
+| Holiday Indicator | Whether the order falls on a public holiday |
+| Festival Indicator | Indicates major festivals or special events |
+
+---
+
+#### Seasonal Features
+
+These features capture long-term temporal trends.
+
+Examples:
+
+| Feature | Description |
+|---------|-------------|
+| Month | Month of the year |
+| Quarter | Business quarter |
+| Season | Summer, Monsoon, Winter |
+| Seasonal Demand Score | Historical demand level for the season |
+
+---
+
+#### Historical Time Features
+
+These features use historical delivery performance.
+
+Examples:
+
+| Feature | Description |
+|---------|-------------|
+| Average ETA by Hour | Historical average delivery time during a specific hour |
+| Average ETA by Weekday | Historical delivery time for each weekday |
+| Peak Hour Delay Factor | Historical delay during peak hours |
+| Holiday Delay Factor | Historical delay during holidays |
+
+---
+
+### Feature Generation Examples
+
+Raw Data
+
+```
+Order Time = 7:15 PM
+Date = Saturday
+Month = December
+```
+
+Generated Features
+
+```
+Meal Period = Dinner
+
+Peak Hour = Yes
+
+Weekend = Yes
+
+Holiday Season = Possible
+
+Historical Peak Delay = High
+```
+
+---
+
+### Feature Calculation Principles
+
+Time-based features are generated using:
+
+- Order timestamp.
+- Historical delivery records.
+- Business calendar.
+- Public holiday calendar.
+- Seasonal demand statistics.
+
+Only information available before prediction time is used to prevent data leakage.
+
+---
+
+### Real-Time Usage
+
+During prediction:
+
+1. Capture the order timestamp.
+2. Determine the meal period.
+3. Check weekend and holiday calendars.
+4. Retrieve historical time-based statistics.
+5. Generate engineered time features.
+6. Pass features to the ETA prediction model.
+
+---
+
+### Benefits
+
+Time-based features provide:
+
+- Better understanding of recurring demand patterns.
+- Improved prediction during peak hours.
+- Better adaptation to holidays and festivals.
+- More reliable ETA estimates across different time periods.
