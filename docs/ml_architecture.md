@@ -1948,3 +1948,136 @@ Driver behavior features provide:
 - Improved prediction accuracy.
 - Understanding of driver performance impact.
 - More reliable delivery estimates.
+## 5.4 Restaurant Performance Features
+
+Restaurant performance features represent the impact of restaurant operations, food preparation behavior, and historical performance on delivery ETA.
+
+These features help the model understand delays caused by order preparation, restaurant workload, and operational efficiency.
+
+### Objectives
+
+Restaurant performance features aim to:
+
+- Capture restaurant preparation patterns.
+- Understand restaurant workload impact.
+- Estimate potential preparation delays.
+- Improve ETA prediction accuracy.
+- Represent restaurant-specific behavior.
+
+### Restaurant Feature Categories
+
+#### Food Preparation Features
+
+These features represent how quickly restaurants prepare orders.
+
+Examples:
+
+| Feature | Description |
+|---------|-------------|
+| Average Preparation Time | Average time taken to prepare previous orders |
+| Current Preparation Time Estimate | Expected preparation time for current order |
+| Preparation Delay Rate | Frequency of delayed food preparation |
+| Order Ready Time Accuracy | Difference between expected and actual ready time |
+
+---
+
+#### Restaurant Workload Features
+
+These features represent current restaurant operational pressure.
+
+Examples:
+
+| Feature | Description |
+|---------|-------------|
+| Active Order Count | Number of ongoing orders |
+| Current Kitchen Load | Current workload level |
+| Average Queue Time | Average waiting time before preparation starts |
+| Peak Hour Load | Restaurant workload during high-demand periods |
+
+---
+
+#### Restaurant Historical Performance Features
+
+These features represent past restaurant behavior.
+
+Examples:
+
+| Feature | Description |
+|---------|-------------|
+| Restaurant Average Delay | Historical delay compared with expected preparation time |
+| Order Completion Rate | Percentage of successfully completed orders |
+| Customer Rating | Historical customer satisfaction score |
+| ETA Accuracy Score | How accurately restaurant preparation time was estimated |
+
+---
+
+#### Restaurant Location Features
+
+These features represent location-related impact.
+
+Examples:
+
+| Feature | Description |
+|---------|-------------|
+| Restaurant Delivery Zone | Area where restaurant operates |
+| Nearby Demand Level | Order demand around restaurant |
+| Distance to Customer | Delivery distance from restaurant |
+
+---
+
+### Feature Generation Examples
+
+Raw Data:
+
+```
+Average Preparation Time = 18 minutes
+Current Active Orders = 25
+Late Preparation Count = 50
+Total Orders = 500
+```
+
+Generated Features:
+
+```
+Preparation Delay Rate = 10%
+
+Restaurant Workload Level = High
+
+Preparation Risk Score = Medium
+```
+
+---
+
+### Feature Calculation Principles
+
+Restaurant features are generated using:
+
+- Historical completed orders.
+- Current restaurant status.
+- Order volume patterns.
+- Preparation time history.
+
+Only information available before delivery completion is used to avoid data leakage.
+
+---
+
+### Real-Time Usage
+
+During prediction:
+
+1. Customer places an order.
+2. Restaurant accepts the order.
+3. Current restaurant workload is collected.
+4. Historical restaurant performance features are retrieved.
+5. Features are passed to the ETA prediction model.
+
+---
+
+### Benefits
+
+Restaurant performance features provide:
+
+- Better prediction of preparation delays.
+- More accurate ETA estimation.
+- Identification of restaurant-specific patterns.
+- Reduced customer dissatisfaction caused by incorrect delivery times.
