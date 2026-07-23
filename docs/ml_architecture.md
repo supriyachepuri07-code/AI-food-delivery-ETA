@@ -3061,3 +3061,129 @@ Demand and volume features provide:
 - Improved understanding of operational delays.
 - More accurate dispatch-aware ETA estimates.
 - Better scalability across different demand levels.
+## 5.12 Feature Selection Strategy
+
+Feature selection is the process of identifying the most informative features for training the ETA prediction model. It reduces redundancy, removes irrelevant features, and improves model performance while maintaining interpretability.
+
+The objective is to build a feature set that maximizes prediction accuracy without introducing unnecessary complexity.
+
+### Objectives
+
+The feature selection process aims to:
+
+- Improve model accuracy.
+- Reduce overfitting.
+- Eliminate redundant features.
+- Reduce training time.
+- Improve model interpretability.
+- Support efficient real-time inference.
+
+---
+
+### Feature Selection Workflow
+
+The feature selection process consists of the following stages:
+
+1. Generate all engineered features.
+2. Validate feature quality.
+3. Remove invalid or low-quality features.
+4. Identify redundant features.
+5. Evaluate feature importance.
+6. Select the final feature set.
+7. Store the selected feature list for training and inference.
+
+---
+
+### Feature Evaluation Criteria
+
+Each engineered feature is evaluated based on:
+
+| Criterion | Purpose |
+|-----------|---------|
+| Predictive Power | Measures contribution to ETA prediction |
+| Correlation | Identifies highly correlated features |
+| Missing Value Percentage | Removes unreliable features |
+| Stability | Ensures consistent behavior over time |
+| Business Relevance | Confirms the feature aligns with delivery operations |
+| Computational Cost | Evaluates impact on training and inference latency |
+
+---
+
+### Feature Selection Techniques
+
+Multiple techniques may be used to evaluate features:
+
+#### Statistical Methods
+
+- Correlation analysis
+- Variance threshold
+- Mutual information
+- Chi-square test (for categorical features)
+
+#### Model-Based Methods
+
+- Tree-based feature importance
+- Permutation importance
+- SHAP value analysis
+
+#### Wrapper Methods
+
+- Recursive Feature Elimination (RFE)
+- Sequential Feature Selection
+
+---
+
+### Handling Redundant Features
+
+If multiple features represent similar information:
+
+- Retain the most informative feature.
+- Remove highly correlated features when appropriate.
+- Simplify the feature set without losing predictive power.
+
+Example:
+
+Instead of using:
+
+- Driver Experience (Years)
+- Total Deliveries Completed
+- Driver Reliability Score
+
+A feature importance analysis may determine that Driver Reliability Score captures most of the relevant information.
+
+---
+
+### Feature Selection Validation
+
+The selected feature set is validated to ensure:
+
+- Consistent performance across training and validation datasets.
+- No target leakage.
+- Stable feature distributions.
+- Business relevance.
+- Reproducibility across model versions.
+
+---
+
+### Output
+
+The output of this stage is:
+
+- Final selected feature list.
+- Feature metadata.
+- Feature importance scores.
+- Version-controlled feature configuration.
+
+These outputs are used by the model training and prediction pipelines.
+
+---
+
+### Benefits
+
+A well-designed feature selection strategy provides:
+
+- Better prediction accuracy.
+- Faster model training.
+- Lower inference latency.
+- Improved model explainability.
+- Easier feature maintenance.
