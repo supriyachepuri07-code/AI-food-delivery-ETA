@@ -3187,3 +3187,132 @@ A well-designed feature selection strategy provides:
 - Lower inference latency.
 - Improved model explainability.
 - Easier feature maintenance.
+## 5.13 Feature Validation
+
+Feature validation ensures that all engineered features meet quality standards before they are used for model training or real-time prediction. This process verifies that features are accurate, complete, consistent, and compatible with the machine learning pipeline.
+
+The objective is to detect data quality issues early and prevent invalid features from affecting model performance.
+
+### Objectives
+
+Feature validation aims to:
+
+- Verify feature correctness.
+- Ensure feature completeness.
+- Detect invalid feature values.
+- Prevent data leakage.
+- Maintain consistency between training and inference.
+- Improve model reliability.
+
+---
+
+### Validation Categories
+
+#### Schema Validation
+
+Verify that each feature:
+
+- Exists in the dataset.
+- Has the correct data type.
+- Matches the expected schema.
+- Uses the correct feature name.
+
+---
+
+#### Value Validation
+
+Validate feature values against predefined rules.
+
+Examples:
+
+| Feature | Validation Rule |
+|---------|-----------------|
+| Driver Rating | Between 1.0 and 5.0 |
+| Delivery Distance | Greater than or equal to 0 |
+| Preparation Time | Greater than or equal to 0 |
+| Temperature | Within supported operational range |
+
+---
+
+#### Completeness Validation
+
+Ensure:
+
+- Required features are present.
+- Critical features are not null.
+- Missing values remain within acceptable thresholds.
+
+---
+
+#### Consistency Validation
+
+Verify that related features do not contradict each other.
+
+Examples:
+
+- Total Distance ≥ Driver-to-Restaurant Distance
+- Order Time ≤ Delivery Time (historical data)
+- Route Duration ≥ 0
+
+---
+
+#### Distribution Validation
+
+Compare feature distributions against historical data to detect unexpected changes.
+
+Checks may include:
+
+- Mean
+- Median
+- Standard deviation
+- Percentiles
+- Category frequency
+
+---
+
+#### Data Leakage Validation
+
+Ensure no feature contains information that would only be known after the prediction is made.
+
+Examples of invalid features:
+
+- Actual delivery duration
+- Actual arrival time
+- Customer delivery feedback
+
+---
+
+### Validation Workflow
+
+1. Load engineered features.
+2. Validate schema.
+3. Validate feature values.
+4. Check completeness.
+5. Detect inconsistencies.
+6. Detect data leakage.
+7. Generate validation report.
+8. Approve features for model training or prediction.
+
+---
+
+### Validation Failure Handling
+
+If validation fails:
+
+- Reject invalid feature records.
+- Log validation errors.
+- Notify monitoring systems.
+- Prevent model training or prediction using invalid data.
+- Store validation reports for auditing.
+
+---
+
+### Benefits
+
+Feature validation provides:
+
+- Reliable model inputs.
+- Improved prediction accuracy.
+- Better production stability.
+- Easier debugging.
+- Stronger data quality governance.
