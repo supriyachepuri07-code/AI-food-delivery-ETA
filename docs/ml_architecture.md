@@ -733,3 +733,81 @@ The preprocessing pipeline follows these principles:
 - Support modular and reusable preprocessing components.
 - Produce reproducible results.
 - Integrate seamlessly with Airflow and ML pipelines.
+## 4.2 Data Cleaning
+
+The data cleaning stage is responsible for improving the quality and consistency of raw operational data before it enters the machine learning pipeline. The objective is to remove invalid, corrupted, and inconsistent records while preserving valuable business information.
+
+Data cleaning ensures that the dataset accurately represents real-world delivery operations and provides a reliable foundation for preprocessing, feature engineering, and model training.
+
+### Data Cleaning Objectives
+
+The data cleaning process aims to:
+
+- Remove invalid records.
+- Standardize data formats.
+- Correct inconsistent values.
+- Validate business rules.
+- Eliminate corrupted records.
+- Improve overall dataset quality.
+
+### Cleaning Operations
+
+The following cleaning operations are performed:
+
+#### Invalid Record Removal
+
+Records containing invalid or impossible values are identified and removed.
+
+Examples include:
+
+- Negative delivery distance.
+- Negative food preparation time.
+- Delivery completed before the order was placed.
+- Invalid driver identifiers.
+- Invalid restaurant identifiers.
+
+#### Data Standardization
+
+Standardize data formats across all datasets.
+
+Examples:
+
+- Standard date and time formats.
+- Consistent measurement units (minutes, kilometers).
+- Standardized categorical values.
+- Uniform text formatting.
+
+#### Business Rule Validation
+
+Business rules are applied to verify operational consistency.
+
+Examples:
+
+- Every order must have a valid customer.
+- Every completed delivery must have an assigned driver.
+- Every restaurant must have a valid location.
+- Delivery timestamps must follow the correct sequence.
+
+#### Corrupted Record Detection
+
+Identify and remove records affected by:
+
+- Incomplete transactions.
+- System failures.
+- Duplicate event generation.
+- Invalid GPS readings.
+- Corrupted API responses.
+
+### Cleaning Workflow
+
+1. Load raw dataset.
+2. Validate business rules.
+3. Remove invalid records.
+4. Standardize formats.
+5. Detect corrupted records.
+6. Generate cleaning report.
+7. Pass cleaned dataset to the next preprocessing stage.
+
+### Cleaning Output
+
+The output of this stage is a standardized and validated dataset that is ready for missing value handling and subsequent preprocessing steps.
