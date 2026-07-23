@@ -877,3 +877,88 @@ This process:
 - Maintains dataset consistency.
 - Supports reliable production inference.
 - Ensures reproducible preprocessing across environments.
+## 4.4 Duplicate Record Handling
+
+Duplicate records can occur due to system retries, multiple event processing, API failures, synchronization issues, or data ingestion errors. Duplicate entries can introduce bias into the machine learning model by overrepresenting specific delivery scenarios.
+
+The Duplicate Record Handling stage identifies and removes duplicate records while preserving the most accurate and complete version of each delivery record.
+
+### Objectives
+
+The duplicate handling process aims to:
+
+- Detect duplicate records.
+- Remove redundant data.
+- Preserve unique delivery events.
+- Improve dataset integrity.
+- Prevent model bias caused by duplicate observations.
+
+### Types of Duplicates
+
+#### Exact Duplicates
+
+Records where all feature values are identical.
+
+Example:
+
+- Same Order ID
+- Same Driver ID
+- Same Restaurant ID
+- Same timestamps
+- Same target value
+
+These records are removed.
+
+#### Partial Duplicates
+
+Records that share the same business identifier but differ in one or more non-critical fields.
+
+Examples:
+
+- Updated driver location
+- Corrected restaurant information
+- Delayed event synchronization
+
+Business rules determine which record should be retained.
+
+### Duplicate Detection Strategy
+
+Duplicate records are identified using:
+
+- Order ID
+- Delivery ID
+- Driver ID
+- Restaurant ID
+- Delivery Timestamp
+- Event Timestamp
+
+The combination of these identifiers helps ensure that each completed delivery is represented only once.
+
+### Record Retention Rules
+
+When duplicate records are detected:
+
+- Keep the most recent valid record.
+- Retain records with the highest data completeness.
+- Discard incomplete or outdated duplicate records.
+- Log all removed duplicates for auditing purposes.
+
+### Processing Workflow
+
+1. Load cleaned dataset.
+2. Identify duplicate records.
+3. Classify duplicates as exact or partial.
+4. Apply record retention rules.
+5. Remove redundant records.
+6. Generate duplicate detection report.
+7. Pass the unique dataset to the next preprocessing stage.
+
+### Benefits
+
+Duplicate record handling provides:
+
+- Higher data quality.
+- Reduced training bias.
+- Improved model generalization.
+- More reliable evaluation metrics.
+- Consistent and trustworthy datasets.
