@@ -1377,3 +1377,95 @@ Date and time feature processing provides:
 - Improved handling of seasonal behavior.
 - Better prediction during peak hours.
 - Improved model generalization.
+## 4.10 Geospatial Data Processing
+
+Geospatial data plays a critical role in food delivery ETA prediction because delivery time depends heavily on locations, distances, routes, traffic patterns, and geographical conditions.
+
+The Geospatial Data Processing stage transforms raw location information into meaningful geographical features that help the machine learning model understand delivery movement and route complexity.
+
+### Objectives
+
+The geospatial processing stage aims to:
+
+- Validate location data.
+- Calculate distance-based features.
+- Extract meaningful location patterns.
+- Improve ETA prediction accuracy.
+- Handle real-world delivery movement scenarios.
+
+### Input Geospatial Data
+
+The following location data is processed:
+
+- Customer Latitude and Longitude
+- Driver Latitude and Longitude
+- Restaurant Latitude and Longitude
+- Delivery Zone
+- Route Information
+- Distance from Driver to Restaurant
+- Distance from Restaurant to Customer
+
+### Geospatial Feature Generation
+
+The following features are generated:
+
+| Feature | Description |
+|---------|-------------|
+| Driver-Restaurant Distance | Distance driver needs to travel to pickup order |
+| Restaurant-Customer Distance | Final delivery distance |
+| Total Delivery Distance | Complete route distance |
+| Driver Current Location | Real-time driver position |
+| Delivery Zone | Customer geographical area |
+| Route Complexity | Complexity of delivery route |
+| Area Density | Urban, suburban, or rural classification |
+
+### Distance Calculation
+
+Distance between locations is calculated using geographical coordinates.
+
+Common approaches include:
+
+- Haversine Distance
+- Mapping API Route Distance
+- Road Network Distance
+
+The system prefers road network distance from mapping services when available because it represents actual travel conditions.
+
+### Geospatial Validation
+
+The pipeline validates:
+
+- Latitude range (-90 to 90).
+- Longitude range (-180 to 180).
+- Missing coordinates.
+- Invalid GPS readings.
+- Unrealistic location jumps.
+
+### Location-Based Feature Engineering
+
+Additional features may include:
+
+- Delivery region.
+- High traffic zones.
+- Restaurant cluster.
+- Customer density.
+- Historical delivery time by location.
+
+### Processing Workflow
+
+1. Receive raw GPS and location data.
+2. Validate geographical coordinates.
+3. Calculate distance features.
+4. Generate location-based features.
+5. Combine with other delivery features.
+6. Pass processed data to feature engineering.
+
+### Benefits
+
+Geospatial data processing provides:
+
+- Better route understanding.
+- Improved ETA accuracy.
+- Better handling of traffic impact.
+- Location-based delivery insights.
+- More reliable predictions.
