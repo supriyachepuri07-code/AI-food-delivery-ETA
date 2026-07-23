@@ -1186,3 +1186,106 @@ Categorical feature encoding provides:
 - Reliable production inference.
 - Improved predictive performance.
 - Reproducible preprocessing across environments.
+## 4.8 Numerical Feature Scaling
+
+Numerical features in the ETA prediction dataset have different measurement units and value ranges. Numerical Feature Scaling transforms these features into a consistent scale to improve model performance and training stability.
+
+The scaling strategy is applied after data cleaning, missing value handling, outlier treatment, and before model training.
+
+### Objectives
+
+The numerical scaling process aims to:
+
+- Normalize numerical feature ranges.
+- Improve model convergence.
+- Prevent features with larger values from dominating.
+- Maintain consistency between training and inference.
+- Improve model stability.
+
+### Numerical Features
+
+The following numerical features require scaling:
+
+- Order Value
+- Number of Items
+- Restaurant Preparation Time
+- Driver Rating
+- Driver Experience
+- Distance Measurements
+- Travel Time
+- Temperature
+- Humidity
+- Wind Speed
+- Historical Average Delivery Time
+
+### Scaling Techniques
+
+The appropriate scaling method is selected based on feature distribution.
+
+| Feature Type | Scaling Method |
+|--------------|----------------|
+| Normally Distributed Features | Standard Scaling |
+| Features with Outliers | Robust Scaling |
+| Bounded Features | Min-Max Scaling |
+
+### Scaling Strategy
+
+#### Standard Scaling
+
+Used for features that follow an approximately normal distribution.
+
+Formula:
+
+```
+z = (x - mean) / standard deviation
+```
+
+Example:
+
+- Temperature
+- Driver Rating
+
+#### Robust Scaling
+
+Used for features containing extreme values because it uses median and interquartile range.
+
+Example:
+
+- Order Value
+- Delivery Distance
+
+#### Min-Max Scaling
+
+Used when features need to be converted into a fixed range.
+
+Example:
+
+- Normalized scores
+- Probability-based features
+
+### Scaling Workflow
+
+1. Identify numerical features.
+2. Analyze feature distributions.
+3. Select appropriate scaling method.
+4. Fit scaler only on training data.
+5. Save scaler parameters.
+6. Apply the same scaler during validation, testing, and inference.
+
+### Data Leakage Prevention
+
+To prevent data leakage:
+
+- Scaling parameters are learned only from the training dataset.
+- Validation and test datasets use the existing training scaler.
+- Production inference uses the saved scaler version.
+
+### Benefits
+
+Numerical feature scaling provides:
+
+- Faster model training.
+- Improved optimization.
+- Better feature comparison.
+- Consistent model behavior.
+- Reliable production predictions.
