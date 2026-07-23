@@ -2081,3 +2081,141 @@ Restaurant performance features provide:
 - More accurate ETA estimation.
 - Identification of restaurant-specific patterns.
 - Reduced customer dissatisfaction caused by incorrect delivery times.
+## 5.5 Customer Location Features
+
+Customer location features represent geographical characteristics, delivery area behavior, and location-based factors that influence food delivery ETA.
+
+These features help the model understand how customer location, area characteristics, and historical delivery patterns impact delivery duration.
+
+### Objectives
+
+Customer location features aim to:
+
+- Capture geographical delivery patterns.
+- Understand location-based delays.
+- Improve route and ETA estimation.
+- Identify difficult delivery areas.
+- Improve location-aware predictions.
+
+### Customer Location Feature Categories
+
+#### Geographic Features
+
+These features represent the physical characteristics of the customer location.
+
+Examples:
+
+| Feature | Description |
+|---------|-------------|
+| Customer Latitude | Customer geographical latitude |
+| Customer Longitude | Customer geographical longitude |
+| Delivery Zone | Customer service area |
+| Area Classification | Urban, suburban, or rural area |
+| Location Cluster | Grouping of similar geographical regions |
+
+---
+
+#### Location Complexity Features
+
+These features represent delivery difficulty based on location.
+
+Examples:
+
+| Feature | Description |
+|---------|-------------|
+| Accessibility Score | Ease of reaching customer location |
+| Road Network Complexity | Complexity of routes around location |
+| Delivery Difficulty Score | Historical difficulty of deliveries in area |
+| Building Density | Density of buildings in the area |
+
+---
+
+#### Historical Location Features
+
+These features represent previous delivery patterns in the same area.
+
+Examples:
+
+| Feature | Description |
+|---------|-------------|
+| Average ETA by Area | Historical delivery time for location |
+| Area Delay Rate | Frequency of delivery delays |
+| Successful Delivery Rate | Completion success in area |
+| Peak Hour Delay Impact | Delay during busy periods |
+
+---
+
+#### Customer Density Features
+
+These features capture demand concentration around the customer location.
+
+Examples:
+
+| Feature | Description |
+|---------|-------------|
+| Nearby Active Orders | Number of nearby deliveries |
+| Area Demand Level | Current order demand |
+| Customer Density Score | Number of customers in region |
+
+---
+
+### Feature Generation Examples
+
+Raw Data:
+
+```
+Customer Location:
+Latitude = 13.0827
+Longitude = 80.2707
+
+Previous Deliveries in Area = 500
+
+Average Area ETA = 32 minutes
+```
+
+Generated Features:
+
+```
+Delivery Zone = Central Region
+
+Area Difficulty Score = Medium
+
+Historical Area Delay Factor = High
+```
+
+---
+
+### Feature Calculation Principles
+
+Customer location features are generated using:
+
+- Customer GPS coordinates.
+- Historical delivery records.
+- Geographic clustering.
+- Area-level delivery statistics.
+
+Only historical information available before the prediction request is used to prevent data leakage.
+
+---
+
+### Real-Time Usage
+
+During prediction:
+
+1. Customer places an order.
+2. Customer location is captured.
+3. Location-based features are generated.
+4. Historical area statistics are retrieved.
+5. Features are passed to the ETA prediction model.
+
+---
+
+### Benefits
+
+Customer location features provide:
+
+- Location-aware ETA predictions.
+- Better understanding of delivery complexity.
+- Improved accuracy across different areas.
+- Identification of high-delay zones.
+- Better customer experience.
