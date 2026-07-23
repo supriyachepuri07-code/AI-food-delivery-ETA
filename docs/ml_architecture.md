@@ -2505,3 +2505,125 @@ Traffic impact features provide:
 - Better adaptation to real-time road conditions.
 - Improved predictions during peak traffic.
 - Reduced customer dissatisfaction caused by inaccurate delivery estimates.
+## 5.8 Weather Impact Features
+
+Weather impact features represent environmental conditions that influence delivery operations and travel time. These features enable the ETA prediction model to account for the effect of weather on driver movement, road conditions, and overall delivery performance.
+
+The system combines real-time weather information with historical delivery patterns to improve prediction accuracy under different environmental conditions.
+
+### Objectives
+
+Weather impact features aim to:
+
+- Capture current weather conditions.
+- Measure the effect of weather on delivery time.
+- Learn historical weather-related delivery patterns.
+- Improve ETA prediction during adverse weather.
+- Support dynamic prediction adjustments.
+
+### Weather Feature Categories
+
+#### Current Weather Features
+
+These features describe the current environmental conditions.
+
+Examples:
+
+| Feature | Description |
+|---------|-------------|
+| Weather Condition | Sunny, Cloudy, Rainy, Stormy, Foggy |
+| Temperature | Current temperature |
+| Humidity | Current humidity level |
+| Wind Speed | Wind speed during delivery |
+| Visibility | Road visibility conditions |
+
+---
+
+#### Weather Severity Features
+
+These features estimate how severe the weather is.
+
+Examples:
+
+| Feature | Description |
+|---------|-------------|
+| Weather Severity Score | Overall weather impact score |
+| Rain Intensity | Light, Moderate, Heavy |
+| Storm Indicator | Indicates storm conditions |
+| Extreme Weather Flag | Identifies severe weather events |
+
+---
+
+#### Historical Weather Features
+
+These features are based on previous deliveries under similar weather conditions.
+
+Examples:
+
+| Feature | Description |
+|---------|-------------|
+| Average ETA During Rain | Historical average delivery time in rainy weather |
+| Weather Delay Factor | Average delay caused by similar weather |
+| Delivery Success Rate | Historical completion rate under similar conditions |
+
+---
+
+### Feature Generation Examples
+
+Raw Data:
+
+```
+Weather = Rainy
+
+Temperature = 28°C
+
+Humidity = 90%
+
+Wind Speed = 22 km/h
+```
+
+Generated Features:
+
+```
+Weather Severity Score = High
+
+Rain Impact = Significant
+
+Historical Weather Delay = +8 minutes
+```
+
+---
+
+### Feature Calculation Principles
+
+Weather features are generated using:
+
+- Live weather APIs.
+- Historical weather records.
+- Historical delivery performance under similar weather.
+- Weather severity classification.
+
+Only weather information available at prediction time is used to prevent data leakage.
+
+---
+
+### Real-Time Usage
+
+During prediction:
+
+1. Retrieve current weather conditions.
+2. Calculate weather severity.
+3. Retrieve historical weather impact data.
+4. Generate weather features.
+5. Pass features to the ETA prediction model.
+
+---
+
+### Benefits
+
+Weather impact features provide:
+
+- Better ETA predictions during changing weather.
+- Improved handling of severe weather events.
+- More reliable delivery estimates.
+- Better customer communication during adverse conditions.
