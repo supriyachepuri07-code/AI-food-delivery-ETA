@@ -1653,3 +1653,84 @@ A well-defined preprocessing output provides:
 - Improved model reproducibility.
 - Easier debugging.
 - Scalable ML pipeline integration.
+# 5. Feature Engineering Pipeline
+
+## 5.1 Feature Engineering Overview
+
+Feature Engineering is the process of transforming processed raw data into meaningful machine learning features that improve the accuracy and reliability of the ETA prediction model.
+
+In the food delivery ETA prediction system, feature engineering combines operational, geographical, temporal, environmental, and historical delivery information to identify patterns that influence delivery time.
+
+The objective is to create features that help the model understand the complete delivery journey, including restaurant preparation delays, driver movement, traffic impact, weather conditions, customer location, and historical delivery behavior.
+
+### Feature Engineering Objectives
+
+The feature engineering pipeline aims to:
+
+- Convert raw attributes into meaningful predictive signals.
+- Capture hidden patterns affecting delivery time.
+- Improve model accuracy and generalization.
+- Represent real-world delivery scenarios.
+- Maintain consistency between training and real-time prediction.
+- Reduce dependency on manual analysis.
+
+### Feature Engineering Process
+
+The feature engineering pipeline operates after data preprocessing and before model training.
+
+The workflow includes:
+
+1. Receive validated and processed data.
+2. Generate domain-specific features.
+3. Combine multiple data sources.
+4. Validate generated features.
+5. Store features for model training and inference.
+
+### Feature Categories
+
+The ETA prediction model uses multiple feature groups:
+
+| Feature Category | Purpose |
+|-----------------|---------|
+| Driver Features | Understand driver behavior and efficiency |
+| Restaurant Features | Capture food preparation and restaurant performance |
+| Customer Location Features | Understand delivery area characteristics |
+| Distance and Route Features | Measure travel complexity |
+| Traffic Features | Capture road congestion impact |
+| Weather Features | Understand environmental impact |
+| Time-Based Features | Capture demand and seasonal patterns |
+| Historical Features | Learn from previous delivery behavior |
+| Demand Features | Understand order volume impact |
+
+### Training and Inference Consistency
+
+The same feature engineering logic is applied during:
+
+- Model training.
+- Model validation.
+- Real-time ETA prediction.
+
+This ensures that the model receives features in the same format throughout the ML lifecycle.
+
+### Feature Engineering Principles
+
+The pipeline follows these principles:
+
+- Business-driven feature creation.
+- Avoid unnecessary feature complexity.
+- Prevent data leakage.
+- Maintain feature reproducibility.
+- Support real-time feature generation.
+- Enable future feature expansion.
+
+### Importance in ETA Prediction
+
+Feature engineering helps the model understand complex relationships such as:
+
+- High traffic increasing delivery time.
+- Restaurant workload increasing preparation delays.
+- Rain affecting travel speed.
+- Experienced drivers reducing delivery delays.
+- Peak hours increasing overall delivery duration.
+
+The quality of engineered features directly impacts the accuracy, reliability, and business value of the ETA prediction system.
