@@ -1116,3 +1116,73 @@ Outlier detection and treatment provides:
 - Better prediction accuracy.
 - Preservation of important business events.
 - More reliable machine learning models.
+## 4.7 Categorical Feature Encoding
+
+Categorical features contain textual or discrete values that describe characteristics of an order, restaurant, driver, traffic conditions, and weather. Since most machine learning algorithms require numerical input, these features must be transformed into numerical representations before model training and inference.
+
+The encoding strategy is selected based on the nature of each feature to preserve meaningful information while avoiding unnecessary complexity.
+
+### Objectives
+
+The categorical feature encoding process aims to:
+
+- Convert categorical values into numerical representations.
+- Preserve business meaning within encoded features.
+- Handle unseen categories during inference.
+- Maintain consistency between training and production.
+- Improve model performance.
+
+### Categorical Features
+
+Examples of categorical features include:
+
+- Cuisine Type
+- Weather Condition
+- Traffic Level
+- Driver Availability
+- Payment Method
+- Order Type
+- Day of Week
+- Delivery Zone
+
+### Encoding Strategy
+
+| Feature | Encoding Method |
+|---------|-----------------|
+| Weather Condition | One-Hot Encoding |
+| Traffic Level | Ordinal Encoding |
+| Cuisine Type | One-Hot Encoding |
+| Driver Availability | Binary Encoding |
+| Payment Method | One-Hot Encoding |
+| Order Type | One-Hot Encoding |
+| Day of Week | Cyclical or One-Hot Encoding |
+| Delivery Zone | Frequency Encoding (if high cardinality) |
+
+### Unknown Category Handling
+
+During inference, previously unseen categories may appear.
+
+The preprocessing pipeline handles unknown categories by:
+
+- Mapping them to an "Unknown" category where appropriate.
+- Ignoring unseen values if supported by the encoding method.
+- Logging occurrences for monitoring and future model updates.
+
+### Encoding Workflow
+
+1. Identify categorical features.
+2. Select the appropriate encoding technique.
+3. Fit encoders using the training dataset.
+4. Save encoder configurations for reuse.
+5. Apply the same encoders during inference.
+6. Validate the encoded output before feature engineering.
+
+### Benefits
+
+Categorical feature encoding provides:
+
+- Numerical input suitable for machine learning algorithms.
+- Consistent feature representation.
+- Reliable production inference.
+- Improved predictive performance.
+- Reproducible preprocessing across environments.
