@@ -1581,3 +1581,75 @@ The preprocessing workflow provides:
 - Easier debugging.
 - Better production stability.
 - Scalable ML pipeline architecture.
+## 4.12 Preprocessing Output
+
+The output of the preprocessing pipeline is a clean, validated, and machine learning-ready dataset that can be consumed by downstream feature engineering and model training processes.
+
+The processed dataset contains standardized features with consistent data types, transformed categorical values, scaled numerical values, and generated temporal and geographical attributes.
+
+### Output Characteristics
+
+The final processed dataset:
+
+- Contains only validated records.
+- Has no unresolved critical missing values.
+- Contains standardized data formats.
+- Includes encoded categorical features.
+- Includes processed numerical features.
+- Contains extracted time-based features.
+- Contains processed geospatial features.
+- Maintains dataset version information.
+
+### Output Dataset Structure
+
+The processed dataset contains the following feature groups:
+
+| Feature Group | Examples |
+|--------------|----------|
+| Order Features | Order value, number of items, order type |
+| Driver Features | Driver rating, availability, experience |
+| Restaurant Features | Preparation time, restaurant location |
+| Traffic Features | Traffic level, congestion information |
+| Weather Features | Temperature, weather condition |
+| Time Features | Hour, weekday, peak hour indicator |
+| Geospatial Features | Distance, delivery zone, route information |
+| Target Variable | Actual Delivery ETA |
+
+### Output Storage
+
+The processed dataset is stored separately from raw data to maintain data lineage and reproducibility.
+
+Storage locations:
+
+- Cloud storage for processed datasets.
+- Metadata storage for dataset tracking.
+- Version-controlled storage for ML experiments.
+
+### Output Validation
+
+Before moving to feature engineering and model training, the output dataset is validated for:
+
+- Schema correctness.
+- Feature completeness.
+- Data consistency.
+- Target variable availability.
+- Dataset version compatibility.
+
+### Downstream Usage
+
+The processed dataset is consumed by:
+
+1. Feature Engineering Pipeline
+2. Model Training Pipeline
+3. Model Evaluation Pipeline
+4. Model Prediction Pipeline
+
+### Benefits
+
+A well-defined preprocessing output provides:
+
+- Reliable model inputs.
+- Consistent training and inference data.
+- Improved model reproducibility.
+- Easier debugging.
+- Scalable ML pipeline integration.
