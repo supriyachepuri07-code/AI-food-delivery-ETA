@@ -1036,3 +1036,83 @@ Data type validation provides:
 - Reliable feature engineering.
 - Stable machine learning pipelines.
 - Consistent behavior across training and production environments.
+## 4.6 Outlier Detection and Treatment
+
+Outliers are observations that differ significantly from the majority of the dataset. They may result from data entry errors, sensor failures, system issues, or genuine business events. The Outlier Detection and Treatment stage identifies these observations and applies appropriate handling strategies to improve model performance while preserving meaningful business information.
+
+The preprocessing pipeline combines statistical methods with business rules to distinguish between invalid outliers and legitimate rare events.
+
+### Objectives
+
+The outlier detection process aims to:
+
+- Identify abnormal observations.
+- Remove or correct invalid data.
+- Preserve valid business scenarios.
+- Reduce the impact of extreme values on model training.
+- Improve model stability and generalization.
+
+### Features Monitored for Outliers
+
+The following numerical features are monitored:
+
+- Order Value
+- Number of Items
+- Food Preparation Time
+- Driver-to-Restaurant Distance
+- Restaurant-to-Customer Distance
+- Total Route Distance
+- Estimated Travel Time
+- Actual ETA
+- Driver Speed
+
+### Detection Techniques
+
+The preprocessing pipeline may use one or more of the following methods:
+
+- Interquartile Range (IQR)
+- Z-Score Analysis
+- Percentile-Based Detection
+- Domain-Specific Business Rules
+
+The chosen technique depends on the feature distribution and business requirements.
+
+### Business Rule Validation
+
+Before treating an observation as an outlier, business rules are applied.
+
+Examples:
+
+- Long delivery times during severe traffic or bad weather may be valid.
+- Large order values during festivals or promotional events may be expected.
+- Long travel distances for customers in remote areas may be legitimate.
+
+Only observations identified as invalid after both statistical analysis and business validation are treated as outliers.
+
+### Outlier Treatment Strategy
+
+Depending on the feature and business context, the pipeline may:
+
+- Remove invalid records.
+- Cap extreme values within acceptable limits.
+- Replace values using business-defined thresholds.
+- Retain valid extreme observations.
+
+### Processing Workflow
+
+1. Identify numerical features.
+2. Apply statistical outlier detection methods.
+3. Validate detected outliers using business rules.
+4. Apply the appropriate treatment strategy.
+5. Generate an outlier analysis report.
+6. Pass the processed dataset to the next preprocessing stage.
+
+### Benefits
+
+Outlier detection and treatment provides:
+
+- Improved model robustness.
+- Reduced influence of invalid extreme values.
+- Better prediction accuracy.
+- Preservation of important business events.
+- More reliable machine learning models.
