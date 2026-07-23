@@ -962,3 +962,77 @@ Duplicate record handling provides:
 - Improved model generalization.
 - More reliable evaluation metrics.
 - Consistent and trustworthy datasets.
+## 4.5 Data Type Validation
+
+The Data Type Validation stage ensures that every feature conforms to its expected data type before entering the machine learning pipeline. Since data is collected from multiple internal systems and external APIs, inconsistencies in data types can occur due to formatting differences, system integrations, or data entry errors.
+
+Validating and standardizing data types improves data consistency, prevents processing errors, and ensures compatibility with downstream preprocessing and machine learning components.
+
+### Objectives
+
+The data type validation process aims to:
+
+- Verify the data type of every feature.
+- Convert values to their expected formats where possible.
+- Detect invalid or incompatible values.
+- Prevent downstream processing failures.
+- Ensure consistency between training and inference.
+
+### Expected Data Types
+
+| Feature Category | Expected Data Type |
+|------------------|-------------------|
+| Order ID | String |
+| Driver ID | String |
+| Restaurant ID | String |
+| Customer ID | String |
+| Order Value | Float |
+| Distance | Float |
+| Temperature | Float |
+| Driver Rating | Float |
+| Number of Items | Integer |
+| Order Timestamp | Datetime |
+| Delivery Timestamp | Datetime |
+| Weather Condition | Categorical (String) |
+| Traffic Level | Categorical (String) |
+| Driver Availability | Boolean |
+
+### Validation Rules
+
+The pipeline performs the following validations:
+
+- Verify that numeric fields contain valid numerical values.
+- Ensure timestamps follow a standard datetime format.
+- Confirm categorical features contain valid text values.
+- Validate boolean fields.
+- Detect invalid or unsupported data types.
+- Convert compatible values to the expected type when possible.
+
+### Error Handling
+
+If invalid data types are detected:
+
+- Attempt automatic type conversion.
+- Log successful conversions.
+- Flag records that cannot be converted.
+- Reject records with critical data type errors.
+- Generate a validation report for auditing.
+
+### Processing Workflow
+
+1. Load the dataset.
+2. Validate data types for all features.
+3. Convert compatible values to expected types.
+4. Identify invalid records.
+5. Generate a data type validation report.
+6. Pass the validated dataset to the next preprocessing stage.
+
+### Benefits
+
+Data type validation provides:
+
+- Improved data consistency.
+- Reduced preprocessing errors.
+- Reliable feature engineering.
+- Stable machine learning pipelines.
+- Consistent behavior across training and production environments.
