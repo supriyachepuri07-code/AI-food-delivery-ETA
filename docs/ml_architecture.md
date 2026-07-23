@@ -3316,3 +3316,143 @@ Feature validation provides:
 - Better production stability.
 - Easier debugging.
 - Stronger data quality governance.
+## 5.14 Feature Store Design
+
+The Feature Store is a centralized system for storing, managing, serving, and versioning machine learning features. It ensures that the same feature definitions are used consistently during model training, validation, and real-time prediction.
+
+The Feature Store improves reproducibility, reduces duplicate feature engineering logic, and minimizes training-serving skew.
+
+### Objectives
+
+The Feature Store aims to:
+
+- Centralize engineered features.
+- Ensure feature consistency.
+- Support feature reuse.
+- Maintain feature versioning.
+- Enable low-latency feature retrieval.
+- Improve governance and traceability.
+
+---
+
+### Feature Store Architecture
+
+The Feature Store consists of two logical components:
+
+#### Offline Feature Store
+
+The offline store is used for:
+
+- Model training.
+- Batch feature generation.
+- Historical feature analysis.
+- Experimentation.
+- Model evaluation.
+
+Characteristics:
+
+- Stores historical feature values.
+- Optimized for analytical queries.
+- Supports large-scale batch processing.
+
+---
+
+#### Online Feature Store
+
+The online store is used for:
+
+- Real-time ETA prediction.
+- Low-latency feature retrieval.
+- Live feature serving.
+
+Characteristics:
+
+- Stores the latest feature values.
+- Optimized for fast read operations.
+- Supports real-time inference.
+
+---
+
+### Feature Metadata
+
+Each feature includes metadata such as:
+
+| Metadata | Description |
+|----------|-------------|
+| Feature Name | Unique identifier |
+| Description | Business meaning |
+| Data Type | Numeric, categorical, boolean, etc. |
+| Source | Origin of the feature |
+| Version | Feature definition version |
+| Refresh Frequency | How often the feature is updated |
+| Owner | Responsible team or service |
+
+---
+
+### Feature Lifecycle
+
+The lifecycle of a feature includes:
+
+1. Feature creation.
+2. Validation.
+3. Registration in the Feature Store.
+4. Versioning.
+5. Serving for training and inference.
+6. Monitoring.
+7. Deprecation or replacement.
+
+---
+
+### Feature Versioning
+
+Feature versioning ensures reproducibility.
+
+Each feature version records:
+
+- Transformation logic.
+- Source datasets.
+- Feature parameters.
+- Creation timestamp.
+- Compatible model versions.
+
+Older versions remain available for retraining or auditing.
+
+---
+
+### Feature Freshness
+
+Different features require different update frequencies.
+
+Examples:
+
+| Feature | Refresh Frequency |
+|---------|-------------------|
+| Driver Location | Real-time |
+| Traffic Level | Every few minutes |
+| Weather Condition | Every few minutes |
+| Driver Reliability Score | Daily |
+| Restaurant Performance Metrics | Daily or hourly |
+
+---
+
+### Feature Serving Workflow
+
+1. Generate engineered features.
+2. Validate features.
+3. Store validated features in the Feature Store.
+4. Retrieve features during training or prediction.
+5. Provide a consistent feature set to the ML model.
+
+---
+
+### Benefits
+
+The Feature Store provides:
+
+- Consistent feature definitions.
+- Faster model development.
+- Reusable features.
+- Reduced engineering effort.
+- Better governance.
+- Lower inference latency.
+- Improved reproducibility.
