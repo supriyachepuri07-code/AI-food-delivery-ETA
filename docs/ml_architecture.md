@@ -811,3 +811,69 @@ Identify and remove records affected by:
 ### Cleaning Output
 
 The output of this stage is a standardized and validated dataset that is ready for missing value handling and subsequent preprocessing steps.
+## 4.3 Missing Value Handling
+
+Missing values are common in real-world datasets due to incomplete records, delayed data synchronization, API failures, sensor issues, or unavailable historical information. The Missing Value Handling stage is responsible for identifying, analyzing, and treating missing values to ensure the dataset remains suitable for machine learning.
+
+The handling strategy depends on the importance of the feature, the percentage of missing values, and the business impact of removing or imputing data.
+
+### Objectives
+
+The missing value handling process aims to:
+
+- Detect missing values in all input features.
+- Preserve as much useful data as possible.
+- Apply appropriate imputation techniques.
+- Avoid introducing bias into the dataset.
+- Ensure consistency between training and inference.
+
+### Missing Value Detection
+
+The preprocessing pipeline checks every feature for:
+
+- Null values
+- Empty strings
+- Missing timestamps
+- Missing GPS coordinates
+- Missing API responses
+- Invalid placeholder values
+
+### Missing Value Handling Strategy
+
+| Feature Type | Handling Strategy |
+|--------------|-------------------|
+| Numerical Features | Mean, Median, or Business Rule-Based Imputation |
+| Categorical Features | Mode or "Unknown" Category |
+| GPS Coordinates | Remove record if essential, otherwise use last valid location if available |
+| Traffic Data | Use recent available value or historical average |
+| Weather Data | Use recent available value or historical average |
+| Critical Identifiers (Order ID, Driver ID, Restaurant ID) | Reject the record |
+| Target Variable (Actual ETA) | Remove the record from training |
+
+### Business Rules
+
+The following business rules are applied:
+
+- Records missing the target variable are excluded from model training.
+- Records missing critical identifiers are rejected.
+- Non-critical missing values are imputed using predefined strategies.
+- Every imputation is logged for traceability.
+
+### Processing Workflow
+
+1. Detect missing values.
+2. Classify missing features as critical or non-critical.
+3. Apply the appropriate imputation strategy.
+4. Validate the completed dataset.
+5. Generate a missing value report.
+6. Pass the processed dataset to the next preprocessing stage.
+
+### Benefits
+
+This process:
+
+- Reduces unnecessary data loss.
+- Improves model robustness.
+- Maintains dataset consistency.
+- Supports reliable production inference.
+- Ensures reproducible preprocessing across environments.
