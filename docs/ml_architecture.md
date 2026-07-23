@@ -1469,3 +1469,115 @@ Geospatial data processing provides:
 - Better handling of traffic impact.
 - Location-based delivery insights.
 - More reliable predictions.
+## 4.11 Preprocessing Pipeline Workflow
+
+The preprocessing pipeline combines multiple data transformation stages into a sequential workflow that converts raw operational data into a machine learning-ready dataset.
+
+Each preprocessing component performs a specific transformation while maintaining consistency, reproducibility, and compatibility between training and inference environments.
+
+### End-to-End Workflow
+
+```
+Raw Dataset
+      |
+      ↓
+Data Cleaning
+      |
+      ↓
+Missing Value Handling
+      |
+      ↓
+Duplicate Record Removal
+      |
+      ↓
+Data Type Validation
+      |
+      ↓
+Outlier Detection and Treatment
+      |
+      ↓
+Categorical Feature Encoding
+      |
+      ↓
+Numerical Feature Scaling
+      |
+      ↓
+Date and Time Feature Processing
+      |
+      ↓
+Geospatial Data Processing
+      |
+      ↓
+Processed ML Dataset
+```
+
+### Pipeline Execution Steps
+
+#### Step 1: Data Ingestion
+
+Raw delivery data is collected from operational databases and external sources.
+
+Sources include:
+
+- Order Management System
+- Driver Tracking System
+- Restaurant System
+- Traffic APIs
+- Weather APIs
+
+#### Step 2: Data Quality Processing
+
+The dataset is validated and cleaned by:
+
+- Removing invalid records.
+- Handling missing values.
+- Removing duplicates.
+- Validating data types.
+
+#### Step 3: Feature Preparation
+
+The pipeline transforms raw attributes into ML-compatible features through:
+
+- Outlier treatment.
+- Categorical encoding.
+- Numerical scaling.
+- Time-based feature extraction.
+- Geospatial feature generation.
+
+#### Step 4: Dataset Generation
+
+The final processed dataset is:
+
+- Stored with version information.
+- Validated before training.
+- Used for feature engineering and model training.
+
+### Training and Inference Consistency
+
+The same preprocessing logic is applied during:
+
+- Model training.
+- Model validation.
+- Production prediction.
+
+This ensures that the model receives data in the same format throughout the ML lifecycle.
+
+### Pipeline Failure Handling
+
+If any preprocessing stage fails:
+
+- Pipeline execution stops.
+- Error details are logged.
+- Failed data is isolated.
+- Alerts are generated.
+- Previous validated datasets remain available.
+
+### Benefits
+
+The preprocessing workflow provides:
+
+- Reproducible data transformation.
+- Reliable ML model inputs.
+- Easier debugging.
+- Better production stability.
+- Scalable ML pipeline architecture.
