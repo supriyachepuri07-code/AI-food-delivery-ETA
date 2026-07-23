@@ -2387,3 +2387,121 @@ Distance and route features provide:
 - Better understanding of route difficulty.
 - Improved handling of different delivery scenarios.
 - More reliable ETA predictions.
+## 5.7 Traffic Impact Features
+
+Traffic impact features represent real-time and historical road conditions that influence food delivery travel time. These features help the ETA prediction model understand how traffic congestion, road incidents, and peak-hour conditions affect delivery duration.
+
+The system combines live traffic information with historical traffic patterns to produce more accurate ETA predictions.
+
+### Objectives
+
+Traffic impact features aim to:
+
+- Capture current road congestion.
+- Measure traffic-related delays.
+- Learn historical traffic patterns.
+- Improve ETA prediction during peak hours.
+- Adapt predictions to changing road conditions.
+
+### Traffic Feature Categories
+
+#### Real-Time Traffic Features
+
+These features represent current road conditions.
+
+Examples:
+
+| Feature | Description |
+|---------|-------------|
+| Traffic Level | Low, Medium, High |
+| Average Vehicle Speed | Estimated speed on the delivery route |
+| Estimated Traffic Delay | Delay caused by current traffic |
+| Road Congestion Score | Overall congestion level |
+
+---
+
+#### Historical Traffic Features
+
+These features represent historical traffic behavior.
+
+Examples:
+
+| Feature | Description |
+|---------|-------------|
+| Average Traffic by Hour | Typical traffic level at a given hour |
+| Average Traffic by Day | Traffic patterns by weekday/weekend |
+| Historical Route Delay | Average delay on the same route |
+| Seasonal Traffic Pattern | Traffic trends during holidays or festivals |
+
+---
+
+#### Incident Features
+
+Unexpected events affecting traffic.
+
+Examples:
+
+| Feature | Description |
+|---------|-------------|
+| Accident Indicator | Presence of reported accidents |
+| Road Closure Indicator | Closed or restricted roads |
+| Construction Indicator | Roadwork affecting travel |
+| Event Impact | Large public events increasing congestion |
+
+---
+
+### Feature Generation Examples
+
+Raw Data:
+
+```
+Traffic Level = High
+Average Speed = 18 km/h
+Historical Delay = 12 minutes
+```
+
+Generated Features:
+
+```
+Traffic Delay Factor = High
+
+Congestion Score = 0.85
+
+Expected Traffic Impact = Significant
+```
+
+---
+
+### Feature Calculation Principles
+
+Traffic features are generated using:
+
+- Live traffic APIs.
+- Historical traffic records.
+- Time-of-day traffic trends.
+- Route-specific congestion patterns.
+
+Only information available at prediction time is used to prevent data leakage.
+
+---
+
+### Real-Time Usage
+
+During prediction:
+
+1. Retrieve the planned delivery route.
+2. Fetch live traffic information.
+3. Combine with historical traffic data.
+4. Generate traffic impact features.
+5. Pass features to the ETA prediction model.
+
+---
+
+### Benefits
+
+Traffic impact features provide:
+
+- More accurate ETA predictions.
+- Better adaptation to real-time road conditions.
+- Improved predictions during peak traffic.
+- Reduced customer dissatisfaction caused by inaccurate delivery estimates.
