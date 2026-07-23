@@ -1289,3 +1289,91 @@ Numerical feature scaling provides:
 - Better feature comparison.
 - Consistent model behavior.
 - Reliable production predictions.
+## 4.9 Date and Time Feature Processing
+
+Date and time information plays a significant role in food delivery ETA prediction because delivery duration is influenced by traffic patterns, customer demand, restaurant workload, and seasonal variations.
+
+The Date and Time Feature Processing stage transforms raw timestamps into meaningful temporal features that help the machine learning model understand time-based delivery patterns.
+
+### Objectives
+
+The date and time processing stage aims to:
+
+- Extract useful information from timestamps.
+- Capture demand and traffic patterns.
+- Identify peak delivery periods.
+- Represent seasonal and cyclic time patterns.
+- Improve ETA prediction accuracy.
+
+### Input Timestamp Features
+
+The following timestamp fields are processed:
+
+- Order Timestamp
+- Driver Assignment Timestamp
+- Restaurant Acceptance Timestamp
+- Pickup Timestamp
+- Delivery Completion Timestamp
+
+### Extracted Time Features
+
+| Feature | Description |
+|---------|-------------|
+| Hour of Day | Identifies delivery time period |
+| Day of Week | Identifies weekday patterns |
+| Weekday/Weekend Indicator | Captures weekend delivery behavior |
+| Month | Captures seasonal patterns |
+| Quarter | Captures yearly trends |
+| Holiday Indicator | Identifies special days |
+| Meal Time Category | Breakfast, Lunch, Evening, Dinner |
+| Peak Hour Indicator | Identifies high-demand periods |
+
+### Cyclic Time Encoding
+
+Time-based features such as hour and day of week have repeating patterns. Cyclic encoding is used to represent these relationships.
+
+Examples:
+
+- 23:00 and 00:00 are close in time but numerically far apart.
+- Monday and Sunday have a weekly relationship.
+
+Cyclic features may include:
+
+- Hour sin/cos transformation.
+- Day of week sin/cos transformation.
+
+### Business Rules
+
+The pipeline identifies important delivery periods:
+
+| Time Period | Category |
+|-------------|----------|
+| 7 AM - 11 AM | Breakfast |
+| 12 PM - 3 PM | Lunch Peak |
+| 4 PM - 6 PM | Evening |
+| 7 PM - 11 PM | Dinner Peak |
+
+Peak periods are flagged because they usually experience:
+
+- Higher order volume.
+- Increased restaurant preparation time.
+- Increased traffic congestion.
+- Higher delivery delays.
+
+### Processing Workflow
+
+1. Extract timestamps from raw data.
+2. Convert timestamps into standard datetime format.
+3. Generate temporal features.
+4. Apply cyclic encoding where required.
+5. Validate generated features.
+6. Pass processed features to feature engineering.
+
+### Benefits
+
+Date and time feature processing provides:
+
+- Better understanding of delivery patterns.
+- Improved handling of seasonal behavior.
+- Better prediction during peak hours.
+- Improved model generalization.
