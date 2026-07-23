@@ -2768,3 +2768,156 @@ Time-based features provide:
 - Improved prediction during peak hours.
 - Better adaptation to holidays and festivals.
 - More reliable ETA estimates across different time periods.
+## 5.10 Historical Delivery Features
+
+Historical delivery features capture patterns from previous deliveries to improve ETA prediction accuracy. These features summarize past performance of drivers, restaurants, delivery routes, customer locations, and operational conditions.
+
+Rather than relying only on the current order, the model uses historical delivery behavior to identify recurring trends and make more reliable predictions.
+
+### Objectives
+
+Historical delivery features aim to:
+
+- Learn from previous delivery outcomes.
+- Capture long-term operational patterns.
+- Improve prediction consistency.
+- Reduce uncertainty for similar delivery scenarios.
+- Support data-driven ETA estimation.
+
+---
+
+### Historical Feature Categories
+
+#### Driver History Features
+
+These features describe a driver's historical performance.
+
+Examples:
+
+| Feature | Description |
+|---------|-------------|
+| Historical Average ETA | Average delivery time for previous orders |
+| On-Time Delivery Rate | Percentage of deliveries completed within expected ETA |
+| Historical Delay Rate | Percentage of delayed deliveries |
+| Average Pickup Time | Historical pickup duration |
+
+---
+
+#### Restaurant History Features
+
+These features summarize restaurant performance over time.
+
+Examples:
+
+| Feature | Description |
+|---------|-------------|
+| Historical Preparation Time | Average food preparation duration |
+| Historical Preparation Delay | Average delay beyond expected preparation time |
+| Restaurant Reliability Score | Consistency of restaurant performance |
+| Historical Order Volume | Average number of daily orders |
+
+---
+
+#### Route History Features
+
+These features describe historical route performance.
+
+Examples:
+
+| Feature | Description |
+|---------|-------------|
+| Average Route ETA | Historical travel time for the same route |
+| Historical Traffic Delay | Average traffic-related delay |
+| Route Reliability Score | Consistency of travel time |
+| Route Congestion Frequency | Frequency of congestion on the route |
+
+---
+
+#### Area History Features
+
+These features represent historical delivery performance for specific locations.
+
+Examples:
+
+| Feature | Description |
+|---------|-------------|
+| Area Average ETA | Average delivery time within the delivery zone |
+| Area Delay Frequency | Percentage of delayed deliveries |
+| Area Demand Trend | Historical order demand |
+| Area Success Rate | Percentage of successful deliveries |
+
+---
+
+### Feature Generation Examples
+
+Historical Data
+
+```
+Restaurant Average Preparation Time = 18 minutes
+
+Driver On-Time Delivery Rate = 94%
+
+Average Route Delay = 6 minutes
+```
+
+Generated Features
+
+```
+Restaurant Reliability = High
+
+Driver Reliability Score = 94
+
+Historical Route Risk = Medium
+```
+
+---
+
+### Feature Calculation Principles
+
+Historical features are generated using:
+
+- Previous completed deliveries.
+- Historical driver performance.
+- Restaurant delivery history.
+- Route performance statistics.
+- Area delivery trends.
+
+Only information available before the current order is used to prevent data leakage.
+
+---
+
+### Historical Window Strategy
+
+Historical statistics may be calculated over different time windows such as:
+
+- Last 7 days
+- Last 30 days
+- Last 90 days
+- Rolling averages
+- Exponentially weighted averages
+
+The selected window depends on the stability and relevance of the feature.
+
+---
+
+### Real-Time Usage
+
+During prediction:
+
+1. Retrieve historical statistics.
+2. Aggregate relevant historical metrics.
+3. Generate historical delivery features.
+4. Combine with real-time features.
+5. Pass all features to the ETA prediction model.
+
+---
+
+### Benefits
+
+Historical delivery features provide:
+
+- Better learning from past behavior.
+- Improved ETA prediction accuracy.
+- More stable predictions.
+- Better adaptation to recurring operational patterns.
+- Improved robustness across different delivery scenarios.
