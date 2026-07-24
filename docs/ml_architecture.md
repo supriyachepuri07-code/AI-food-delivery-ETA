@@ -6537,3 +6537,158 @@ A well-designed API provides:
 - Reliable request handling.
 - Easier maintenance.
 - Better developer experience.
+## 7.10 Real-Time Inference Pipeline
+
+The Real-Time Inference Pipeline processes live ETA prediction requests from client applications. It coordinates request validation, feature retrieval, data preprocessing, model inference, post-processing, and response generation while meeting low-latency and high-availability requirements.
+
+The pipeline is designed to provide fast, reliable, and scalable predictions for operational use.
+
+### Objectives
+
+The real-time inference pipeline aims to:
+
+- Process live prediction requests.
+- Deliver low-latency ETA predictions.
+- Ensure consistent feature processing.
+- Maintain high service availability.
+- Record operational metrics and logs.
+
+---
+
+### Pipeline Stages
+
+#### 1. Request Reception
+
+The API receives a prediction request from a client application.
+
+The request typically contains:
+
+- Order identifier.
+- Customer location.
+- Restaurant location.
+- Driver location.
+- Order details.
+- Request timestamp.
+
+---
+
+#### 2. Authentication and Authorization
+
+The system verifies:
+
+- Client identity.
+- Access permissions.
+- API credentials.
+
+Unauthorized requests are rejected.
+
+---
+
+#### 3. Input Validation
+
+The request is validated for:
+
+- Required fields.
+- Data types.
+- Coordinate formats.
+- Timestamp validity.
+- Business rules.
+
+Invalid requests return structured error responses.
+
+---
+
+#### 4. Feature Retrieval
+
+The pipeline retrieves required online features from:
+
+- Feature Store.
+- Operational databases.
+- External services (for example, traffic or weather services).
+
+---
+
+#### 5. Data Preprocessing
+
+Retrieved features are transformed using the same preprocessing pipeline applied during training.
+
+Typical operations include:
+
+- Missing value handling.
+- Feature encoding.
+- Scaling or normalization.
+- Feature ordering.
+
+---
+
+#### 6. Model Inference
+
+The serving framework loads the active production model and generates the ETA prediction.
+
+Inference includes:
+
+- Feature vector creation.
+- Model execution.
+- Prediction generation.
+
+---
+
+#### 7. Post-Processing
+
+Prediction outputs are formatted for client consumption.
+
+This may include:
+
+- Rounding values.
+- Applying business rules.
+- Formatting timestamps.
+- Adding metadata such as model version.
+
+---
+
+#### 8. Response Generation
+
+The API returns a structured response containing:
+
+- Predicted ETA.
+- Model version.
+- Request identifier.
+- Processing timestamp.
+
+---
+
+#### 9. Logging and Monitoring
+
+The pipeline records:
+
+- Request logs.
+- Response times.
+- Prediction latency.
+- Error information.
+- Operational metrics.
+
+These records support monitoring, troubleshooting, and performance analysis.
+
+---
+
+### Performance Considerations
+
+The pipeline is optimized to:
+
+- Minimize inference latency.
+- Support concurrent requests.
+- Scale horizontally.
+- Maintain high availability.
+- Recover gracefully from failures.
+
+---
+
+### Benefits
+
+The real-time inference pipeline provides:
+
+- Fast prediction responses.
+- Consistent inference behavior.
+- Reliable service delivery.
+- Operational visibility.
+- Scalable production performance.
