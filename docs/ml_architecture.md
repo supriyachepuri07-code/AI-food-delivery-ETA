@@ -4717,3 +4717,118 @@ Cross-validation provides:
 - Reduced dependence on a single dataset split.
 - Improved confidence in model selection.
 - Lower risk of overfitting.
+## 6.11 Model Evaluation Metrics
+
+Model evaluation metrics measure the performance of candidate machine learning models and provide an objective basis for selecting the most suitable model for ETA prediction. Since ETA prediction is a regression task, regression evaluation metrics are used to assess prediction accuracy and model generalization.
+
+The evaluation process ensures that the selected model meets both business expectations and technical performance requirements.
+
+### Objectives
+
+The model evaluation process aims to:
+
+- Measure prediction accuracy.
+- Compare candidate models objectively.
+- Identify strengths and weaknesses of each model.
+- Verify generalization to unseen data.
+- Support production model selection.
+
+---
+
+### Evaluation Metrics
+
+The following regression metrics are used:
+
+#### Mean Absolute Error (MAE)
+
+MAE measures the average absolute difference between predicted and actual delivery times.
+
+Characteristics:
+
+- Easy to interpret.
+- Less sensitive to outliers.
+- Represents the average prediction error.
+
+---
+
+#### Root Mean Squared Error (RMSE)
+
+RMSE measures the square root of the average squared prediction errors.
+
+Characteristics:
+
+- Penalizes larger errors more heavily.
+- Useful when large prediction errors are particularly undesirable.
+- Commonly used for regression model evaluation.
+
+---
+
+#### Mean Absolute Percentage Error (MAPE)
+
+MAPE measures the average percentage difference between predicted and actual delivery times.
+
+Characteristics:
+
+- Expresses error as a percentage.
+- Useful for comparing model performance across datasets.
+- Easy for business stakeholders to interpret.
+
+---
+
+#### R² Score (Coefficient of Determination)
+
+R² measures how well the model explains the variation in the target variable.
+
+Characteristics:
+
+- Indicates the proportion of variance explained by the model.
+- Values closer to 1 indicate better performance.
+- Useful for comparing regression models.
+
+---
+
+### Model Comparison
+
+Each candidate model is evaluated using the same:
+
+- Validation dataset.
+- Cross-validation strategy.
+- Feature set.
+- Hyperparameter tuning process.
+
+This ensures a fair comparison between algorithms.
+
+---
+
+### Acceptance Criteria
+
+A model is considered suitable for production when it:
+
+- Achieves the lowest prediction error.
+- Demonstrates stable performance across validation folds.
+- Meets inference latency requirements.
+- Generalizes well to unseen data.
+- Satisfies business performance objectives.
+
+---
+
+### Evaluation Report
+
+The evaluation process generates:
+
+- Model performance metrics.
+- Cross-validation summary.
+- Performance comparison tables.
+- Model ranking.
+- Recommended production model.
+
+---
+
+### Benefits
+
+Using standardized evaluation metrics provides:
+
+- Objective model comparison.
+- Reliable performance assessment.
+- Transparent model selection.
+- Improved confidence in deployment decisions.
