@@ -4832,3 +4832,120 @@ Using standardized evaluation metrics provides:
 - Reliable performance assessment.
 - Transparent model selection.
 - Improved confidence in deployment decisions.
+## 6.12 Model Explainability
+
+Model explainability provides insights into how the ETA prediction model makes decisions. It helps stakeholders understand which features influence predictions, improves trust in the model, and supports debugging, validation, and governance activities.
+
+Explainability is applied throughout the model lifecycle, including development, evaluation, deployment, and monitoring.
+
+### Objectives
+
+The model explainability process aims to:
+
+- Improve transparency of model predictions.
+- Identify the most influential features.
+- Support debugging and error analysis.
+- Increase stakeholder confidence.
+- Assist in regulatory and governance requirements.
+- Detect unexpected model behavior.
+
+---
+
+### Explainability Levels
+
+#### Global Explainability
+
+Global explainability describes how the model behaves across the entire dataset.
+
+It answers questions such as:
+
+- Which features are most important overall?
+- What factors generally increase or decrease ETA?
+- How does the model make decisions on average?
+
+---
+
+#### Local Explainability
+
+Local explainability focuses on a single prediction.
+
+It answers questions such as:
+
+- Why was this delivery predicted to take 42 minutes?
+- Which features contributed most to this specific prediction?
+- What would change the prediction?
+
+---
+
+### Explainability Techniques
+
+The following techniques may be used:
+
+#### Feature Importance
+
+Measures the relative contribution of each feature to the model's predictions.
+
+Example:
+
+| Feature | Importance |
+|----------|-----------:|
+| Traffic Congestion Score | 0.31 |
+| Restaurant Preparation Time | 0.25 |
+| Delivery Distance | 0.18 |
+| Driver Reliability Score | 0.11 |
+| Weather Severity | 0.08 |
+| Peak Hour Indicator | 0.07 |
+
+---
+
+#### SHAP (SHapley Additive exPlanations)
+
+SHAP explains individual predictions by showing how each feature increases or decreases the predicted ETA.
+
+Benefits include:
+
+- Consistent feature attribution.
+- Global and local explanations.
+- Strong support for tree-based models.
+
+---
+
+#### Partial Dependence Analysis
+
+Partial Dependence Plots (PDPs) illustrate how changes in a single feature affect the predicted ETA while holding other features constant.
+
+This helps understand feature behavior and model sensitivity.
+
+---
+
+### Explainability Workflow
+
+1. Train the selected model.
+2. Calculate feature importance.
+3. Generate local explanations for individual predictions.
+4. Produce global explanation reports.
+5. Store explainability artifacts alongside the trained model.
+
+---
+
+### Output
+
+The explainability process generates:
+
+- Global feature importance rankings.
+- Local prediction explanations.
+- Explainability reports.
+- Visualization artifacts.
+- Explainability metadata.
+
+---
+
+### Benefits
+
+Model explainability provides:
+
+- Greater transparency.
+- Increased trust in predictions.
+- Easier troubleshooting.
+- Better feature engineering insights.
+- Support for governance and auditing.
