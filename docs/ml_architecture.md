@@ -5725,3 +5725,197 @@ Clearly defined deployment requirements provide:
 - Enhanced security.
 - Easier maintenance.
 - Better operational efficiency.
+## 7.4 Deployment Architecture
+
+The Deployment Architecture defines the production infrastructure and software components responsible for serving ETA predictions. It describes how client applications, APIs, model-serving infrastructure, data services, monitoring systems, and deployment platforms interact to provide secure, scalable, and highly available prediction services.
+
+The architecture follows a modular, cloud-native design that supports continuous deployment, horizontal scalability, high availability, and operational observability.
+
+### Objectives
+
+The deployment architecture aims to:
+
+- Provide reliable real-time prediction services.
+- Support scalable production workloads.
+- Enable secure communication between services.
+- Integrate with monitoring, logging, and alerting systems.
+- Simplify model updates and deployment automation.
+- Ensure high availability and fault tolerance.
+
+---
+
+### Architecture Components
+
+The deployment architecture consists of the following components:
+
+#### Client Applications
+
+Client applications consume ETA prediction services.
+
+Examples include:
+
+- Customer mobile application
+- Delivery partner application
+- Restaurant dashboard
+- Operations dashboard
+- Administrative portal
+
+---
+
+#### API Gateway
+
+The API Gateway serves as the entry point for all external requests.
+
+Responsibilities include:
+
+- Request routing
+- Authentication
+- Authorization
+- Rate limiting
+- SSL/TLS termination
+- Request validation
+
+---
+
+#### Authentication Service
+
+Responsible for:
+
+- User authentication
+- Access token validation
+- Identity verification
+- Role-based authorization
+
+---
+
+#### Prediction API
+
+The Prediction API receives validated requests and coordinates the inference workflow.
+
+Responsibilities include:
+
+- Input validation
+- Feature retrieval
+- Request preprocessing
+- Calling the model-serving service
+- Formatting prediction responses
+
+---
+
+#### Feature Store
+
+Provides consistent online features required for inference.
+
+Responsibilities include:
+
+- Online feature retrieval
+- Feature version management
+- Low-latency feature access
+
+---
+
+#### Model Serving Service
+
+Hosts the approved production model.
+
+Responsibilities include:
+
+- Loading production models
+- Executing inference
+- Returning ETA predictions
+- Supporting model version switching
+
+---
+
+#### Model Registry
+
+Maintains:
+
+- Approved model versions
+- Deployment metadata
+- Model lifecycle states
+- Version history
+
+---
+
+#### Monitoring and Logging
+
+Provides operational visibility through:
+
+- Application logs
+- Prediction metrics
+- Infrastructure metrics
+- Error tracking
+- Audit logs
+- Alert generation
+
+---
+
+#### Data Storage
+
+Persistent storage is used for:
+
+- Prediction history
+- Deployment metadata
+- Application logs
+- Monitoring data
+- Configuration information
+
+---
+
+#### Load Balancer
+
+Distributes incoming requests across multiple model-serving instances to improve availability and scalability.
+
+---
+
+#### Container Orchestration Platform
+
+Coordinates deployment and scaling of application services.
+
+Typical responsibilities include:
+
+- Container scheduling
+- Auto-scaling
+- Health monitoring
+- Service discovery
+- Rolling updates
+
+---
+
+### Deployment Characteristics
+
+The deployment architecture supports:
+
+- High availability
+- Horizontal scalability
+- Fault tolerance
+- Secure communication
+- Automated deployment
+- Centralized monitoring
+- Disaster recovery
+
+---
+
+### Deployment Workflow
+
+1. Client sends an ETA prediction request.
+2. API Gateway authenticates and routes the request.
+3. Prediction API validates the request.
+4. Required features are retrieved from the Feature Store.
+5. Model Serving Service loads the current production model.
+6. The model generates the ETA prediction.
+7. Prediction response is returned to the client.
+8. Logs and metrics are sent to the monitoring system.
+
+---
+
+### Benefits
+
+The deployment architecture provides:
+
+- Reliable prediction services.
+- Efficient scaling.
+- Secure operations.
+- Simplified model lifecycle management.
+- Production-grade observability.
