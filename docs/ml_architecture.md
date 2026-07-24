@@ -4621,3 +4621,99 @@ Hyperparameter tuning provides:
 - Reduced model bias and variance.
 - More efficient use of computational resources.
 - Improved production readiness.
+## 6.10 Cross-Validation Strategy
+
+Cross-validation is used to evaluate the generalization performance of candidate machine learning models before production deployment. It provides a reliable estimate of model performance by training and validating the model across multiple subsets of the dataset.
+
+The selected validation strategy ensures consistent evaluation while minimizing the risk of overfitting and data leakage.
+
+### Objectives
+
+The cross-validation strategy aims to:
+
+- Estimate model performance on unseen data.
+- Reduce evaluation bias.
+- Detect overfitting and underfitting.
+- Support fair comparison between candidate models.
+- Improve confidence in model selection.
+
+---
+
+### Selected Validation Strategy
+
+The primary validation strategy is:
+
+**K-Fold Cross-Validation**
+
+The dataset is divided into *K* equally sized folds.
+
+For each iteration:
+
+1. One fold is used as the validation dataset.
+2. The remaining folds are used for training.
+3. The process repeats until every fold has served as the validation set once.
+4. The evaluation metrics are averaged across all folds.
+
+A common choice is **5-fold** or **10-fold** cross-validation, depending on dataset size and computational resources.
+
+> **Note:** If delivery data has a strong time dependency, a **Time Series Split** may be more appropriate to preserve chronological order and prevent future information from influencing past predictions.
+
+---
+
+### Cross-Validation Workflow
+
+1. Split the dataset into K folds.
+2. Train the model on K-1 folds.
+3. Validate on the remaining fold.
+4. Record evaluation metrics.
+5. Repeat until all folds have been evaluated.
+6. Compute the average and standard deviation of the metrics.
+7. Compare candidate models using aggregated results.
+
+---
+
+### Evaluation Metrics
+
+Each fold is evaluated using:
+
+- Mean Absolute Error (MAE)
+- Root Mean Squared Error (RMSE)
+- Mean Absolute Percentage Error (MAPE)
+- R² Score
+
+The final evaluation is based on the average performance across all folds.
+
+---
+
+### Data Leakage Prevention
+
+To ensure unbiased evaluation:
+
+- Validation data is never used during model training.
+- Feature engineering transformations are fitted only on the training portion of each fold.
+- Target-related information is excluded from feature generation before prediction.
+- For time-dependent datasets, chronological ordering is maintained when applicable.
+
+---
+
+### Validation Results
+
+The cross-validation process produces:
+
+- Fold-wise evaluation metrics.
+- Average performance metrics.
+- Metric variability (standard deviation).
+- Candidate model rankings.
+- Recommended model for final evaluation.
+
+---
+
+### Benefits
+
+Cross-validation provides:
+
+- More reliable model evaluation.
+- Better generalization assessment.
+- Reduced dependence on a single dataset split.
+- Improved confidence in model selection.
+- Lower risk of overfitting.
