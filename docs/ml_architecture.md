@@ -5182,3 +5182,120 @@ Model versioning provides:
 - Safe production deployments.
 - Simplified rollback.
 - Strong governance and compliance.
+## 6.15 Model Registry
+
+The Model Registry is a centralized repository for managing the lifecycle of trained machine learning models. It stores model versions, metadata, evaluation results, approval status, and deployment information, providing a single source of truth for model governance and deployment.
+
+The registry enables consistent model management across development, testing, staging, and production environments.
+
+### Objectives
+
+The Model Registry aims to:
+
+- Centralize model management.
+- Store approved model versions.
+- Track model metadata.
+- Manage model lifecycle stages.
+- Support controlled deployments.
+- Enable model rollback and auditing.
+
+---
+
+### Registry Components
+
+Each registered model includes:
+
+- Model name.
+- Model version.
+- Algorithm.
+- Training dataset version.
+- Feature set version.
+- Hyperparameter configuration.
+- Evaluation metrics.
+- Model artifacts.
+- Registration timestamp.
+- Approval status.
+
+---
+
+### Model Lifecycle States
+
+Models progress through the following lifecycle stages:
+
+| State | Description |
+|--------|-------------|
+| Development | Model is under experimentation and testing |
+| Validation | Model has passed initial evaluation and is undergoing validation |
+| Staging | Model is approved for pre-production testing |
+| Production | Model is actively serving predictions |
+| Archived | Model is retained for historical reference but no longer deployed |
+
+---
+
+### Registration Workflow
+
+The model registration process includes:
+
+1. Complete model training.
+2. Evaluate model performance.
+3. Assign a model version.
+4. Upload model artifacts.
+5. Record metadata.
+6. Register the model.
+7. Assign lifecycle state.
+8. Make the model available for deployment.
+
+---
+
+### Governance
+
+The Model Registry maintains:
+
+- Version history.
+- Approval records.
+- Deployment history.
+- Audit logs.
+- Model lineage.
+- Access permissions.
+
+These records support compliance, traceability, and operational governance.
+
+---
+
+### Integration
+
+The Model Registry integrates with:
+
+- Training Pipeline
+- Experiment Tracking
+- Feature Store
+- Model Versioning
+- Deployment Pipeline
+- Monitoring Pipeline
+
+This ensures seamless movement of models through the ML lifecycle.
+
+---
+
+### Output
+
+The Model Registry provides:
+
+- Registered model versions.
+- Model metadata.
+- Deployment-ready artifacts.
+- Lifecycle status.
+- Audit records.
+
+---
+
+### Benefits
+
+Using a Model Registry provides:
+
+- Centralized model management.
+- Improved governance.
+- Easier deployment automation.
+- Better traceability.
+- Simplified rollback.
+- Consistent lifecycle management.
