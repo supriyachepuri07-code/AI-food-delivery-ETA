@@ -5493,3 +5493,60 @@ The training outputs provide:
 - Simplified deployment automation.
 - Consistent governance.
 - Efficient model lifecycle management.
+# Chapter 7 – Model Deployment & Serving
+
+## 7.1 Deployment Overview
+
+The Model Deployment and Serving phase is responsible for making the trained ETA prediction model available for production use. It transforms validated model artifacts into a scalable prediction service that can process real-time and batch inference requests.
+
+This phase includes model packaging, deployment automation, API exposure, infrastructure configuration, monitoring, security, and lifecycle management.
+
+The deployment architecture is designed to provide reliable, low-latency, and highly available prediction services while supporting continuous integration, continuous delivery (CI/CD), model versioning, and rollback capabilities.
+
+### Objectives
+
+The deployment process aims to:
+
+- Deploy validated models into production.
+- Serve real-time and batch predictions.
+- Ensure scalability and high availability.
+- Support secure and reliable inference.
+- Enable automated deployment pipelines.
+- Integrate with monitoring and alerting systems.
+- Support controlled model updates and rollback.
+
+### Key Components
+
+The deployment phase includes:
+
+- Model Packaging
+- Containerization
+- Model Serving Framework
+- API Gateway
+- Inference Service
+- Deployment Pipeline
+- Monitoring System
+- Model Registry Integration
+- Logging and Audit Services
+
+### Deployment Principles
+
+The deployment architecture follows these principles:
+
+- Reliability
+- Scalability
+- Security
+- Maintainability
+- Reproducibility
+- Observability
+- Automation
+
+### Expected Outcomes
+
+The deployment process produces:
+
+- Production-ready inference service.
+- Secure API endpoints.
+- Automated deployment workflows.
+- Monitored production environment.
+- Deployment metadata and logs.
