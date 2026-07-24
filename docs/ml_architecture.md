@@ -3968,3 +3968,95 @@ A structured model selection strategy provides:
 - Reduced deployment risk.
 - Improved reproducibility.
 - A transparent decision-making process.
+## 6.5 Baseline Model
+
+A baseline model is the initial machine learning model used to establish a reference level of performance for ETA prediction. It provides a benchmark against which all candidate models are evaluated.
+
+The baseline model is intentionally simple, allowing the development team to measure whether more complex models deliver meaningful improvements in prediction accuracy and operational performance.
+
+### Objectives
+
+The baseline model aims to:
+
+- Establish a minimum acceptable performance level.
+- Provide a benchmark for model comparison.
+- Validate the training pipeline.
+- Verify data quality and feature engineering.
+- Identify whether advanced models add measurable value.
+
+---
+
+### Baseline Model Characteristics
+
+The baseline model should:
+
+- Be simple to implement.
+- Train quickly.
+- Be easy to interpret.
+- Produce consistent results.
+- Require minimal computational resources.
+
+---
+
+### Selected Baseline Algorithm
+
+For ETA prediction, the baseline model uses:
+
+**Linear Regression**
+
+Reasons for selection:
+
+- Simple and widely understood.
+- Fast training and inference.
+- Highly interpretable.
+- Serves as a reliable reference for regression tasks.
+
+Alternative baseline models (such as Dummy Regressor) may also be evaluated during experimentation.
+
+---
+
+### Training Process
+
+The baseline model is trained using:
+
+- The engineered feature dataset.
+- The standard training dataset split.
+- Default algorithm parameters.
+- The same preprocessing pipeline used for all candidate models.
+
+This ensures a fair comparison with more advanced models.
+
+---
+
+### Evaluation
+
+The baseline model is evaluated using the same metrics applied to all candidate models, including:
+
+- Mean Absolute Error (MAE)
+- Root Mean Squared Error (RMSE)
+- Mean Absolute Percentage Error (MAPE)
+- R² Score
+
+---
+
+### Acceptance Criteria
+
+A candidate model should demonstrate measurable improvement over the baseline in terms of:
+
+- Lower prediction error.
+- Better generalization to unseen data.
+- Acceptable inference latency.
+- Stable performance across validation datasets.
+
+If a candidate model does not outperform the baseline, it will not be considered for production deployment.
+
+---
+
+### Benefits
+
+Using a baseline model provides:
+
+- An objective performance benchmark.
+- Validation of the training pipeline.
+- A foundation for comparing advanced models.
+- Early identification of data or feature quality issues.
