@@ -4250,3 +4250,118 @@ Evaluating multiple candidate models provides:
 - Better production readiness.
 - Reduced model selection bias.
 - Confidence in the final deployment decision.
+## 6.7 Training Dataset Preparation
+
+The Training Dataset Preparation stage transforms the validated feature dataset into a format suitable for machine learning model training. This process ensures that the training data is complete, consistent, and properly organized before being passed to the selected machine learning algorithms.
+
+The objective is to provide high-quality training, validation, and test datasets that support accurate model learning and unbiased performance evaluation.
+
+### Objectives
+
+The training dataset preparation process aims to:
+
+- Prepare ML-ready datasets.
+- Separate input features and target variables.
+- Create reproducible dataset splits.
+- Ensure consistency across experiments.
+- Validate dataset integrity before training.
+
+---
+
+### Input Dataset
+
+The preparation process consumes:
+
+- Engineered feature dataset.
+- Selected feature list.
+- Target variable (Actual Delivery Time).
+- Feature metadata.
+- Dataset version information.
+
+---
+
+### Dataset Preparation Workflow
+
+The workflow consists of the following steps:
+
+1. Load the engineered feature dataset.
+2. Verify dataset schema and feature availability.
+3. Separate input features (`X`) and target variable (`y`).
+4. Apply the predefined train, validation, and test split.
+5. Apply any required feature scaling or normalization.
+6. Validate the prepared datasets.
+7. Store dataset metadata for experiment tracking.
+
+---
+
+### Dataset Splitting
+
+The dataset is divided into:
+
+| Dataset | Purpose |
+|----------|---------|
+| Training Set | Train machine learning models |
+| Validation Set | Tune hyperparameters and compare models |
+| Test Set | Evaluate final model performance on unseen data |
+
+The split strategy remains consistent across all experiments to ensure fair model comparison.
+
+---
+
+### Feature and Target Preparation
+
+The input matrix (`X`) contains the selected engineered features, while the target vector (`y`) contains the actual delivery time.
+
+This separation ensures compatibility with regression algorithms and evaluation pipelines.
+
+---
+
+### Data Transformation
+
+Depending on the selected algorithm, optional transformations may include:
+
+- Feature scaling.
+- Normalization.
+- Encoding verification.
+- Data type conversion.
+
+Transformations are applied consistently across training, validation, and inference.
+
+---
+
+### Validation Checks
+
+Before model training, the prepared datasets are validated to ensure:
+
+- Correct schema.
+- Expected feature count.
+- No missing target values.
+- Valid feature data types.
+- Consistent feature ordering.
+- Absence of duplicate records.
+
+---
+
+### Output
+
+The preparation stage produces:
+
+- Training dataset.
+- Validation dataset.
+- Test dataset.
+- Dataset metadata.
+- Preparation logs.
+
+These outputs are consumed by the model training pipeline.
+
+---
+
+### Benefits
+
+Training dataset preparation provides:
+
+- High-quality model inputs.
+- Consistent experimental setup.
+- Reliable model evaluation.
+- Reproducible training results.
+- Reduced risk of data-related training failures.
