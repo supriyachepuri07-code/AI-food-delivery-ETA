@@ -6251,3 +6251,136 @@ The model serving framework provides:
 - Consistent API behavior.
 - Simplified model management.
 - Improved operational visibility.
+## 7.8 Deployment Environments
+
+Deployment environments provide isolated stages for developing, testing, validating, and operating the ETA prediction service. Each environment has a specific purpose and configuration to ensure reliable software delivery and minimize deployment risks.
+
+Models are promoted through these environments only after meeting predefined quality and validation criteria.
+
+### Objectives
+
+The deployment environments aim to:
+
+- Isolate development and production workloads.
+- Validate deployments before production release.
+- Ensure consistent configurations across environments.
+- Reduce deployment risks.
+- Support controlled promotion of model versions.
+
+---
+
+### Development Environment
+
+The development environment is used for:
+
+- Feature development.
+- Local testing.
+- Debugging.
+- Initial model integration.
+- API development.
+
+Characteristics:
+
+- Developer-managed.
+- Frequent updates.
+- Non-production data.
+- Flexible configuration.
+
+---
+
+### Testing Environment
+
+The testing environment is used for:
+
+- Functional testing.
+- Integration testing.
+- Unit testing.
+- API validation.
+- Automated testing.
+
+Characteristics:
+
+- Stable configuration.
+- Test datasets.
+- Automated validation pipelines.
+
+---
+
+### Staging Environment
+
+The staging environment closely mirrors the production environment.
+
+It is used for:
+
+- End-to-end validation.
+- Performance testing.
+- User acceptance testing (UAT).
+- Security verification.
+- Deployment validation.
+
+Characteristics:
+
+- Production-like infrastructure.
+- Production-equivalent configuration.
+- Controlled access.
+
+---
+
+### Production Environment
+
+The production environment provides live ETA prediction services to end users.
+
+Responsibilities include:
+
+- Serving real-time predictions.
+- Supporting high availability.
+- Ensuring reliability and scalability.
+- Continuous monitoring.
+- Incident response.
+
+Characteristics:
+
+- High availability.
+- Secure configuration.
+- Strict access controls.
+- Continuous monitoring.
+
+---
+
+### Environment Configuration
+
+Each environment maintains its own:
+
+- Configuration files.
+- Environment variables.
+- Database connections.
+- API endpoints.
+- Resource limits.
+- Secrets and credentials.
+
+Environment-specific settings are managed securely and independently.
+
+---
+
+### Promotion Strategy
+
+Models progress through the environments in the following sequence:
+
+1. Development
+2. Testing
+3. Staging
+4. Production
+
+Promotion occurs only after successful completion of validation, testing, and approval processes.
+
+---
+
+### Benefits
+
+Deployment environments provide:
+
+- Safer releases.
+- Better quality assurance.
+- Reduced deployment failures.
+- Consistent deployments.
+- Controlled production rollouts.
