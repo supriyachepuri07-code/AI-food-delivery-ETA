@@ -6384,3 +6384,156 @@ Deployment environments provide:
 - Reduced deployment failures.
 - Consistent deployments.
 - Controlled production rollouts.
+## 7.9 API Design
+
+The API Design defines the interface through which client applications interact with the ETA prediction service. It specifies the available endpoints, request and response formats, authentication mechanisms, validation rules, error handling, and versioning strategy.
+
+The API follows RESTful principles to provide a consistent and scalable communication layer between clients and the model serving framework.
+
+### Objectives
+
+The API design aims to:
+
+- Provide standardized prediction endpoints.
+- Enable secure communication.
+- Validate incoming requests.
+- Return consistent responses.
+- Support API versioning.
+- Facilitate integration with client applications.
+
+---
+
+### API Endpoints
+
+Typical endpoints include:
+
+| Endpoint | Method | Purpose |
+|----------|--------|---------|
+| `/health` | GET | Service health check |
+| `/ready` | GET | Readiness check |
+| `/predict` | POST | Generate ETA prediction |
+| `/model/info` | GET | Retrieve deployed model information |
+| `/metrics` | GET | Expose service metrics (internal use) |
+
+---
+
+### Request Structure
+
+A prediction request typically includes:
+
+- Order identifier.
+- Customer location.
+- Restaurant location.
+- Driver location.
+- Order preparation status.
+- Traffic information.
+- Weather information.
+- Request timestamp.
+
+All required fields are validated before inference.
+
+---
+
+### Response Structure
+
+A successful prediction response may include:
+
+- Predicted ETA.
+- Prediction confidence (if available).
+- Model version.
+- Request identifier.
+- Response timestamp.
+- Processing time.
+
+---
+
+### Authentication and Authorization
+
+The API supports:
+
+- Token-based authentication (e.g., JWT).
+- Role-based access control (RBAC).
+- Secure HTTPS communication.
+- API key support (where applicable).
+
+---
+
+### Input Validation
+
+The API validates:
+
+- Required fields.
+- Data types.
+- Value ranges.
+- Coordinate formats.
+- Timestamp formats.
+- Business rules.
+
+Invalid requests return standardized error responses.
+
+---
+
+### Error Handling
+
+The API returns structured error responses for:
+
+- Invalid input.
+- Authentication failure.
+- Authorization failure.
+- Resource not found.
+- Validation errors.
+- Internal server errors.
+- Service unavailability.
+
+---
+
+### API Versioning
+
+API versioning ensures backward compatibility.
+
+Example:
+
+- `/api/v1/predict`
+- `/api/v2/predict`
+
+New versions introduce enhancements without disrupting existing clients.
+
+---
+
+### Rate Limiting
+
+To protect the service, the API may enforce:
+
+- Request limits per client.
+- Burst traffic control.
+- Throttling policies.
+- Abuse detection mechanisms.
+
+---
+
+### Documentation
+
+The API should be documented using standards such as:
+
+- OpenAPI Specification.
+- Swagger UI.
+
+Documentation includes:
+
+- Endpoint descriptions.
+- Request/response schemas.
+- Authentication requirements.
+- Error codes.
+- Example requests and responses.
+
+---
+
+### Benefits
+
+A well-designed API provides:
+
+- Consistent client integration.
+- Secure communication.
+- Reliable request handling.
+- Easier maintenance.
+- Better developer experience.
