@@ -4060,3 +4060,193 @@ Using a baseline model provides:
 - Validation of the training pipeline.
 - A foundation for comparing advanced models.
 - Early identification of data or feature quality issues.
+## 6.6 Candidate Models
+
+Multiple machine learning algorithms are evaluated to identify the most suitable model for ETA prediction. Each candidate model is trained and evaluated using the same feature set, dataset splits, preprocessing pipeline, and evaluation metrics to ensure a fair comparison.
+
+The objective is to select a model that delivers high prediction accuracy while meeting the platform's requirements for scalability, reliability, and real-time inference.
+
+### Objectives
+
+The candidate model evaluation aims to:
+
+- Compare multiple regression algorithms.
+- Identify the model with the best predictive performance.
+- Balance accuracy and inference speed.
+- Evaluate model robustness.
+- Select the most suitable model for production deployment.
+
+---
+
+### Candidate Models
+
+#### Linear Regression
+
+**Purpose:** Baseline comparison.
+
+**Advantages**
+
+- Simple and interpretable.
+- Fast training and prediction.
+- Low computational cost.
+
+**Limitations**
+
+- Assumes linear relationships.
+- Limited ability to model complex interactions.
+
+---
+
+#### Decision Tree Regressor
+
+**Purpose:** Capture non-linear relationships.
+
+**Advantages**
+
+- Easy to interpret.
+- Handles non-linear patterns.
+- Requires minimal feature scaling.
+
+**Limitations**
+
+- Can overfit the training data.
+- Less stable than ensemble methods.
+
+---
+
+#### Random Forest Regressor
+
+**Purpose:** Improve prediction accuracy using ensemble learning.
+
+**Advantages**
+
+- Reduces overfitting.
+- Handles complex feature interactions.
+- Provides feature importance scores.
+
+**Limitations**
+
+- Larger model size.
+- Higher inference latency than simpler models.
+
+---
+
+#### Gradient Boosting Regressor
+
+**Purpose:** Learn complex delivery patterns through sequential boosting.
+
+**Advantages**
+
+- High prediction accuracy.
+- Captures non-linear relationships.
+- Strong performance on structured data.
+
+**Limitations**
+
+- Longer training time.
+- Sensitive to hyperparameter settings.
+
+---
+
+#### XGBoost Regressor
+
+**Purpose:** High-performance gradient boosting.
+
+**Advantages**
+
+- Excellent predictive performance.
+- Efficient handling of large datasets.
+- Built-in regularization.
+- Widely adopted in production systems.
+
+**Limitations**
+
+- More complex to tune.
+- Increased computational requirements.
+
+---
+
+#### LightGBM Regressor
+
+**Purpose:** Fast and scalable gradient boosting.
+
+**Advantages**
+
+- Fast training.
+- Low memory usage.
+- Efficient for large datasets.
+- High prediction accuracy.
+
+**Limitations**
+
+- May require careful parameter tuning.
+- Can overfit on smaller datasets if not configured properly.
+
+---
+
+#### CatBoost Regressor
+
+**Purpose:** Efficient handling of categorical features.
+
+**Advantages**
+
+- Native support for categorical variables.
+- Strong predictive performance.
+- Reduced preprocessing effort.
+
+**Limitations**
+
+- Longer training time in some scenarios.
+- Higher computational requirements than simpler models.
+
+---
+
+### Comparison Criteria
+
+Each candidate model is evaluated based on:
+
+| Criterion | Purpose |
+|-----------|---------|
+| Prediction Accuracy | Minimize ETA prediction error |
+| Generalization | Perform well on unseen data |
+| Training Time | Reduce model development time |
+| Inference Latency | Support real-time predictions |
+| Scalability | Handle increasing workloads |
+| Explainability | Support model interpretation |
+| Resource Utilization | Optimize CPU and memory usage |
+
+---
+
+### Evaluation Process
+
+Each model follows the same workflow:
+
+1. Load the engineered feature dataset.
+2. Train the model using the training dataset.
+3. Validate performance using the validation dataset.
+4. Evaluate using predefined regression metrics.
+5. Compare results across all candidate models.
+6. Select the best-performing model for production.
+
+---
+
+### Expected Outcome
+
+The evaluation process produces:
+
+- Performance comparison report.
+- Model ranking.
+- Feature importance analysis (where applicable).
+- Recommended production model.
+
+---
+
+### Benefits
+
+Evaluating multiple candidate models provides:
+
+- Objective algorithm selection.
+- Improved prediction accuracy.
+- Better production readiness.
+- Reduced model selection bias.
+- Confidence in the final deployment decision.
