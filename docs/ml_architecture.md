@@ -5299,3 +5299,112 @@ Using a Model Registry provides:
 - Better traceability.
 - Simplified rollback.
 - Consistent lifecycle management.
+## 6.16 Model Artifact Management
+
+Model Artifact Management defines how artifacts generated during model development and training are organized, versioned, stored, and retrieved throughout the machine learning lifecycle.
+
+Artifacts contain all resources required to reproduce, deploy, monitor, and maintain a trained machine learning model.
+
+### Objectives
+
+The model artifact management process aims to:
+
+- Store all training artifacts securely.
+- Maintain artifact version consistency.
+- Support reproducible deployments.
+- Enable artifact retrieval for inference and rollback.
+- Ensure traceability across the ML lifecycle.
+
+---
+
+### Artifact Types
+
+The system manages the following artifacts:
+
+| Artifact | Description |
+|----------|-------------|
+| Trained Model | Serialized machine learning model |
+| Preprocessing Pipeline | Data preprocessing and feature transformation pipeline |
+| Feature Metadata | Feature definitions and schema |
+| Hyperparameter Configuration | Selected training parameters |
+| Evaluation Report | Model performance metrics and validation results |
+| Training Logs | Training execution details and diagnostics |
+| Explainability Reports | Feature importance and interpretation outputs |
+| Configuration Files | Training and deployment settings |
+
+---
+
+### Artifact Storage
+
+Artifacts are stored in a centralized repository with:
+
+- Version-controlled directories.
+- Secure access controls.
+- Backup and recovery mechanisms.
+- High availability for deployment workflows.
+
+Each artifact is linked to its corresponding model version and experiment.
+
+---
+
+### Versioning
+
+Every artifact is associated with:
+
+- Model version.
+- Dataset version.
+- Feature version.
+- Training configuration version.
+- Experiment identifier.
+
+This ensures consistency and reproducibility across environments.
+
+---
+
+### Naming Convention
+
+Artifacts follow standardized naming conventions to simplify identification and retrieval.
+
+Example:
+
+- eta_model_v1.0.0.pkl
+- preprocessing_pipeline_v1.0.0.pkl
+- feature_metadata_v1.0.0.json
+- evaluation_report_v1.0.0.pdf
+
+---
+
+### Retrieval
+
+Artifacts can be retrieved for:
+
+- Model deployment.
+- Batch prediction.
+- Real-time inference.
+- Model rollback.
+- Performance analysis.
+- Reproducibility of experiments.
+
+---
+
+### Retention Policy
+
+Artifacts are retained according to organizational policies.
+
+Typical practices include:
+
+- Retaining production artifacts for long-term reference.
+- Archiving superseded model versions.
+- Removing temporary training artifacts after validation where appropriate.
+
+---
+
+### Benefits
+
+Model artifact management provides:
+
+- Reliable deployment support.
+- Simplified rollback.
+- Improved reproducibility.
+- Better governance.
+- Efficient artifact lifecycle management.
