@@ -3855,3 +3855,116 @@ The model will be considered production-ready when it:
 - Demonstrates stable performance on unseen data.
 - Integrates successfully with downstream systems.
 - Supports reliable real-time inference.
+## 6.4 Model Selection Strategy
+
+Model selection is the process of identifying the machine learning algorithm that provides the best balance between prediction accuracy, inference latency, scalability, explainability, and operational efficiency for ETA prediction.
+
+Rather than selecting a single algorithm by assumption, multiple candidate models are trained, evaluated, and compared using consistent datasets and evaluation metrics.
+
+### Objectives
+
+The model selection strategy aims to:
+
+- Identify the best-performing regression model.
+- Balance accuracy and inference speed.
+- Reduce the risk of overfitting.
+- Support scalable production deployment.
+- Enable fair and reproducible model comparison.
+
+---
+
+### Model Selection Workflow
+
+The model selection process follows these stages:
+
+1. Prepare the training dataset.
+2. Train a baseline model.
+3. Train multiple candidate models.
+4. Evaluate each model using the same validation strategy.
+5. Compare model performance across evaluation metrics.
+6. Select the best-performing model.
+7. Register the selected model for production.
+
+---
+
+### Candidate Models
+
+The following regression algorithms are considered during model development:
+
+| Model | Purpose |
+|--------|---------|
+| Linear Regression | Establish a simple baseline model |
+| Decision Tree Regressor | Capture non-linear relationships |
+| Random Forest Regressor | Improve accuracy through ensemble learning |
+| Gradient Boosting Regressor | Learn complex delivery patterns |
+| XGBoost Regressor | High-performance gradient boosting |
+| LightGBM Regressor | Fast and scalable boosting for large datasets |
+| CatBoost Regressor | Efficient handling of categorical features |
+
+Additional models may be evaluated as project requirements evolve.
+
+---
+
+### Model Evaluation Criteria
+
+Each candidate model is assessed using:
+
+- Prediction accuracy.
+- Generalization performance.
+- Training time.
+- Inference latency.
+- Model complexity.
+- Scalability.
+- Explainability.
+- Resource utilization.
+
+---
+
+### Selection Principles
+
+The selected production model should:
+
+- Achieve strong performance on unseen data.
+- Meet latency requirements for real-time inference.
+- Scale efficiently with increasing workloads.
+- Be stable across different datasets.
+- Support ongoing monitoring and retraining.
+
+---
+
+### Comparison Process
+
+All candidate models are trained using:
+
+- The same engineered feature set.
+- The same training and validation datasets.
+- The same preprocessing pipeline.
+- The same evaluation metrics.
+
+This ensures that performance differences are due to the model itself rather than differences in the data or training process.
+
+---
+
+### Final Model Selection
+
+The production model is selected after reviewing:
+
+- Validation performance.
+- Cross-validation results.
+- Hyperparameter tuning outcomes.
+- Operational constraints.
+- Business requirements.
+
+The selected model is then registered in the Model Registry for deployment and future lifecycle management.
+
+---
+
+### Benefits
+
+A structured model selection strategy provides:
+
+- Objective comparison of candidate models.
+- Better prediction performance.
+- Reduced deployment risk.
+- Improved reproducibility.
+- A transparent decision-making process.
