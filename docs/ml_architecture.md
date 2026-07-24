@@ -4949,3 +4949,120 @@ Model explainability provides:
 - Easier troubleshooting.
 - Better feature engineering insights.
 - Support for governance and auditing.
+## 6.13 Model Optimization
+
+Model optimization improves the efficiency of the selected machine learning model while maintaining acceptable prediction accuracy. The objective is to ensure that the model satisfies production requirements for latency, scalability, memory usage, and operational reliability.
+
+Optimization activities are performed after model selection and evaluation but before deployment.
+
+### Objectives
+
+The model optimization process aims to:
+
+- Reduce prediction latency.
+- Improve inference efficiency.
+- Minimize memory consumption.
+- Maintain prediction accuracy.
+- Support scalable production deployment.
+
+---
+
+### Optimization Areas
+
+#### Inference Latency
+
+The model should generate ETA predictions within an acceptable response time for real-time applications.
+
+Optimization techniques include:
+
+- Efficient feature retrieval.
+- Optimized prediction pipelines.
+- Hardware acceleration where available.
+
+---
+
+#### Memory Utilization
+
+The model should consume reasonable memory resources during inference.
+
+Optimization approaches include:
+
+- Removing unnecessary model components.
+- Using efficient data structures.
+- Selecting compact model representations.
+
+---
+
+#### Computational Efficiency
+
+The optimization process seeks to reduce CPU and GPU utilization without significantly affecting prediction quality.
+
+Typical improvements include:
+
+- Efficient preprocessing.
+- Parallel processing where appropriate.
+- Optimized prediction workflows.
+
+---
+
+#### Model Complexity
+
+The selected model should balance complexity and performance.
+
+The optimization process evaluates:
+
+- Number of model parameters.
+- Model size.
+- Training complexity.
+- Inference complexity.
+
+---
+
+### Optimization Techniques
+
+Possible optimization techniques include:
+
+- Hyperparameter refinement.
+- Feature reduction.
+- Model pruning (if supported).
+- Quantization (where applicable).
+- Batch prediction optimization.
+- Efficient model serialization.
+
+The techniques applied depend on the selected algorithm and deployment environment.
+
+---
+
+### Performance Validation
+
+After optimization, the model is re-evaluated to verify that it continues to satisfy:
+
+- Accuracy requirements.
+- Latency requirements.
+- Scalability requirements.
+- Reliability requirements.
+
+Any significant degradation in prediction quality is investigated before deployment.
+
+---
+
+### Output
+
+The optimization process produces:
+
+- Optimized trained model.
+- Updated performance metrics.
+- Optimization report.
+- Deployment-ready model artifact.
+
+---
+
+### Benefits
+
+Model optimization provides:
+
+- Faster predictions.
+- Lower infrastructure costs.
+- Improved scalability.
+- Better user experience.
+- Efficient production deployment.
