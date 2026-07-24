@@ -3667,3 +3667,79 @@ The Model Development and Training process provides:
 - Reproducible experiments.
 - Efficient model management.
 - Production-ready ML models.
+## 6.2 Business Objectives
+
+The ETA prediction model is designed to solve key operational and customer experience challenges within the food delivery platform. The primary objective is to provide accurate, reliable, and real-time delivery time estimates while improving operational efficiency across the delivery ecosystem.
+
+The model supports business decision-making by enabling intelligent dispatching, proactive customer communication, and optimized resource utilization.
+
+### Business Objectives
+
+The model aims to achieve the following objectives:
+
+- Improve delivery ETA prediction accuracy.
+- Reduce late deliveries.
+- Increase customer satisfaction through reliable delivery estimates.
+- Improve driver assignment decisions.
+- Optimize restaurant preparation coordination.
+- Reduce order cancellations caused by inaccurate ETAs.
+- Improve operational efficiency during peak demand.
+- Support real-time ETA updates as delivery conditions change.
+
+---
+
+### Business Problems Addressed
+
+The model addresses several business challenges:
+
+#### Inaccurate ETA Estimates
+
+Traditional rule-based methods often fail to account for dynamic factors such as traffic, weather, restaurant workload, and driver availability.
+
+#### Delivery Delays
+
+Unexpected delays reduce customer trust and negatively impact platform reliability.
+
+#### Operational Inefficiencies
+
+Poor ETA estimation can lead to inefficient driver dispatching, longer wait times, and reduced delivery capacity.
+
+#### Customer Experience
+
+Customers expect transparent and accurate delivery information throughout the order lifecycle.
+
+---
+
+### Expected Business Outcomes
+
+Successful implementation of the ETA prediction model is expected to:
+
+- Improve ETA prediction accuracy.
+- Increase on-time delivery rate.
+- Reduce customer complaints related to delivery timing.
+- Improve driver productivity.
+- Improve restaurant coordination.
+- Increase platform reliability and customer trust.
+
+---
+
+### Success Criteria
+
+The business success of the model will be evaluated using measurable outcomes such as:
+
+- Reduction in average ETA prediction error.
+- Improvement in on-time delivery percentage.
+- Reduction in order cancellations.
+- Improvement in customer satisfaction metrics.
+- Improvement in operational efficiency.
+
+---
+
+### Alignment with Platform Goals
+
+The ETA prediction model directly supports the platform's strategic goals by:
+
+- Enhancing customer experience.
+- Supporting scalable delivery operations.
+- Improving decision-making through data-driven predictions.
+- Enabling intelligent automation across the delivery workflow.
