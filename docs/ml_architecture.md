@@ -6026,3 +6026,103 @@ Model packaging provides:
 - Easier rollback.
 - Improved reproducibility.
 - Better compatibility across environments.
+## 7.6 Containerization
+
+Containerization packages the model serving application, runtime environment, dependencies, and configuration into portable container images. These containers provide a consistent execution environment across different deployment stages and infrastructure platforms.
+
+The containerized deployment approach improves portability, scalability, maintainability, and operational efficiency.
+
+### Objectives
+
+The containerization process aims to:
+
+- Package the inference service into portable containers.
+- Ensure environment consistency.
+- Simplify deployment across environments.
+- Support scalable deployments.
+- Improve resource isolation.
+- Enable orchestration using container platforms.
+
+---
+
+### Container Components
+
+Each container includes:
+
+- Model serving application.
+- Packaged machine learning model.
+- Preprocessing pipeline.
+- Required libraries and dependencies.
+- Runtime configuration.
+- API server.
+- Logging configuration.
+- Health check endpoints.
+
+---
+
+### Container Image
+
+A container image contains:
+
+- Base operating system image.
+- Python runtime.
+- Machine learning frameworks.
+- Application source code.
+- Model artifacts.
+- Configuration files.
+- Startup scripts.
+
+The image is immutable and version-controlled.
+
+---
+
+### Image Repository
+
+Container images are stored in a secure image registry.
+
+The registry maintains:
+
+- Image versions.
+- Image tags.
+- Build metadata.
+- Security scan results.
+- Deployment status.
+
+---
+
+### Image Validation
+
+Before deployment, each container image is verified for:
+
+- Successful build completion.
+- Dependency consistency.
+- Security vulnerabilities.
+- Application startup.
+- Health endpoint availability.
+- Model loading validation.
+
+---
+
+### Runtime Configuration
+
+Container runtime configuration includes:
+
+- Environment variables.
+- Resource limits (CPU and memory).
+- Network settings.
+- Secrets management.
+- Logging configuration.
+- Volume mounts (where applicable).
+
+---
+
+### Benefits
+
+Containerization provides:
+
+- Consistent runtime environments.
+- Simplified deployment.
+- Improved portability.
+- Faster scaling.
+- Better resource isolation.
+- Easier maintenance.
