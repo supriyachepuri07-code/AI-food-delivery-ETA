@@ -6692,3 +6692,158 @@ The real-time inference pipeline provides:
 - Reliable service delivery.
 - Operational visibility.
 - Scalable production performance.
+## 7.11 Batch Inference Pipeline
+
+The Batch Inference Pipeline processes large datasets to generate ETA predictions in bulk. Unlike the real-time inference pipeline, which handles individual requests, batch inference executes scheduled or on-demand prediction jobs for multiple records simultaneously.
+
+The pipeline is designed for scalability, efficiency, and reliable processing of high-volume datasets.
+
+### Objectives
+
+The batch inference pipeline aims to:
+
+- Generate ETA predictions for large datasets.
+- Support scheduled and on-demand batch jobs.
+- Ensure consistent preprocessing and inference.
+- Produce prediction outputs for downstream analytics.
+- Monitor batch execution and handle failures.
+
+---
+
+### Pipeline Stages
+
+#### 1. Batch Job Trigger
+
+Batch inference is initiated through:
+
+- Scheduled execution.
+- Manual execution.
+- Workflow orchestration.
+- Event-driven triggers.
+
+---
+
+#### 2. Data Collection
+
+Input data is collected from:
+
+- Operational databases.
+- Data warehouse.
+- Data lake.
+- Historical datasets.
+- External data sources.
+
+---
+
+#### 3. Data Validation
+
+The collected data is validated for:
+
+- Schema compliance.
+- Missing required fields.
+- Data type consistency.
+- Duplicate records.
+- Business rule validation.
+
+Invalid records are logged for further analysis.
+
+---
+
+#### 4. Feature Retrieval
+
+The pipeline retrieves required features from:
+
+- Feature Store.
+- Historical feature repository.
+- External services (where applicable).
+
+---
+
+#### 5. Data Preprocessing
+
+The preprocessing stage applies the same transformations used during model training.
+
+Typical operations include:
+
+- Missing value handling.
+- Feature encoding.
+- Scaling or normalization.
+- Feature ordering.
+- Derived feature generation.
+
+---
+
+#### 6. Batch Model Inference
+
+The serving infrastructure processes the prepared data in batches.
+
+The inference process includes:
+
+- Loading the approved production model.
+- Executing predictions.
+- Generating ETA estimates.
+- Recording processing statistics.
+
+---
+
+#### 7. Output Generation
+
+Prediction results are formatted and enriched with metadata such as:
+
+- Predicted ETA.
+- Model version.
+- Batch identifier.
+- Prediction timestamp.
+- Processing status.
+
+---
+
+#### 8. Output Storage
+
+Prediction outputs are stored in:
+
+- Operational databases.
+- Data warehouse.
+- Object storage.
+- Reporting systems.
+
+These outputs support reporting, analytics, and downstream applications.
+
+---
+
+#### 9. Monitoring and Logging
+
+The pipeline records:
+
+- Batch execution status.
+- Processing duration.
+- Number of processed records.
+- Success and failure counts.
+- Resource utilization.
+- Error logs.
+
+Monitoring ensures operational visibility and supports troubleshooting.
+
+---
+
+### Performance Considerations
+
+The batch inference pipeline is designed to:
+
+- Process large datasets efficiently.
+- Support distributed execution.
+- Optimize resource utilization.
+- Recover from partial failures.
+- Scale according to workload.
+
+---
+
+### Benefits
+
+The batch inference pipeline provides:
+
+- High-throughput prediction processing.
+- Efficient resource utilization.
+- Reliable execution.
+- Consistent inference results.
+- Support for analytics and reporting.
