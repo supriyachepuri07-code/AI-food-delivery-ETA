@@ -3564,3 +3564,106 @@ The feature engineering output provides:
 - Faster model development.
 - Improved reproducibility.
 - Reliable model training and prediction.
+# 6. Model Development & Training
+
+## 6.1 Model Development Overview
+
+The Model Development and Training phase transforms engineered features into a production-ready machine learning model capable of accurately predicting food delivery Estimated Time of Arrival (ETA).
+
+This phase includes model selection, training, validation, optimization, evaluation, versioning, and registration. The objective is to develop a reliable model that generalizes well to unseen delivery scenarios while maintaining low prediction latency and high accuracy.
+
+The model development process follows established machine learning best practices to ensure reproducibility, scalability, and consistency across experimentation and production environments.
+
+### Objectives
+
+The Model Development and Training process aims to:
+
+- Build an accurate ETA prediction model.
+- Learn delivery patterns from historical data.
+- Optimize model performance through feature selection and hyperparameter tuning.
+- Evaluate models using appropriate regression metrics.
+- Prevent overfitting and underfitting.
+- Ensure reproducible model training.
+- Register validated models for deployment.
+
+---
+
+### Inputs
+
+The model development process consumes:
+
+- Validated engineered feature dataset.
+- Target variable (Actual Delivery Time).
+- Training configuration.
+- Feature metadata.
+- Dataset version information.
+
+---
+
+### Outputs
+
+The process produces:
+
+- Trained machine learning model.
+- Model evaluation reports.
+- Performance metrics.
+- Hyperparameter configuration.
+- Feature importance analysis.
+- Model artifacts.
+- Registered model version.
+
+---
+
+### Model Development Workflow
+
+The high-level workflow consists of:
+
+1. Load the engineered feature dataset.
+2. Prepare the training and validation datasets.
+3. Train baseline models.
+4. Train candidate models.
+5. Optimize model hyperparameters.
+6. Evaluate model performance.
+7. Select the best-performing model.
+8. Register the model in the Model Registry.
+9. Store training artifacts and metadata.
+
+---
+
+### Design Principles
+
+The model development process follows these principles:
+
+- Reproducibility
+- Scalability
+- Explainability
+- Performance optimization
+- Data integrity
+- Version control
+- Automation
+
+---
+
+### Integration
+
+The Model Development phase integrates with:
+
+- Feature Engineering Pipeline
+- Training Pipeline
+- Feature Store
+- Experiment Tracking
+- Model Registry
+- Prediction Pipeline
+- Monitoring Pipeline
+
+---
+
+### Benefits
+
+The Model Development and Training process provides:
+
+- Reliable ETA prediction.
+- Consistent training workflow.
+- Reproducible experiments.
+- Efficient model management.
+- Production-ready ML models.
