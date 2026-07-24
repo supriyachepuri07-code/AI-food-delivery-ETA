@@ -6847,3 +6847,152 @@ The batch inference pipeline provides:
 - Reliable execution.
 - Consistent inference results.
 - Support for analytics and reporting.
+## 7.12 Deployment Pipeline (CI/CD)
+
+The Deployment Pipeline automates the process of integrating code changes, validating machine learning models, building deployment artifacts, and promoting approved releases through development, testing, staging, and production environments.
+
+The CI/CD pipeline ensures that deployments are consistent, reproducible, secure, and traceable throughout the software and machine learning lifecycle.
+
+### Objectives
+
+The deployment pipeline aims to:
+
+- Automate build and deployment processes.
+- Validate application code and machine learning models.
+- Reduce deployment errors.
+- Enable rapid and reliable releases.
+- Support controlled promotion across environments.
+- Maintain deployment traceability.
+
+---
+
+### Pipeline Stages
+
+#### 1. Source Code Integration
+
+Developers commit application code, model updates, and configuration changes to the version control system.
+
+Typical repositories include:
+
+- Application source code.
+- Model serving code.
+- Infrastructure configuration.
+- Deployment scripts.
+
+---
+
+#### 2. Continuous Integration
+
+The CI process performs:
+
+- Code checkout.
+- Dependency installation.
+- Static code analysis.
+- Unit testing.
+- Integration testing.
+- Security scanning.
+
+Build failures prevent further pipeline execution.
+
+---
+
+#### 3. Model Validation
+
+Before deployment, the pipeline validates:
+
+- Model performance metrics.
+- Model artifact integrity.
+- Version consistency.
+- Compatibility with preprocessing pipelines.
+- Required governance approvals.
+
+Only approved models proceed to deployment.
+
+---
+
+#### 4. Artifact Build
+
+The pipeline generates deployment artifacts, including:
+
+- Container images.
+- Model packages.
+- Configuration files.
+- Deployment manifests.
+
+Each artifact is versioned and stored in centralized repositories.
+
+---
+
+#### 5. Artifact Publishing
+
+Generated artifacts are published to:
+
+- Container registry.
+- Artifact repository.
+- Model registry.
+
+Published artifacts are available for deployment across environments.
+
+---
+
+#### 6. Continuous Deployment
+
+The deployment pipeline automatically promotes approved releases through:
+
+1. Development
+2. Testing
+3. Staging
+4. Production
+
+Promotion occurs only after successful validation at each stage.
+
+---
+
+#### 7. Post-Deployment Verification
+
+After deployment, the pipeline verifies:
+
+- Service health.
+- API availability.
+- Model loading.
+- Health and readiness endpoints.
+- Initial prediction requests.
+
+---
+
+#### 8. Notification and Reporting
+
+The pipeline records:
+
+- Deployment status.
+- Build logs.
+- Test results.
+- Deployment history.
+- Approval records.
+
+Notifications are sent to relevant stakeholders upon success or failure.
+
+---
+
+### Deployment Controls
+
+The pipeline supports:
+
+- Manual approval gates.
+- Automated quality checks.
+- Rollback triggers.
+- Version tracking.
+- Environment-specific configurations.
+
+---
+
+### Benefits
+
+The deployment pipeline provides:
+
+- Automated releases.
+- Consistent deployments.
+- Reduced operational risk.
+- Faster delivery cycles.
+- Improved traceability.
+- Better governance.
