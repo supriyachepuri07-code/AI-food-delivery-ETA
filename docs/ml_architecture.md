@@ -3743,3 +3743,115 @@ The ETA prediction model directly supports the platform's strategic goals by:
 - Supporting scalable delivery operations.
 - Improving decision-making through data-driven predictions.
 - Enabling intelligent automation across the delivery workflow.
+## 6.3 Model Requirements
+
+The ETA prediction model must satisfy a set of functional and non-functional requirements to ensure accurate predictions, efficient operation, and reliable deployment within the food delivery platform.
+
+These requirements guide the design, development, evaluation, and deployment of the machine learning model.
+
+### Objectives
+
+The model requirements aim to:
+
+- Define the expected capabilities of the model.
+- Establish performance and reliability standards.
+- Ensure compatibility with production systems.
+- Support scalable and maintainable deployments.
+- Provide consistent prediction quality.
+
+---
+
+### Functional Requirements
+
+The model shall:
+
+- Predict the Estimated Time of Arrival (ETA) for every delivery request.
+- Accept engineered features from the Feature Engineering Pipeline.
+- Support both batch and real-time predictions.
+- Generate predictions for new and unseen delivery scenarios.
+- Handle missing or partially available feature values where appropriate.
+- Integrate with the Prediction Pipeline and Feature Store.
+
+---
+
+### Non-Functional Requirements
+
+The model shall:
+
+- Provide high prediction accuracy.
+- Deliver low-latency predictions suitable for real-time applications.
+- Scale to handle increasing prediction requests.
+- Maintain consistent performance under varying workloads.
+- Be reproducible across training environments.
+- Support versioning and rollback.
+
+---
+
+### Performance Requirements
+
+The model should meet the following expectations:
+
+| Requirement | Description |
+|------------|-------------|
+| Prediction Accuracy | Minimize ETA prediction error |
+| Inference Latency | Generate predictions within acceptable response time |
+| Throughput | Handle high volumes of concurrent prediction requests |
+| Availability | Support continuous prediction services |
+| Reliability | Produce stable predictions under normal operating conditions |
+
+---
+
+### Scalability Requirements
+
+The model should support:
+
+- Large-scale historical training datasets.
+- Distributed model training.
+- High-frequency prediction requests.
+- Future expansion to additional cities or regions.
+
+---
+
+### Explainability Requirements
+
+The model should provide:
+
+- Feature importance information.
+- Explanation of prediction behavior.
+- Support for model interpretability tools.
+- Transparent decision-making where possible.
+
+---
+
+### Maintainability Requirements
+
+The solution should support:
+
+- Automated retraining.
+- Model version management.
+- Easy deployment of new model versions.
+- Continuous monitoring of model performance.
+
+---
+
+### Security and Governance Requirements
+
+The model development process should ensure:
+
+- Secure access to training data.
+- Controlled access to model artifacts.
+- Version-controlled training configurations.
+- Complete experiment traceability.
+- Compliance with organizational governance policies.
+
+---
+
+### Success Criteria
+
+The model will be considered production-ready when it:
+
+- Meets defined performance thresholds.
+- Passes validation and testing.
+- Demonstrates stable performance on unseen data.
+- Integrates successfully with downstream systems.
+- Supports reliable real-time inference.
