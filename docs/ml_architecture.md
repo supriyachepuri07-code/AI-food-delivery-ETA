@@ -4497,3 +4497,127 @@ The standardized training workflow provides:
 - Reproducible training.
 - Easier debugging.
 - Smooth integration with deployment pipelines.
+## 6.9 Hyperparameter Tuning
+
+Hyperparameter tuning is the process of identifying the optimal configuration of algorithm-specific settings before model training. Proper tuning improves prediction accuracy, enhances model generalization, and reduces the risks of overfitting or underfitting.
+
+The tuning process evaluates multiple hyperparameter combinations using a consistent validation strategy to identify the configuration that provides the best overall model performance.
+
+### Objectives
+
+The hyperparameter tuning process aims to:
+
+- Improve model prediction accuracy.
+- Optimize model generalization.
+- Reduce overfitting and underfitting.
+- Identify the best-performing parameter configuration.
+- Ensure reproducible optimization experiments.
+
+---
+
+### Hyperparameters
+
+Hyperparameters are settings defined before training begins. They influence how the learning algorithm builds the model but are not learned directly from the training data.
+
+Examples include:
+
+| Model | Example Hyperparameters |
+|--------|-------------------------|
+| Random Forest | Number of trees, maximum tree depth |
+| XGBoost | Learning rate, maximum depth, subsample ratio |
+| LightGBM | Number of leaves, learning rate, feature fraction |
+| CatBoost | Learning rate, tree depth, iterations |
+
+---
+
+### Tuning Strategies
+
+The following search strategies may be used:
+
+#### Grid Search
+
+- Evaluates every combination of predefined hyperparameter values.
+- Suitable for small search spaces.
+- Computationally expensive.
+
+#### Random Search
+
+- Randomly samples hyperparameter combinations.
+- More efficient for large search spaces.
+- Often achieves comparable performance with fewer evaluations.
+
+#### Bayesian Optimization
+
+- Uses previous evaluation results to guide the search.
+- Efficient for complex optimization problems.
+- Reduces the number of required training runs.
+
+The selected strategy depends on the model complexity, dataset size, and available computational resources.
+
+---
+
+### Tuning Workflow
+
+1. Define the hyperparameter search space.
+2. Select the optimization strategy.
+3. Train models using different parameter combinations.
+4. Evaluate each model using the validation strategy.
+5. Compare performance metrics.
+6. Select the optimal hyperparameter configuration.
+7. Store the tuned configuration for future training.
+
+---
+
+### Evaluation Criteria
+
+Each configuration is evaluated using:
+
+- Mean Absolute Error (MAE)
+- Root Mean Squared Error (RMSE)
+- Mean Absolute Percentage Error (MAPE)
+- R² Score
+- Training time
+- Inference latency
+
+The final configuration balances predictive performance with operational efficiency.
+
+---
+
+### Experiment Tracking
+
+Each tuning experiment records:
+
+- Experiment ID
+- Model type
+- Hyperparameter values
+- Dataset version
+- Feature version
+- Validation metrics
+- Execution time
+- Timestamp
+
+This information supports reproducibility and comparison across tuning experiments.
+
+---
+
+### Output
+
+The tuning process produces:
+
+- Optimal hyperparameter configuration.
+- Evaluation results.
+- Performance comparison report.
+- Experiment metadata.
+- Updated training configuration.
+
+---
+
+### Benefits
+
+Hyperparameter tuning provides:
+
+- Higher prediction accuracy.
+- Better generalization to unseen data.
+- Reduced model bias and variance.
+- More efficient use of computational resources.
+- Improved production readiness.
