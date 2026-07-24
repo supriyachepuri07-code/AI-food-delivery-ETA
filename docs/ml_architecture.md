@@ -4365,3 +4365,135 @@ Training dataset preparation provides:
 - Reliable model evaluation.
 - Reproducible training results.
 - Reduced risk of data-related training failures.
+## 6.8 Training Workflow
+
+The Training Workflow defines the end-to-end process for developing a machine learning model using the prepared training dataset. It outlines the sequence of activities required to train, validate, evaluate, and store a production-ready ETA prediction model.
+
+The workflow ensures that every training run follows a standardized and reproducible process.
+
+### Objectives
+
+The training workflow aims to:
+
+- Train machine learning models consistently.
+- Ensure reproducible experiments.
+- Validate model performance during training.
+- Record training metadata and metrics.
+- Produce deployable model artifacts.
+
+---
+
+### Workflow Overview
+
+The training workflow consists of the following stages:
+
+1. Load the training configuration.
+2. Load the prepared training, validation, and test datasets.
+3. Initialize the selected machine learning model.
+4. Train the model using the training dataset.
+5. Evaluate performance using the validation dataset.
+6. Record evaluation metrics.
+7. Save the trained model and metadata.
+8. Register the approved model.
+
+---
+
+### Training Configuration
+
+Each training run is controlled by a configuration that defines:
+
+- Selected algorithm.
+- Hyperparameters.
+- Dataset version.
+- Feature set version.
+- Random seed.
+- Evaluation metrics.
+- Output locations.
+
+This configuration ensures that training can be reproduced at a later time.
+
+---
+
+### Model Initialization
+
+Before training begins:
+
+- The selected algorithm is initialized.
+- Hyperparameters are loaded.
+- Random seeds are configured.
+- Training environment is verified.
+
+---
+
+### Model Training
+
+The model learns from the training dataset by identifying relationships between the engineered features and the target variable (Actual Delivery Time).
+
+Training is performed using the configured algorithm and hyperparameters.
+
+---
+
+### Validation
+
+After training, the model is evaluated using the validation dataset to assess:
+
+- Prediction accuracy.
+- Generalization performance.
+- Stability.
+- Potential overfitting or underfitting.
+
+---
+
+### Experiment Tracking
+
+Each training run records:
+
+- Experiment ID.
+- Model version.
+- Dataset version.
+- Feature version.
+- Hyperparameters.
+- Training duration.
+- Evaluation metrics.
+- Timestamp.
+
+These records support reproducibility and comparison across experiments.
+
+---
+
+### Model Artifact Generation
+
+The workflow produces the following artifacts:
+
+- Trained model file.
+- Configuration file.
+- Evaluation report.
+- Feature metadata.
+- Training logs.
+- Performance metrics.
+
+These artifacts are stored for deployment and future reference.
+
+---
+
+### Workflow Output
+
+The output of the training workflow includes:
+
+- Production-ready trained model.
+- Validation results.
+- Experiment metadata.
+- Model artifacts.
+- Registration request for the Model Registry.
+
+---
+
+### Benefits
+
+The standardized training workflow provides:
+
+- Consistent model development.
+- Reliable experiment tracking.
+- Reproducible training.
+- Easier debugging.
+- Smooth integration with deployment pipelines.
