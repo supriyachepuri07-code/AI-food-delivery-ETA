@@ -12365,3 +12365,154 @@ Regression Testing provides:
 - Improved deployment confidence.
 - Better system stability.
 - Continuous quality assurance.
+## 9.14 Test Automation
+
+Test Automation defines the processes, tools, and workflows used to automatically execute software and machine learning tests throughout the development lifecycle. Automated testing ensures that the ETA prediction system is continuously validated whenever changes are introduced.
+
+The automation framework supports continuous integration, continuous delivery, and MLOps by providing fast, repeatable, and reliable quality verification.
+
+### Objectives
+
+The test automation process aims to:
+
+- Reduce manual testing effort.
+- Detect defects early.
+- Improve testing consistency.
+- Accelerate release cycles.
+- Increase test coverage.
+- Support continuous integration.
+- Improve production readiness.
+
+---
+
+### Scope
+
+Test automation covers:
+
+- Unit tests.
+- Integration tests.
+- End-to-End tests.
+- API tests.
+- Data validation tests.
+- Model validation tests.
+- Regression tests.
+- Performance tests.
+- Security tests.
+- Smoke tests.
+
+---
+
+### Automation Framework
+
+The automation framework includes:
+
+- pytest.
+- GitHub Actions.
+- Docker-based test environments.
+- CI/CD pipeline automation.
+- Test reporting tools.
+- Code coverage tools.
+
+These tools execute and report automated tests consistently across environments.
+
+---
+
+### CI/CD Integration
+
+Automated tests are triggered during:
+
+- Code commits.
+- Pull requests.
+- Merge operations.
+- Nightly scheduled builds.
+- Release candidate creation.
+- Production deployment validation.
+
+Only successful builds continue through the deployment pipeline.
+
+---
+
+### Test Execution Workflow
+
+The automation workflow includes:
+
+1. Source code change detected.
+2. Build application.
+3. Execute automated test suite.
+4. Generate coverage reports.
+5. Generate test reports.
+6. Validate quality gates.
+7. Approve or reject deployment.
+
+---
+
+### Quality Gates
+
+Automated quality gates verify:
+
+- Build success.
+- Unit test success.
+- Integration test success.
+- API validation.
+- Model validation.
+- Security scan completion.
+- Performance benchmarks.
+- Code coverage thresholds.
+
+A release proceeds only if all required quality gates pass.
+
+---
+
+### Reporting
+
+Automation reports include:
+
+- Total tests executed.
+- Passed tests.
+- Failed tests.
+- Skipped tests.
+- Code coverage.
+- Execution duration.
+- Pipeline status.
+- Quality gate results.
+
+Reports are stored for auditing and trend analysis.
+
+---
+
+### Maintenance
+
+The automation framework is maintained by:
+
+- Updating test scripts.
+- Adding tests for new features.
+- Removing obsolete tests.
+- Updating CI/CD workflows.
+- Reviewing automation effectiveness.
+- Improving test reliability.
+
+---
+
+### Best Practices
+
+The project follows these automation practices:
+
+- Keep tests independent.
+- Use deterministic test data.
+- Minimize execution time.
+- Automate repetitive tasks.
+- Run tests in isolated environments.
+- Review automation regularly.
+
+---
+
+### Benefits
+
+Test Automation provides:
+
+- Faster feedback.
+- Higher software quality.
+- Improved deployment confidence.
+- Reduced manual effort.
+- Better regression protection.
+- Continuous quality assurance.
