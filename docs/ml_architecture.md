@@ -10176,3 +10176,186 @@ Model Lifecycle Management provides:
 - Easier audits and compliance.
 - Continuous model improvement.
 - Long-term production stability.
+## 8.15 Backup & Disaster Recovery
+
+Backup & Disaster Recovery (BDR) defines the policies, procedures, and technologies used to protect production data, machine learning assets, infrastructure configurations, and application services from unexpected failures. The objective is to restore business operations quickly while minimizing data loss and service downtime.
+
+The BDR strategy supports operational resilience, business continuity, regulatory compliance, and long-term reliability of the ETA prediction system.
+
+### Objectives
+
+The Backup & Disaster Recovery strategy aims to:
+
+- Protect critical business assets.
+- Minimize production downtime.
+- Prevent permanent data loss.
+- Ensure rapid service restoration.
+- Support business continuity.
+- Maintain operational resilience.
+- Meet organizational recovery objectives.
+
+---
+
+### Backup Scope
+
+The following assets are included in the backup strategy:
+
+- Production databases.
+- Training datasets.
+- Feature Store.
+- Model Registry.
+- Trained model artifacts.
+- Application source code.
+- Configuration files.
+- Infrastructure-as-Code templates.
+- CI/CD pipeline configurations.
+- Monitoring configurations.
+- Logging configurations.
+- Security policies.
+- Documentation.
+
+---
+
+### Backup Strategy
+
+The backup strategy includes:
+
+- Full backups.
+- Incremental backups.
+- Differential backups.
+- Automated scheduled backups.
+- Version-controlled backups.
+- Encrypted backup storage.
+- Multi-region backup replication.
+
+---
+
+### Backup Frequency
+
+Typical backup schedules include:
+
+| Asset | Frequency |
+|--------|-----------|
+| Production Database | Daily |
+| Model Registry | After every model registration |
+| Feature Store | Daily |
+| Model Artifacts | After every approved model |
+| Configuration Files | On every approved change |
+| Source Code | Every commit (Git) |
+| Infrastructure Configuration | Every approved infrastructure update |
+| Documentation | Every repository update |
+
+---
+
+### Disaster Recovery Plan
+
+The disaster recovery process includes:
+
+1. Detect system failure.
+2. Assess business impact.
+3. Activate disaster recovery procedures.
+4. Restore infrastructure.
+5. Restore databases.
+6. Restore Feature Store.
+7. Restore Model Registry.
+8. Restore application services.
+9. Validate system functionality.
+10. Resume production operations.
+
+---
+
+### Recovery Time Objective (RTO)
+
+The maximum acceptable time required to restore production services after a disruption.
+
+Example objectives:
+
+- Critical services: less than 1 hour.
+- Supporting services: less than 4 hours.
+
+RTO values should align with business requirements.
+
+---
+
+### Recovery Point Objective (RPO)
+
+The maximum acceptable amount of data loss measured in time.
+
+Example objectives:
+
+- Production database: less than 15 minutes.
+- Model Registry: zero data loss preferred.
+- Feature Store: less than 1 hour.
+
+RPO values should be reviewed periodically.
+
+---
+
+### Recovery Validation
+
+After restoration, the following must be verified:
+
+- Infrastructure availability.
+- Database integrity.
+- Feature Store consistency.
+- Model Registry integrity.
+- Application functionality.
+- API availability.
+- Model inference correctness.
+- Monitoring services.
+- Security controls.
+
+---
+
+### Disaster Recovery Testing
+
+Recovery procedures should be tested regularly through:
+
+- Backup restoration tests.
+- Database recovery exercises.
+- Infrastructure recovery simulations.
+- Cloud region failover testing.
+- Tabletop disaster recovery exercises.
+
+Testing ensures recovery plans remain effective.
+
+---
+
+### Business Continuity
+
+Business continuity planning includes:
+
+- Clearly defined recovery procedures.
+- Recovery team responsibilities.
+- Communication plans.
+- Escalation procedures.
+- Alternate operational environments.
+- Periodic continuity reviews.
+
+---
+
+### Documentation
+
+Backup and recovery documentation includes:
+
+- Backup schedules.
+- Recovery procedures.
+- Recovery checklists.
+- Disaster response plans.
+- Recovery test reports.
+- Recovery metrics.
+- Contact information.
+- Infrastructure inventories.
+
+---
+
+### Benefits
+
+The Backup & Disaster Recovery strategy provides:
+
+- Reduced operational risk.
+- Faster recovery from failures.
+- Improved business continuity.
+- Increased system resilience.
+- Better regulatory compliance.
+- Reliable protection of machine learning assets.
