@@ -10359,3 +10359,199 @@ The Backup & Disaster Recovery strategy provides:
 - Increased system resilience.
 - Better regulatory compliance.
 - Reliable protection of machine learning assets.
+## 8.16 Security & Compliance Operations
+
+Security & Compliance Operations define the policies, procedures, and technical controls used to protect the ETA prediction system, its data, infrastructure, machine learning models, and operational processes. The objective is to ensure confidentiality, integrity, availability, and regulatory compliance throughout the machine learning lifecycle.
+
+The framework integrates security into infrastructure, applications, APIs, CI/CD pipelines, monitoring systems, and operational workflows.
+
+### Objectives
+
+The security and compliance operations aim to:
+
+- Protect sensitive information.
+- Prevent unauthorized access.
+- Secure machine learning assets.
+- Maintain regulatory compliance.
+- Detect and respond to security incidents.
+- Ensure business continuity.
+- Strengthen operational resilience.
+
+---
+
+### Identity and Access Management (IAM)
+
+Access to system resources is controlled through IAM policies.
+
+Key practices include:
+
+- Role-Based Access Control (RBAC).
+- Least privilege principle.
+- Multi-Factor Authentication (MFA).
+- Periodic access reviews.
+- Temporary privilege elevation.
+- User lifecycle management.
+
+---
+
+### Authentication and Authorization
+
+Authentication verifies user identity, while authorization controls access to resources.
+
+The system supports:
+
+- Secure login mechanisms.
+- OAuth/OpenID Connect integration (where applicable).
+- Token-based authentication.
+- API authorization.
+- Service-to-service authentication.
+
+---
+
+### Secrets Management
+
+Sensitive credentials are securely managed, including:
+
+- API keys.
+- Database credentials.
+- Cloud access keys.
+- Encryption keys.
+- CI/CD secrets.
+- Service account credentials.
+
+Secrets are stored in dedicated secret management solutions and rotated regularly.
+
+---
+
+### Encryption
+
+Data is protected using encryption:
+
+**Data at Rest**
+
+- Databases.
+- Feature Store.
+- Model Registry.
+- Backup storage.
+- Log storage.
+
+**Data in Transit**
+
+- HTTPS/TLS.
+- Secure API communication.
+- Encrypted internal service communication.
+
+---
+
+### Network Security
+
+Network security controls include:
+
+- Firewalls.
+- Network segmentation.
+- Private subnets.
+- Security groups.
+- Load balancer protection.
+- Intrusion detection and prevention systems.
+
+---
+
+### API Security
+
+API protection includes:
+
+- Authentication.
+- Authorization.
+- Rate limiting.
+- Input validation.
+- Request logging.
+- API gateway security.
+- Protection against common web attacks.
+
+---
+
+### Vulnerability Management
+
+The security process includes:
+
+- Dependency scanning.
+- Container image scanning.
+- Operating system patching.
+- Security updates.
+- Penetration testing.
+- Periodic security assessments.
+
+---
+
+### Security Monitoring
+
+Continuous monitoring detects:
+
+- Unauthorized access attempts.
+- Suspicious user activity.
+- Privilege escalation.
+- Configuration changes.
+- Malware indicators.
+- Infrastructure security events.
+- API abuse.
+
+Security alerts integrate with the incident management process.
+
+---
+
+### Compliance
+
+Compliance activities include:
+
+- Security policy enforcement.
+- Audit logging.
+- Data retention policies.
+- Privacy protection.
+- Access reviews.
+- Change management.
+- Documentation maintenance.
+
+Compliance requirements depend on organizational and regional regulations.
+
+---
+
+### Security Incident Response
+
+The incident response process includes:
+
+1. Detection.
+2. Analysis.
+3. Containment.
+4. Eradication.
+5. Recovery.
+6. Post-incident review.
+
+Lessons learned are incorporated into future security improvements.
+
+---
+
+### Security Metrics
+
+The framework tracks:
+
+- Failed login attempts.
+- Vulnerabilities detected.
+- Patch compliance.
+- Security incident count.
+- Mean Time to Detect (MTTD).
+- Mean Time to Respond (MTTR).
+- Access review completion.
+- Secret rotation compliance.
+
+---
+
+### Benefits
+
+Security & Compliance Operations provide:
+
+- Strong protection of business assets.
+- Reduced cybersecurity risk.
+- Improved regulatory compliance.
+- Better operational governance.
+- Enhanced customer trust.
+- Secure and reliable production operations.
