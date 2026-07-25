@@ -11670,3 +11670,171 @@ Model Validation Testing provides:
 - Better business outcomes.
 - Improved customer satisfaction.
 - Stronger model governance.
+## 9.10 Performance & Load Testing
+
+Performance & Load Testing evaluates the responsiveness, scalability, stability, and resource efficiency of the ETA prediction system under varying workloads. The objective is to ensure that the system can process requests efficiently while maintaining acceptable performance during normal operations and peak demand.
+
+Testing validates APIs, machine learning inference services, databases, data pipelines, and supporting infrastructure to ensure production readiness.
+
+### Objectives
+
+The performance and load testing process aims to:
+
+- Verify response times.
+- Measure throughput.
+- Evaluate scalability.
+- Identify performance bottlenecks.
+- Ensure system stability.
+- Optimize resource utilization.
+- Support production capacity planning.
+
+---
+
+### Scope
+
+Performance testing covers:
+
+- REST APIs.
+- ETA prediction service.
+- Model inference engine.
+- Database queries.
+- Feature Store.
+- Model Registry.
+- Batch processing pipelines.
+- Monitoring services.
+
+---
+
+### Response Time Testing
+
+Testing verifies:
+
+- Average response time.
+- Median response time.
+- 95th percentile latency.
+- 99th percentile latency.
+- Maximum response time.
+
+Response times must satisfy business and operational requirements.
+
+---
+
+### Load Testing
+
+Load testing evaluates system behavior under expected workloads by measuring:
+
+- Concurrent users.
+- Concurrent API requests.
+- Transactions per second.
+- Sustained workload performance.
+- Throughput.
+
+The system should remain stable under anticipated production traffic.
+
+---
+
+### Stress Testing
+
+Stress testing intentionally exceeds expected production capacity to determine:
+
+- Maximum supported workload.
+- Breaking point.
+- Recovery behavior.
+- Failure handling.
+- Graceful degradation.
+
+---
+
+### Endurance Testing
+
+Endurance testing evaluates long-running stability by measuring:
+
+- Memory usage over time.
+- CPU utilization.
+- Resource leaks.
+- System stability.
+- Long-term response consistency.
+
+This helps identify issues that appear only during prolonged operation.
+
+---
+
+### Scalability Testing
+
+Testing verifies that the system can scale effectively by evaluating:
+
+- Horizontal scaling.
+- Vertical scaling.
+- Auto-scaling behavior.
+- Resource allocation.
+- Load balancing effectiveness.
+
+---
+
+### Resource Utilization
+
+Performance monitoring includes:
+
+- CPU utilization.
+- Memory consumption.
+- Disk usage.
+- Network utilization.
+- GPU utilization (if applicable).
+
+Resource usage should remain within acceptable operational limits.
+
+---
+
+### Capacity Planning
+
+Testing supports capacity planning by estimating:
+
+- Maximum concurrent users.
+- Peak request volume.
+- Infrastructure requirements.
+- Database capacity.
+- Storage requirements.
+- Network bandwidth.
+
+Capacity planning informs future infrastructure expansion.
+
+---
+
+### Test Execution
+
+Performance tests are executed:
+
+- Before major releases.
+- During staging validation.
+- After infrastructure changes.
+- After model optimization.
+- During periodic production readiness assessments.
+
+---
+
+### Reporting
+
+Performance reports include:
+
+- Response time statistics.
+- Throughput.
+- Resource utilization.
+- Error rates.
+- Scalability results.
+- Stress testing outcomes.
+- Capacity recommendations.
+
+Reports support deployment approval and infrastructure planning.
+
+---
+
+### Benefits
+
+Performance & Load Testing provides:
+
+- Faster system response.
+- Improved scalability.
+- Reduced production failures.
+- Better customer experience.
+- Efficient resource utilization.
+- Increased confidence in production deployments.
