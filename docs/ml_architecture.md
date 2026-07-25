@@ -9612,3 +9612,210 @@ The alerting and notification framework provides:
 - Better incident management.
 - Increased system reliability.
 - Enhanced business continuity.
+## 8.12 Incident Management
+
+Incident Management defines the procedures for identifying, responding to, resolving, documenting, and reviewing incidents that affect the production ETA prediction system. The objective is to restore normal service operations as quickly as possible while minimizing the impact on customers and business operations.
+
+The incident management framework integrates with monitoring, alerting, logging, and operational support processes to provide a coordinated response to production issues.
+
+### Objectives
+
+The incident management process aims to:
+
+- Detect incidents quickly.
+- Minimize service disruption.
+- Restore normal operations rapidly.
+- Coordinate incident response.
+- Identify root causes.
+- Prevent recurring incidents.
+- Improve operational resilience.
+
+---
+
+### Incident Types
+
+Incidents may include:
+
+- Infrastructure failures.
+- Application failures.
+- API outages.
+- Database failures.
+- Model inference failures.
+- Data pipeline failures.
+- Data quality issues.
+- Data drift detection.
+- Model drift detection.
+- Security incidents.
+- Third-party service failures.
+
+---
+
+### Incident Severity Levels
+
+Incidents are classified based on business impact.
+
+#### Critical
+
+Examples:
+
+- Complete production outage.
+- ETA prediction service unavailable.
+- Database unavailable.
+- Major security breach.
+
+Response: Immediate.
+
+---
+
+#### High
+
+Examples:
+
+- Significant API degradation.
+- Model inference failures.
+- Major data pipeline failures.
+- High error rates.
+
+Response: Urgent.
+
+---
+
+#### Medium
+
+Examples:
+
+- Performance degradation.
+- Background job failures.
+- Partial service disruption.
+- Moderate data quality issues.
+
+Response: Scheduled priority.
+
+---
+
+#### Low
+
+Examples:
+
+- Minor configuration issues.
+- Non-critical warnings.
+- Documentation updates.
+- Cosmetic interface issues.
+
+Response: Planned maintenance.
+
+---
+
+### Incident Lifecycle
+
+Each incident follows a structured lifecycle:
+
+1. Incident detection.
+2. Incident logging.
+3. Severity assessment.
+4. Team notification.
+5. Incident investigation.
+6. Root cause analysis.
+7. Corrective action.
+8. Service recovery.
+9. Validation and testing.
+10. Incident closure.
+11. Post-incident review.
+
+---
+
+### Incident Response Workflow
+
+The response process includes:
+
+- Confirm the incident.
+- Assess business impact.
+- Assign ownership.
+- Communicate status updates.
+- Implement corrective actions.
+- Verify service restoration.
+- Close the incident after validation.
+
+---
+
+### Root Cause Analysis (RCA)
+
+Following resolution, the team performs Root Cause Analysis to determine:
+
+- What happened.
+- Why it happened.
+- Which systems were affected.
+- Contributing factors.
+- Preventive actions.
+- Long-term improvements.
+
+---
+
+### Corrective and Preventive Actions (CAPA)
+
+Corrective actions restore normal operations.
+
+Preventive actions reduce the likelihood of recurrence through:
+
+- Infrastructure improvements.
+- Code fixes.
+- Pipeline enhancements.
+- Monitoring updates.
+- Operational process improvements.
+- Staff training.
+
+---
+
+### Incident Documentation
+
+Each incident record includes:
+
+- Incident ID.
+- Detection time.
+- Severity.
+- Affected services.
+- Root cause.
+- Corrective actions.
+- Resolution time.
+- Preventive actions.
+- Responsible team.
+
+---
+
+### Post-Incident Review
+
+After major incidents, a review is conducted to:
+
+- Evaluate the response.
+- Identify improvement opportunities.
+- Update runbooks.
+- Improve monitoring rules.
+- Enhance operational procedures.
+- Share lessons learned.
+
+---
+
+### Incident Metrics
+
+Key performance indicators include:
+
+- Total incidents.
+- Incidents by severity.
+- Mean Time to Detect (MTTD).
+- Mean Time to Acknowledge (MTTA).
+- Mean Time to Resolve (MTTR).
+- Incident recurrence rate.
+- Service availability.
+
+---
+
+### Benefits
+
+The incident management framework provides:
+
+- Faster service recovery.
+- Reduced operational downtime.
+- Improved customer satisfaction.
+- Better operational coordination.
+- Continuous process improvement.
+- Increased production reliability.
