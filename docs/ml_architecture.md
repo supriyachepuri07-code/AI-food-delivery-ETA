@@ -8925,3 +8925,142 @@ Data quality monitoring provides:
 - Early detection of data issues.
 - Better operational stability.
 - Increased confidence in machine learning outcomes.
+## 8.8 Data Drift Detection
+
+Data Drift Detection continuously monitors changes in the statistical properties and distributions of production data compared to the training dataset. It identifies significant shifts that may reduce model performance and trigger corrective actions such as investigation or model retraining.
+
+The data drift monitoring framework ensures that the ETA prediction model continues to receive representative and reliable input data throughout its lifecycle.
+
+### Objectives
+
+The data drift detection process aims to:
+
+- Detect changes in production data.
+- Monitor feature distribution shifts.
+- Identify abnormal input patterns.
+- Protect model prediction quality.
+- Support retraining decisions.
+- Maintain long-term model reliability.
+
+---
+
+### Drift Monitoring Scope
+
+The monitoring framework evaluates:
+
+- Customer-related features.
+- Driver-related features.
+- Restaurant-related features.
+- Traffic features.
+- Weather features.
+- Distance and route features.
+- Time-based features.
+- Historical delivery features.
+
+---
+
+### Statistical Drift Detection
+
+The monitoring system compares production data with the reference training dataset using statistical techniques to identify significant distribution changes.
+
+The analysis includes:
+
+- Distribution comparison.
+- Mean and variance changes.
+- Quantile analysis.
+- Feature correlation changes.
+- Category frequency analysis.
+
+---
+
+### Feature Distribution Monitoring
+
+Each important feature is monitored for:
+
+- Distribution changes.
+- Unexpected value ranges.
+- Category imbalance.
+- Missing value increases.
+- New feature values.
+
+Significant deviations are recorded for further investigation.
+
+---
+
+### Drift Detection Methods
+
+Common statistical methods include:
+
+- Population Stability Index (PSI).
+- Kolmogorov–Smirnov (KS) Test.
+- Jensen–Shannon Divergence.
+- Kullback–Leibler (KL) Divergence.
+- Chi-Square Test (for categorical features).
+
+The appropriate method is selected based on the feature type and monitoring requirements.
+
+---
+
+### Drift Thresholds
+
+Predefined thresholds determine when drift requires action.
+
+Typical thresholds include:
+
+- No drift.
+- Moderate drift requiring investigation.
+- Significant drift requiring corrective action.
+
+Thresholds are configurable based on business requirements and operational experience.
+
+---
+
+### Drift Alerts
+
+Alerts are generated when:
+
+- Feature distributions shift significantly.
+- New categories appear unexpectedly.
+- Missing values increase substantially.
+- Multiple features drift simultaneously.
+- Drift exceeds configured thresholds.
+
+Alerts are prioritized according to severity.
+
+---
+
+### Corrective Actions
+
+When drift is detected, possible actions include:
+
+- Investigating data sources.
+- Validating feature engineering pipelines.
+- Reviewing external data providers.
+- Collecting additional training data.
+- Triggering model retraining.
+- Updating feature definitions if required.
+
+---
+
+### Reporting
+
+Regular drift reports include:
+
+- Drift status by feature.
+- Statistical test results.
+- Drift severity levels.
+- Historical drift trends.
+- Recommended actions.
+- Retraining recommendations.
+
+---
+
+### Benefits
+
+Data drift detection provides:
+
+- Early identification of changing data patterns.
+- Protection against model degradation.
+- Improved prediction reliability.
+- Better operational awareness.
+- Data-driven retraining decisions.
