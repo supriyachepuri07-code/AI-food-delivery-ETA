@@ -8250,3 +8250,171 @@ The monitoring architecture provides:
 - Improved troubleshooting.
 - Better system reliability.
 - Continuous operational insights.
+## 8.4 Infrastructure Monitoring
+
+Infrastructure Monitoring continuously observes the health, performance, and availability of the production infrastructure supporting the ETA prediction system. It ensures that compute resources, networking, storage, databases, and containerized services operate efficiently and reliably.
+
+The monitoring framework enables proactive detection of infrastructure issues, capacity planning, and performance optimization.
+
+### Objectives
+
+The infrastructure monitoring process aims to:
+
+- Ensure infrastructure availability.
+- Monitor resource utilization.
+- Detect hardware and service failures.
+- Optimize infrastructure performance.
+- Support capacity planning.
+- Minimize downtime.
+
+---
+
+### Compute Resource Monitoring
+
+The monitoring system tracks:
+
+- CPU utilization.
+- Memory utilization.
+- Disk usage.
+- Process health.
+- System load.
+- Operating system status.
+
+Alerts are generated when predefined thresholds are exceeded.
+
+---
+
+### Network Monitoring
+
+Network monitoring includes:
+
+- Network latency.
+- Bandwidth utilization.
+- Packet loss.
+- Connection failures.
+- DNS resolution.
+- Network availability.
+
+These metrics ensure reliable communication between system components.
+
+---
+
+### Storage Monitoring
+
+Storage monitoring tracks:
+
+- Disk capacity.
+- Available storage.
+- Read/write performance.
+- Disk I/O operations.
+- Storage latency.
+- Storage failures.
+
+Monitoring prevents storage exhaustion and performance degradation.
+
+---
+
+### Database Monitoring
+
+Database monitoring observes:
+
+- Connection availability.
+- Query execution time.
+- Active connections.
+- Transaction rates.
+- Replication status.
+- Backup success.
+- Database storage utilization.
+
+---
+
+### Container Monitoring
+
+For containerized deployments, monitoring includes:
+
+- Container health.
+- Container restart count.
+- CPU and memory usage.
+- Container logs.
+- Image version.
+- Resource limits.
+
+---
+
+### Orchestration Monitoring
+
+If an orchestration platform such as Kubernetes is used, monitoring includes:
+
+- Node health.
+- Pod status.
+- Replica availability.
+- Deployment status.
+- Auto-scaling events.
+- Cluster resource utilization.
+
+---
+
+### Load Balancer Monitoring
+
+The monitoring framework tracks:
+
+- Request distribution.
+- Backend availability.
+- Response time.
+- Health checks.
+- Traffic volume.
+- Failover events.
+
+---
+
+### Cloud Infrastructure Monitoring
+
+Cloud monitoring includes:
+
+- Virtual machine health.
+- Managed service availability.
+- Storage services.
+- Networking services.
+- Auto-scaling events.
+- Cloud resource consumption.
+
+---
+
+### Capacity Planning
+
+Infrastructure metrics support:
+
+- Future resource planning.
+- Workload forecasting.
+- Scaling decisions.
+- Cost optimization.
+- Performance improvements.
+
+---
+
+### Alerting
+
+Infrastructure alerts are generated for:
+
+- High CPU utilization.
+- Memory exhaustion.
+- Disk capacity limits.
+- Network failures.
+- Database outages.
+- Container failures.
+- Node failures.
+
+Alerts are prioritized based on severity and routed to the operations team.
+
+---
+
+### Benefits
+
+Infrastructure monitoring provides:
+
+- Improved system availability.
+- Faster infrastructure issue detection.
+- Better resource utilization.
+- Reduced operational downtime.
+- Enhanced scalability.
+- Reliable production operations.
