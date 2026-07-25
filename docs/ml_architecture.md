@@ -11370,3 +11370,151 @@ API Testing provides:
 - Stronger security validation.
 - Better user experience.
 - Increased confidence in production releases.
+## 9.8 Data Validation Testing
+
+Data Validation Testing verifies that all data used throughout the ETA prediction system satisfies predefined quality, integrity, and consistency requirements. Validation is performed before data enters preprocessing pipelines, feature engineering workflows, model training, or real-time inference.
+
+The objective is to prevent invalid, incomplete, or inconsistent data from affecting business operations or machine learning performance.
+
+### Objectives
+
+The data validation testing process aims to:
+
+- Verify data quality.
+- Detect invalid records.
+- Ensure schema compliance.
+- Prevent data corruption.
+- Improve model reliability.
+- Support regulatory compliance.
+- Maintain production readiness.
+
+---
+
+### Scope
+
+Data validation testing covers:
+
+- Raw datasets.
+- Incoming API requests.
+- Preprocessed datasets.
+- Engineered features.
+- Training datasets.
+- Validation datasets.
+- Testing datasets.
+- Batch inference data.
+- Real-time inference requests.
+
+---
+
+### Schema Validation
+
+Testing verifies:
+
+- Required columns.
+- Data types.
+- Column names.
+- Column order (when applicable).
+- Nullable fields.
+- Schema version compatibility.
+
+Only datasets matching the expected schema proceed further.
+
+---
+
+### Data Quality Validation
+
+Testing checks:
+
+- Missing values.
+- Duplicate records.
+- Invalid coordinates.
+- Invalid timestamps.
+- Incorrect categorical values.
+- Numerical range violations.
+- Inconsistent records.
+
+Data quality issues are logged and handled according to validation policies.
+
+---
+
+### Feature Validation
+
+Generated features are validated for:
+
+- Correct calculations.
+- Expected data types.
+- Valid numerical ranges.
+- Missing feature values.
+- Feature consistency.
+- Feature availability.
+- Business rule compliance.
+
+---
+
+### Business Rule Validation
+
+Testing verifies business-specific rules such as:
+
+- Delivery distance is greater than zero.
+- Restaurant and customer locations are valid.
+- Driver availability is correctly represented.
+- Order timestamps follow chronological order.
+- Weather data corresponds to the delivery location.
+- Traffic information is available when required.
+
+---
+
+### Data Integrity Validation
+
+Integrity testing ensures:
+
+- Referential integrity.
+- Consistent identifiers.
+- No orphan records.
+- Valid foreign key relationships.
+- Consistent feature mappings.
+
+---
+
+### Validation Execution
+
+Data validation tests are executed:
+
+- During data ingestion.
+- Before preprocessing.
+- Before feature engineering.
+- Before model training.
+- Before batch inference.
+- Before real-time inference.
+- During CI/CD validation.
+
+Automation ensures consistent enforcement of validation rules.
+
+---
+
+### Reporting
+
+Validation reports include:
+
+- Total records processed.
+- Valid records.
+- Invalid records.
+- Validation failures.
+- Rule violation summaries.
+- Data quality metrics.
+- Execution duration.
+
+Reports support operational monitoring and auditing.
+
+---
+
+### Benefits
+
+Data Validation Testing provides:
+
+- Higher data quality.
+- More reliable predictions.
+- Reduced processing failures.
+- Improved business confidence.
+- Better compliance.
+- Enhanced production stability.
