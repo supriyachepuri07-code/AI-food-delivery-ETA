@@ -13178,3 +13178,256 @@ Stakeholder Management provides:
 - Higher stakeholder satisfaction.
 - Reduced project risks.
 - Greater project success.
+## 10.3 Team Roles & Responsibilities
+
+Team Roles & Responsibilities define the ownership, accountability, and collaboration structure for all teams participating in the ETA Prediction System project. Each role has clearly defined responsibilities to ensure efficient execution, high software quality, reliable machine learning operations, and successful project delivery.
+
+The responsibility framework promotes accountability, collaboration, and effective coordination throughout the software development and MLOps lifecycle.
+
+### Objectives
+
+The Team Roles & Responsibilities framework aims to:
+
+- Define ownership.
+- Clarify responsibilities.
+- Improve collaboration.
+- Reduce role ambiguity.
+- Increase accountability.
+- Support efficient delivery.
+- Ensure operational excellence.
+
+---
+
+### Scope
+
+The framework covers:
+
+- Business teams.
+- Product management.
+- Project management.
+- Solution architecture.
+- Data engineering.
+- Machine learning engineering.
+- Backend development.
+- Frontend development.
+- DevOps.
+- MLOps.
+- Quality assurance.
+- Operations.
+- Security.
+- Customer support.
+
+---
+
+### Business Team
+
+Responsibilities include:
+
+- Define business objectives.
+- Approve project scope.
+- Validate business requirements.
+- Review project outcomes.
+- Approve production releases.
+
+---
+
+### Product Owner
+
+Responsibilities include:
+
+- Prioritize product backlog.
+- Define functional requirements.
+- Accept completed features.
+- Coordinate stakeholder feedback.
+- Approve sprint deliverables.
+
+---
+
+### Project Manager
+
+Responsibilities include:
+
+- Plan project execution.
+- Track milestones.
+- Manage resources.
+- Coordinate teams.
+- Monitor risks.
+- Report project status.
+
+---
+
+### Solution Architect
+
+Responsibilities include:
+
+- Design system architecture.
+- Define technical standards.
+- Review technical designs.
+- Ensure scalability.
+- Guide implementation decisions.
+
+---
+
+### Data Engineers
+
+Responsibilities include:
+
+- Build data pipelines.
+- Manage data ingestion.
+- Maintain data quality.
+- Optimize data storage.
+- Support feature engineering.
+
+---
+
+### Machine Learning Engineers
+
+Responsibilities include:
+
+- Develop ML models.
+- Train and validate models.
+- Optimize prediction accuracy.
+- Manage model versioning.
+- Support model deployment.
+- Monitor model performance.
+
+---
+
+### Backend Developers
+
+Responsibilities include:
+
+- Develop REST APIs.
+- Implement business logic.
+- Integrate ML inference.
+- Optimize backend performance.
+- Maintain API documentation.
+
+---
+
+### Frontend Developers
+
+Responsibilities include:
+
+- Develop user interfaces.
+- Integrate backend APIs.
+- Improve user experience.
+- Ensure responsive design.
+- Implement client-side validation.
+
+---
+
+### DevOps Engineers
+
+Responsibilities include:
+
+- Build CI/CD pipelines.
+- Manage infrastructure.
+- Automate deployments.
+- Monitor system health.
+- Optimize cloud resources.
+
+---
+
+### MLOps Engineers
+
+Responsibilities include:
+
+- Automate ML pipelines.
+- Manage model registry.
+- Deploy ML models.
+- Monitor model drift.
+- Coordinate retraining.
+- Maintain Feature Store.
+
+---
+
+### Quality Assurance Engineers
+
+Responsibilities include:
+
+- Design test plans.
+- Execute automated tests.
+- Validate software quality.
+- Report defects.
+- Verify release readiness.
+
+---
+
+### Operations Team
+
+Responsibilities include:
+
+- Monitor production systems.
+- Handle incidents.
+- Manage backups.
+- Ensure system availability.
+- Support disaster recovery.
+
+---
+
+### Security Team
+
+Responsibilities include:
+
+- Perform security reviews.
+- Monitor vulnerabilities.
+- Manage access control.
+- Ensure compliance.
+- Respond to security incidents.
+
+---
+
+### Customer Support Team
+
+Responsibilities include:
+
+- Handle customer issues.
+- Collect user feedback.
+- Escalate incidents.
+- Support operational teams.
+- Improve customer satisfaction.
+
+---
+
+### Collaboration Model
+
+Project collaboration includes:
+
+- Sprint planning.
+- Daily stand-ups.
+- Design reviews.
+- Code reviews.
+- Architecture reviews.
+- Release planning.
+- Incident response.
+- Retrospective meetings.
+
+Cross-functional collaboration ensures successful project delivery.
+
+---
+
+### Responsibility Matrix
+
+The responsibility framework follows:
+
+- Responsible (R)
+- Accountable (A)
+- Consulted (C)
+- Informed (I)
+
+A RACI matrix is maintained to clearly assign ownership for every major project activity.
+
+---
+
+### Benefits
+
+Clearly defined roles provide:
+
+- Better accountability.
+- Faster decision-making.
+- Improved collaboration.
+- Reduced project risk.
+- Higher software quality.
+- Efficient project execution.
+- Successful long-term maintenance.
