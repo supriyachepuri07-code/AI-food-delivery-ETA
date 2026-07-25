@@ -9819,3 +9819,175 @@ The incident management framework provides:
 - Better operational coordination.
 - Continuous process improvement.
 - Increased production reliability.
+## 8.13 Retraining Strategy
+
+The Retraining Strategy defines the processes for updating the production ETA prediction model using new data collected from production environments. The objective is to maintain prediction accuracy, adapt to changing business conditions, and continuously improve model performance throughout its lifecycle.
+
+The retraining framework integrates with monitoring, data validation, model evaluation, CI/CD pipelines, and deployment workflows to enable reliable and controlled model updates.
+
+### Objectives
+
+The retraining strategy aims to:
+
+- Maintain model accuracy.
+- Adapt to changing data patterns.
+- Reduce model drift.
+- Improve prediction quality.
+- Support continuous learning.
+- Automate model improvement.
+- Ensure safe model deployment.
+
+---
+
+### Retraining Triggers
+
+Model retraining may be initiated when:
+
+- Data drift exceeds acceptable thresholds.
+- Model drift is detected.
+- Prediction accuracy decreases.
+- New production data becomes available.
+- Business requirements change.
+- Feature engineering logic is updated.
+- A scheduled retraining interval is reached.
+
+---
+
+### Scheduled Retraining
+
+Regular retraining can be performed:
+
+- Daily (for rapidly changing environments).
+- Weekly.
+- Monthly.
+- Quarterly.
+
+The schedule depends on business needs, data volume, and observed model stability.
+
+---
+
+### Event-Driven Retraining
+
+Retraining may also be triggered by specific events such as:
+
+- Significant data drift.
+- Significant model drift.
+- Introduction of new features.
+- Major application updates.
+- Changes in business processes.
+- Persistent monitoring alerts.
+
+---
+
+### Data Preparation
+
+Before retraining, production data is:
+
+- Collected from validated sources.
+- Cleaned and preprocessed.
+- Validated for quality.
+- Checked for schema consistency.
+- Passed through feature engineering pipelines.
+- Split into training, validation, and testing datasets.
+
+---
+
+### Model Training
+
+The retraining workflow includes:
+
+- Feature extraction.
+- Model training.
+- Hyperparameter tuning.
+- Cross-validation.
+- Performance evaluation.
+- Model version creation.
+
+The workflow follows the same standards as the initial model development process.
+
+---
+
+### Model Validation
+
+Before deployment, the retrained model is validated by verifying:
+
+- Prediction accuracy.
+- Generalization performance.
+- Latency requirements.
+- Resource utilization.
+- Business KPI improvements.
+- Compatibility with production systems.
+
+Only validated models proceed to deployment.
+
+---
+
+### Model Approval Workflow
+
+The approval process includes:
+
+1. Retraining completion.
+2. Performance evaluation.
+3. Validation review.
+4. Approval by authorized personnel or automated policy.
+5. Registration in the Model Registry.
+6. Deployment through the CI/CD pipeline.
+
+---
+
+### Automated Retraining Pipeline
+
+The automated pipeline performs:
+
+- Data extraction.
+- Data validation.
+- Feature engineering.
+- Model training.
+- Model evaluation.
+- Model registration.
+- Deployment preparation.
+- Performance reporting.
+
+Automation reduces manual effort and improves consistency.
+
+---
+
+### Retraining Metrics
+
+The retraining process tracks:
+
+- Training duration.
+- Validation accuracy.
+- Model improvement over baseline.
+- Resource consumption.
+- Deployment success rate.
+- Retraining frequency.
+- Number of approved models.
+
+---
+
+### Documentation
+
+Each retraining cycle records:
+
+- Retraining date.
+- Dataset version.
+- Model version.
+- Hyperparameters.
+- Evaluation metrics.
+- Approval status.
+- Deployment status.
+- Responsible personnel or automated workflow.
+
+---
+
+### Benefits
+
+The retraining strategy provides:
+
+- Continuous model improvement.
+- Adaptation to changing business conditions.
+- Reduced model degradation.
+- Reliable prediction quality.
+- Controlled model updates.
+- Long-term operational success.
