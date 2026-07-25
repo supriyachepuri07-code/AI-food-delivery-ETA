@@ -12516,3 +12516,158 @@ Test Automation provides:
 - Reduced manual effort.
 - Better regression protection.
 - Continuous quality assurance.
+## 9.15 Test Reporting
+
+Test Reporting defines the process for collecting, analyzing, and communicating the results of testing activities throughout the ETA prediction system lifecycle. Reports provide visibility into software quality, model quality, test coverage, defects, and deployment readiness.
+
+The reporting framework supports informed decision-making by development, QA, ML, DevOps, and business teams before production deployment.
+
+### Objectives
+
+The test reporting process aims to:
+
+- Summarize testing results.
+- Measure software quality.
+- Track testing progress.
+- Monitor defect trends.
+- Evaluate release readiness.
+- Support audits.
+- Improve continuous quality.
+
+---
+
+### Scope
+
+Test reporting includes:
+
+- Unit testing.
+- Integration testing.
+- End-to-End testing.
+- API testing.
+- Data validation testing.
+- Model validation testing.
+- Performance testing.
+- Security testing.
+- Regression testing.
+- User Acceptance Testing.
+
+---
+
+### Report Components
+
+Each report contains:
+
+- Test execution summary.
+- Total test cases.
+- Passed test cases.
+- Failed test cases.
+- Skipped test cases.
+- Blocked test cases.
+- Test execution duration.
+- Environment information.
+
+---
+
+### Quality Metrics
+
+Reports include metrics such as:
+
+- Test pass rate.
+- Test failure rate.
+- Code coverage.
+- API success rate.
+- Model validation results.
+- Performance benchmarks.
+- Security scan results.
+- Defect density.
+
+These metrics provide an overall view of system quality.
+
+---
+
+### Defect Reporting
+
+Defect reports include:
+
+- Defect identifier.
+- Severity.
+- Priority.
+- Affected component.
+- Steps to reproduce.
+- Current status.
+- Resolution details.
+- Root cause analysis.
+
+Defects are tracked until resolution.
+
+---
+
+### Release Readiness
+
+Before deployment, reports verify:
+
+- All critical tests passed.
+- No unresolved critical defects.
+- Required code coverage achieved.
+- Model validation approved.
+- Security testing completed.
+- Performance benchmarks satisfied.
+- Stakeholder approvals received.
+
+---
+
+### Report Generation
+
+Reports are generated:
+
+- After every CI/CD pipeline execution.
+- After nightly regression runs.
+- Before release candidates.
+- Before production deployment.
+- After User Acceptance Testing.
+
+Automated report generation ensures consistency and accuracy.
+
+---
+
+### Storage and Retention
+
+Reports are securely stored with:
+
+- Version information.
+- Build number.
+- Model version.
+- Dataset version.
+- Execution timestamp.
+- Test environment.
+
+Retention policies support auditing and historical analysis.
+
+---
+
+### Distribution
+
+Reports are shared with:
+
+- Developers.
+- QA engineers.
+- ML engineers.
+- DevOps engineers.
+- Product owners.
+- Project managers.
+- Business stakeholders.
+
+Each team receives the information relevant to its responsibilities.
+
+---
+
+### Benefits
+
+Test Reporting provides:
+
+- Complete visibility into testing activities.
+- Better release decisions.
+- Improved traceability.
+- Faster defect resolution.
+- Stronger compliance support.
+- Continuous quality improvement.
