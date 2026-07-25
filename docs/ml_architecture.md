@@ -11838,3 +11838,195 @@ Performance & Load Testing provides:
 - Better customer experience.
 - Efficient resource utilization.
 - Increased confidence in production deployments.
+## 9.11 Security Testing
+
+Security Testing verifies that the ETA prediction system is protected against security threats, unauthorized access, and vulnerabilities. It ensures that the application's APIs, infrastructure, machine learning services, databases, and supporting components comply with organizational security requirements and industry best practices.
+
+The security testing framework integrates with CI/CD pipelines and operational monitoring to continuously assess and improve the security posture of the production environment.
+
+### Objectives
+
+The security testing process aims to:
+
+- Identify security vulnerabilities.
+- Protect sensitive data.
+- Prevent unauthorized access.
+- Validate authentication and authorization.
+- Ensure secure communication.
+- Reduce cybersecurity risks.
+- Support regulatory compliance.
+
+---
+
+### Scope
+
+Security testing covers:
+
+- REST APIs.
+- Authentication services.
+- Authorization mechanisms.
+- Databases.
+- Feature Store.
+- Model Registry.
+- CI/CD pipelines.
+- Cloud infrastructure.
+- Configuration files.
+- Secrets management.
+
+---
+
+### Authentication Testing
+
+Testing verifies:
+
+- User login functionality.
+- Token generation.
+- Token validation.
+- Session management.
+- Invalid credential handling.
+- Expired token handling.
+- Multi-Factor Authentication (if implemented).
+
+---
+
+### Authorization Testing
+
+Authorization testing ensures:
+
+- Role-Based Access Control (RBAC).
+- Least privilege enforcement.
+- Resource access restrictions.
+- Administrative access protection.
+- API permission validation.
+
+Users should only access resources they are authorized to use.
+
+---
+
+### Input Validation Testing
+
+Testing verifies protection against:
+
+- SQL Injection.
+- NoSQL Injection.
+- Command Injection.
+- Cross-Site Scripting (XSS).
+- Path Traversal.
+- Malformed requests.
+- Buffer overflow attempts (where applicable).
+
+All user inputs should be validated and sanitized.
+
+---
+
+### API Security Testing
+
+API security testing validates:
+
+- HTTPS enforcement.
+- Authentication headers.
+- Authorization tokens.
+- Rate limiting.
+- Secure response headers.
+- API gateway protection.
+- Request validation.
+
+---
+
+### Dependency and Vulnerability Scanning
+
+Security assessments include:
+
+- Dependency vulnerability scanning.
+- Container image scanning.
+- Operating system vulnerability checks.
+- Static Application Security Testing (SAST).
+- Dynamic Application Security Testing (DAST).
+
+Critical vulnerabilities must be resolved before deployment.
+
+---
+
+### Secrets Management Testing
+
+Testing verifies:
+
+- Secure storage of secrets.
+- Secret rotation.
+- Access restrictions.
+- Encryption of sensitive credentials.
+- No hardcoded secrets in source code.
+
+---
+
+### Encryption Verification
+
+Security testing confirms:
+
+**Data at Rest**
+
+- Database encryption.
+- Backup encryption.
+- Model artifact encryption.
+- Feature Store encryption.
+
+**Data in Transit**
+
+- HTTPS/TLS communication.
+- Encrypted service-to-service communication.
+- Secure API traffic.
+
+---
+
+### Penetration Testing
+
+Penetration testing simulates attacks to identify exploitable weaknesses in:
+
+- APIs.
+- Authentication systems.
+- Infrastructure.
+- Network configuration.
+- Application logic.
+
+Findings are documented and remediated before production deployment.
+
+---
+
+### Security Test Execution
+
+Security testing is performed:
+
+- During development.
+- Before every production release.
+- After infrastructure changes.
+- After dependency updates.
+- During periodic security assessments.
+
+---
+
+### Reporting
+
+Security reports include:
+
+- Vulnerabilities identified.
+- Risk severity.
+- Remediation status.
+- Scan results.
+- Penetration testing findings.
+- Compliance status.
+- Test execution date.
+
+Reports are retained for auditing and continuous improvement.
+
+---
+
+### Benefits
+
+Security Testing provides:
+
+- Stronger application security.
+- Reduced attack surface.
+- Better protection of sensitive data.
+- Improved regulatory compliance.
+- Increased customer trust.
+- Safer production deployments.
