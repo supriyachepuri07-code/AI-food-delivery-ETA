@@ -7393,3 +7393,165 @@ A rollback strategy provides:
 - Improved deployment reliability.
 - Better operational resilience.
 - Enhanced business continuity.
+## 7.16 Deployment Security
+
+Deployment Security defines the policies, controls, and mechanisms used to protect the ETA prediction service, infrastructure, APIs, machine learning models, and operational data throughout the deployment lifecycle.
+
+The security architecture follows the principles of least privilege, defense in depth, secure communication, and continuous monitoring to reduce security risks and ensure compliance with organizational policies.
+
+### Objectives
+
+The deployment security strategy aims to:
+
+- Protect production infrastructure.
+- Secure API communication.
+- Prevent unauthorized access.
+- Safeguard machine learning models.
+- Protect sensitive business and customer data.
+- Ensure compliance with security standards.
+- Detect and respond to security incidents.
+
+---
+
+### Authentication
+
+Authentication verifies the identity of users, services, and applications accessing the deployment.
+
+Supported mechanisms include:
+
+- JSON Web Tokens (JWT)
+- OAuth 2.0
+- API Keys (where appropriate)
+- Multi-Factor Authentication (MFA) for administrators
+- Service Accounts for internal communication
+
+---
+
+### Authorization
+
+Authorization controls what authenticated users and services are permitted to access.
+
+Access control includes:
+
+- Role-Based Access Control (RBAC)
+- Principle of Least Privilege
+- Resource-level permissions
+- Administrative access restrictions
+
+---
+
+### API Security
+
+The prediction APIs are protected using:
+
+- HTTPS/TLS encryption
+- API authentication
+- Request validation
+- Input sanitization
+- Rate limiting
+- Request logging
+- Protection against common web attacks
+
+---
+
+### Data Security
+
+Sensitive information is protected through:
+
+- Encryption in transit
+- Encryption at rest
+- Secure storage of customer data
+- Data masking where appropriate
+- Controlled access to production datasets
+
+---
+
+### Secrets Management
+
+Sensitive credentials are managed securely, including:
+
+- API keys
+- Database credentials
+- Cloud access credentials
+- Encryption keys
+- Service tokens
+
+Secrets are never stored directly in source code.
+
+---
+
+### Container Security
+
+Containerized services are secured by:
+
+- Using trusted base images
+- Regular vulnerability scanning
+- Removing unnecessary packages
+- Running containers with minimal privileges
+- Image integrity verification
+
+---
+
+### Network Security
+
+The deployment environment implements:
+
+- Firewall rules
+- Network segmentation
+- Private internal communication
+- Secure load balancing
+- Restricted inbound and outbound traffic
+
+---
+
+### Logging and Auditing
+
+Security-related activities are recorded, including:
+
+- Authentication attempts
+- Authorization failures
+- API access logs
+- Configuration changes
+- Deployment activities
+- Administrative actions
+
+Audit logs support compliance and incident investigations.
+
+---
+
+### Security Monitoring
+
+Continuous monitoring detects:
+
+- Unauthorized access attempts
+- Unusual API activity
+- Infrastructure anomalies
+- Container vulnerabilities
+- Configuration drift
+- Security policy violations
+
+Alerts are generated for high-priority security events.
+
+---
+
+### Incident Response
+
+The deployment supports security incident response through:
+
+- Automated alerting
+- Incident logging
+- Isolation of affected services
+- Recovery procedures
+- Post-incident analysis
+
+---
+
+### Benefits
+
+Deployment security provides:
+
+- Protection against cyber threats.
+- Secure access to production services.
+- Enhanced data privacy.
+- Improved regulatory compliance.
+- Greater operational resilience.
