@@ -14390,3 +14390,191 @@ Documentation Management provides:
 - Easier maintenance.
 - Increased traceability.
 - Long-term project sustainability.
+## 10.9 Compliance & Audit
+
+Compliance & Audit defines the framework used to ensure that the ETA Prediction System complies with applicable organizational policies, security standards, data governance practices, legal obligations, and internal operational requirements. It also establishes audit procedures for verifying compliance, identifying gaps, and driving continuous improvement.
+
+The framework supports secure, reliable, and accountable operation of the system throughout its lifecycle.
+
+### Objectives
+
+The Compliance & Audit framework aims to:
+
+- Ensure regulatory compliance.
+- Enforce organizational policies.
+- Protect sensitive data.
+- Improve accountability.
+- Maintain audit readiness.
+- Reduce compliance risks.
+- Support continuous governance.
+
+---
+
+### Scope
+
+Compliance and audit activities cover:
+
+- Business processes.
+- Software development.
+- Machine learning lifecycle.
+- Data governance.
+- Infrastructure management.
+- Security controls.
+- Deployment processes.
+- Operational procedures.
+- Documentation management.
+- Incident management.
+
+---
+
+### Compliance Areas
+
+The project monitors compliance across:
+
+**Security Compliance**
+
+- Authentication policies.
+- Authorization controls.
+- Encryption standards.
+- Secure coding practices.
+- Vulnerability management.
+
+**Data Governance**
+
+- Data quality standards.
+- Data retention policies.
+- Data access controls.
+- Backup requirements.
+- Data lifecycle management.
+
+**Operational Compliance**
+
+- Incident response procedures.
+- Change management.
+- Deployment approvals.
+- Monitoring requirements.
+- Disaster recovery readiness.
+
+**Development Compliance**
+
+- Coding standards.
+- Code review requirements.
+- Testing standards.
+- CI/CD quality gates.
+- Documentation standards.
+
+---
+
+### Audit Process
+
+Audits follow a structured process:
+
+1. Define audit scope.
+2. Prepare audit checklist.
+3. Collect evidence.
+4. Review compliance.
+5. Identify findings.
+6. Recommend corrective actions.
+7. Track remediation.
+8. Verify closure.
+
+Regular audits help ensure ongoing compliance.
+
+---
+
+### Evidence Collection
+
+Audit evidence includes:
+
+- System logs.
+- Deployment records.
+- Test reports.
+- Change requests.
+- Approval records.
+- Security scan results.
+- Monitoring reports.
+- Backup verification.
+- Training records.
+- Documentation revisions.
+
+Evidence is securely stored for future reference.
+
+---
+
+### Roles and Responsibilities
+
+Compliance activities involve:
+
+- Project Manager.
+- Product Owner.
+- Solution Architect.
+- ML Engineers.
+- Software Engineers.
+- DevOps Engineers.
+- QA Engineers.
+- Security Team.
+- Operations Team.
+- Internal Auditors.
+
+Each role contributes to maintaining compliance within its area of responsibility.
+
+---
+
+### Monitoring
+
+Compliance is monitored through:
+
+- Scheduled audits.
+- Security assessments.
+- Policy reviews.
+- Configuration reviews.
+- KPI dashboards.
+- Incident analysis.
+- Compliance reports.
+
+Monitoring helps detect and address issues proactively.
+
+---
+
+### Corrective Actions
+
+When non-compliance is identified:
+
+- Record the issue.
+- Assess its impact.
+- Assign an owner.
+- Implement corrective actions.
+- Validate the solution.
+- Update documentation.
+- Close the audit finding.
+
+All actions are tracked until completion.
+
+---
+
+### Documentation
+
+Compliance documentation includes:
+
+- Audit plans.
+- Audit reports.
+- Compliance checklists.
+- Evidence repository.
+- Corrective action logs.
+- Policy documents.
+- Review records.
+- Compliance dashboards.
+
+---
+
+### Benefits
+
+Compliance & Audit provides:
+
+- Stronger governance.
+- Improved accountability.
+- Better security.
+- Increased operational transparency.
+- Reduced compliance risks.
+- Higher stakeholder confidence.
+- Continuous process improvement.
