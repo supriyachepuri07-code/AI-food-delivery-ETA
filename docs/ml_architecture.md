@@ -13802,3 +13802,210 @@ Risk Management provides:
 - Faster incident response.
 - Improved stakeholder confidence.
 - More reliable production systems.
+## 10.6 Change Management
+
+Change Management defines the framework for requesting, evaluating, approving, implementing, communicating, and documenting changes throughout the ETA Prediction System lifecycle. It ensures that changes are introduced in a controlled, traceable, and low-risk manner while maintaining system stability, quality, and business alignment.
+
+The framework applies to software, machine learning models, datasets, infrastructure, documentation, and operational processes.
+
+### Objectives
+
+The Change Management framework aims to:
+
+- Control project changes.
+- Reduce implementation risks.
+- Maintain system stability.
+- Improve change traceability.
+- Ensure stakeholder alignment.
+- Support continuous improvement.
+- Protect production environments.
+
+---
+
+### Scope
+
+Change management covers:
+
+- Business requirements.
+- System architecture.
+- Source code.
+- Machine learning models.
+- Datasets.
+- Feature engineering pipelines.
+- REST APIs.
+- Infrastructure.
+- CI/CD pipelines.
+- Monitoring configurations.
+- Documentation.
+- Operational procedures.
+
+---
+
+### Types of Changes
+
+The project classifies changes into:
+
+**Business Changes**
+
+- Requirement updates.
+- Feature requests.
+- Scope modifications.
+- Business rule changes.
+
+**Technical Changes**
+
+- Code enhancements.
+- Bug fixes.
+- API modifications.
+- Database schema updates.
+- Architecture improvements.
+
+**Machine Learning Changes**
+
+- Model retraining.
+- Hyperparameter updates.
+- Feature engineering improvements.
+- Dataset updates.
+- Model replacement.
+
+**Infrastructure Changes**
+
+- Cloud resource updates.
+- Container updates.
+- CI/CD improvements.
+- Security configuration changes.
+- Monitoring enhancements.
+
+---
+
+### Change Request Process
+
+Every change follows a formal process:
+
+1. Submit change request.
+2. Record the request.
+3. Assess business and technical impact.
+4. Estimate effort and resources.
+5. Review risks.
+6. Obtain approvals.
+7. Schedule implementation.
+8. Execute the change.
+9. Validate through testing.
+10. Deploy to production.
+11. Update documentation.
+12. Close the change request.
+
+---
+
+### Impact Assessment
+
+Each proposed change is evaluated for:
+
+- Business impact.
+- Technical impact.
+- Security impact.
+- Performance impact.
+- Cost impact.
+- Schedule impact.
+- Operational impact.
+- User impact.
+
+Only approved changes proceed to implementation.
+
+---
+
+### Approval Process
+
+Changes may require approval from:
+
+- Product Owner.
+- Project Manager.
+- Solution Architect.
+- Technical Lead.
+- ML Lead.
+- DevOps Lead.
+- Security Team.
+- Business Sponsor.
+
+Approval requirements depend on the change type and associated risk.
+
+---
+
+### Change Implementation
+
+Implementation activities include:
+
+- Development.
+- Code review.
+- Automated testing.
+- Model validation.
+- Security validation.
+- Performance testing.
+- Staging deployment.
+- Production deployment.
+
+Each change follows the established release management process.
+
+---
+
+### Change Communication
+
+Stakeholders are informed through:
+
+- Sprint planning meetings.
+- Release notes.
+- Change logs.
+- Email notifications.
+- Project dashboards.
+- Incident notifications (if applicable).
+
+Timely communication minimizes operational disruption.
+
+---
+
+### Change Documentation
+
+Each change record includes:
+
+- Change ID.
+- Description.
+- Requestor.
+- Business justification.
+- Risk assessment.
+- Approval history.
+- Implementation details.
+- Test results.
+- Deployment date.
+- Rollback plan.
+- Current status.
+
+Documentation ensures full traceability.
+
+---
+
+### Post-Implementation Review
+
+After deployment, the project team reviews:
+
+- Implementation success.
+- Production stability.
+- User feedback.
+- Performance impact.
+- Incident reports.
+- Lessons learned.
+
+Findings are incorporated into future improvements.
+
+---
+
+### Benefits
+
+Change Management provides:
+
+- Controlled system evolution.
+- Reduced implementation risk.
+- Improved traceability.
+- Better stakeholder communication.
+- Higher deployment quality.
+- Stronger operational stability.
+- Continuous business alignment.
