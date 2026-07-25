@@ -12195,3 +12195,173 @@ User Acceptance Testing provides:
 - Reduced production risk.
 - Higher deployment quality.
 - Greater business value.
+## 9.13 Regression Testing
+
+Regression Testing verifies that existing functionality continues to operate correctly after software changes, model updates, infrastructure modifications, dependency upgrades, or bug fixes. The objective is to detect unintended side effects introduced by new changes before deployment to production.
+
+Regression testing is automated wherever possible and integrated into the Continuous Integration and Continuous Deployment (CI/CD) pipeline to ensure consistent quality across releases.
+
+### Objectives
+
+The regression testing process aims to:
+
+- Verify existing functionality.
+- Detect unintended defects.
+- Prevent functionality degradation.
+- Validate new changes.
+- Improve release confidence.
+- Support continuous delivery.
+- Maintain production stability.
+
+---
+
+### Scope
+
+Regression testing covers:
+
+- Data ingestion pipelines.
+- Data preprocessing.
+- Feature engineering.
+- Model training.
+- Model inference.
+- REST APIs.
+- Database operations.
+- Feature Store.
+- Model Registry.
+- Monitoring services.
+- Deployment workflows.
+
+---
+
+### Regression Triggers
+
+Regression tests are executed after:
+
+- New feature implementation.
+- Bug fixes.
+- Model retraining.
+- Feature engineering updates.
+- API modifications.
+- Dependency upgrades.
+- Infrastructure changes.
+- Configuration updates.
+- Security patches.
+
+---
+
+### Test Selection Strategy
+
+The regression suite includes:
+
+- Critical business workflows.
+- Frequently used APIs.
+- Core machine learning functionality.
+- Data validation pipelines.
+- Authentication services.
+- Performance-critical components.
+- Previously failed test cases.
+
+Priority is given to high-risk and business-critical functionality.
+
+---
+
+### Automation Strategy
+
+Regression tests are automated using:
+
+- pytest
+- CI/CD pipelines
+- Scheduled regression jobs
+- Automated API testing
+- Automated model validation
+- Automated data validation
+
+Automation ensures repeatability and rapid feedback.
+
+---
+
+### Execution Process
+
+Regression testing follows these steps:
+
+1. Identify modified components.
+2. Select relevant regression test cases.
+3. Execute automated regression suite.
+4. Analyze test results.
+5. Report defects.
+6. Resolve issues.
+7. Re-execute affected tests.
+8. Approve release.
+
+---
+
+### Validation Criteria
+
+Regression testing verifies:
+
+- Existing functionality remains unchanged.
+- APIs remain backward compatible.
+- Model predictions remain consistent.
+- Data pipelines execute successfully.
+- Business workflows continue operating correctly.
+- Performance remains within acceptable limits.
+
+---
+
+### Reporting
+
+Regression reports include:
+
+- Total tests executed.
+- Passed tests.
+- Failed tests.
+- Skipped tests.
+- Newly identified defects.
+- Regression defect trends.
+- Test execution duration.
+- Release readiness status.
+
+Reports are archived for historical analysis and auditing.
+
+---
+
+### CI/CD Integration
+
+Regression testing is integrated with:
+
+- Source code commits.
+- Pull request validation.
+- Build pipelines.
+- Release pipelines.
+- Deployment approvals.
+- Nightly automated testing.
+
+Deployment proceeds only after mandatory regression tests pass.
+
+---
+
+### Maintenance
+
+Regression test suites are updated whenever:
+
+- New functionality is added.
+- Existing functionality changes.
+- Bugs are resolved.
+- Business requirements evolve.
+- APIs are enhanced.
+- Models are retrained.
+
+Regular maintenance ensures long-term effectiveness.
+
+---
+
+### Benefits
+
+Regression Testing provides:
+
+- Higher software reliability.
+- Reduced production defects.
+- Faster release cycles.
+- Improved deployment confidence.
+- Better system stability.
+- Continuous quality assurance.
