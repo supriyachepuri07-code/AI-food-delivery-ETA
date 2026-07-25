@@ -11222,3 +11222,151 @@ Unit Testing provides:
 - Safer code changes.
 - Better maintainability.
 - Strong foundation for higher-level testing.
+## 9.7 API Testing
+
+API Testing verifies that the REST APIs of the ETA prediction system function correctly, securely, and efficiently. It validates request processing, response generation, authentication, authorization, error handling, and performance under various scenarios.
+
+The testing framework ensures that APIs remain reliable and backward-compatible as the application evolves.
+
+### Objectives
+
+The API testing process aims to:
+
+- Verify endpoint functionality.
+- Validate request and response formats.
+- Ensure authentication and authorization.
+- Test error handling.
+- Confirm API reliability.
+- Maintain backward compatibility.
+- Support production readiness.
+
+---
+
+### Scope
+
+API testing covers:
+
+- Prediction endpoints.
+- Health check endpoints.
+- Authentication endpoints.
+- Model information endpoints.
+- Monitoring endpoints.
+- Administrative endpoints.
+- Configuration endpoints (if applicable).
+
+---
+
+### Request Validation
+
+Testing verifies:
+
+- Required parameters.
+- Optional parameters.
+- Data types.
+- Input validation.
+- Boundary values.
+- Invalid inputs.
+- Missing fields.
+
+The API should reject malformed or invalid requests with appropriate status codes.
+
+---
+
+### Response Validation
+
+Each response is verified for:
+
+- HTTP status code.
+- Response schema.
+- Data types.
+- Field completeness.
+- ETA prediction values.
+- Error messages.
+- Response headers.
+
+Responses should follow the documented API specification.
+
+---
+
+### Authentication and Authorization
+
+Security testing verifies:
+
+- Valid authentication tokens.
+- Invalid token handling.
+- Expired token handling.
+- Unauthorized access.
+- Role-based permissions (if implemented).
+
+Only authorized users or services should access protected endpoints.
+
+---
+
+### Error Handling
+
+Testing confirms proper handling of:
+
+- Invalid requests.
+- Missing resources.
+- Internal server errors.
+- Validation failures.
+- Service unavailability.
+- Timeout conditions.
+
+The API should return meaningful error messages without exposing sensitive implementation details.
+
+---
+
+### Performance Testing
+
+API performance is evaluated for:
+
+- Response time.
+- Throughput.
+- Concurrent requests.
+- Resource utilization.
+- Stability under sustained load.
+
+Performance targets should align with business and operational requirements.
+
+---
+
+### Test Execution
+
+API tests are executed:
+
+- During local development.
+- Within CI/CD pipelines.
+- Before staging deployment.
+- Before production deployment.
+- After major API changes.
+
+Automated execution helps identify regressions quickly.
+
+---
+
+### Reporting
+
+API testing reports include:
+
+- Total endpoints tested.
+- Passed and failed tests.
+- Response time statistics.
+- Authentication results.
+- Error summaries.
+- Test execution duration.
+
+Reports are retained for quality tracking and release validation.
+
+---
+
+### Benefits
+
+API Testing provides:
+
+- Reliable client-server communication.
+- Early detection of interface defects.
+- Improved API stability.
+- Stronger security validation.
+- Better user experience.
+- Increased confidence in production releases.
