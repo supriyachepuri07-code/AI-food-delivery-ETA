@@ -8584,3 +8584,160 @@ Application monitoring provides:
 - Enhanced operational visibility.
 - Reduced service disruptions.
 - Continuous application optimization.
+## 8.6 Model Performance Monitoring
+
+Model Performance Monitoring continuously evaluates the behavior, accuracy, efficiency, and reliability of the deployed ETA prediction model. It ensures that the model continues to generate high-quality predictions under changing real-world conditions.
+
+The monitoring framework collects operational metrics, evaluates prediction quality, detects performance degradation, and supports continuous model improvement.
+
+### Objectives
+
+The model performance monitoring process aims to:
+
+- Maintain prediction accuracy.
+- Monitor inference performance.
+- Detect model degradation.
+- Track model usage.
+- Identify prediction anomalies.
+- Support retraining decisions.
+- Improve business outcomes.
+
+---
+
+### Prediction Accuracy Monitoring
+
+The monitoring system evaluates:
+
+- Prediction accuracy.
+- Mean Absolute Error (MAE).
+- Root Mean Squared Error (RMSE).
+- Mean Absolute Percentage Error (MAPE).
+- Error distribution.
+- Accuracy trends over time.
+
+These metrics help determine whether the deployed model continues to meet business expectations.
+
+---
+
+### Inference Performance Monitoring
+
+The system tracks:
+
+- Inference latency.
+- Prediction throughput.
+- Average response time.
+- Request processing time.
+- Inference success rate.
+- Inference failure rate.
+
+These metrics ensure efficient real-time prediction.
+
+---
+
+### Prediction Distribution Monitoring
+
+The monitoring framework observes:
+
+- Distribution of predicted ETA values.
+- Prediction ranges.
+- Outlier predictions.
+- Prediction frequency.
+- Seasonal prediction patterns.
+
+Unexpected changes may indicate model degradation or data issues.
+
+---
+
+### Model Version Monitoring
+
+The monitoring system records:
+
+- Active model version.
+- Model deployment history.
+- Version-specific performance.
+- Version adoption.
+- Rollback history.
+
+Version tracking supports traceability and controlled deployments.
+
+---
+
+### Feature Monitoring
+
+The model monitoring process verifies:
+
+- Feature availability.
+- Missing feature values.
+- Feature distributions.
+- Feature consistency.
+- Feature freshness.
+
+Changes in input features may impact prediction quality.
+
+---
+
+### Drift Indicators
+
+The monitoring system detects:
+
+- Feature distribution changes.
+- Prediction distribution changes.
+- Accuracy degradation.
+- Unexpected prediction behavior.
+
+These indicators help identify potential model drift.
+
+---
+
+### Business Performance Monitoring
+
+The deployed model is evaluated using business metrics such as:
+
+- Average delivery time accuracy.
+- Customer satisfaction trends.
+- Order completion rates.
+- Delivery delay reduction.
+- ETA prediction reliability.
+
+These metrics measure the real-world impact of the model.
+
+---
+
+### Alerting
+
+Alerts are generated when:
+
+- Prediction accuracy falls below thresholds.
+- Inference latency increases significantly.
+- Prediction failures increase.
+- Feature availability decreases.
+- Unexpected prediction distributions are detected.
+- Model version inconsistencies occur.
+
+Alerts enable rapid investigation and corrective action.
+
+---
+
+### Reporting
+
+Regular monitoring reports include:
+
+- Model performance summary.
+- Prediction quality metrics.
+- Inference statistics.
+- Model version information.
+- Drift indicators.
+- Operational recommendations.
+
+---
+
+### Benefits
+
+Model performance monitoring provides:
+
+- Reliable ETA predictions.
+- Early detection of performance degradation.
+- Improved customer experience.
+- Better business decision-making.
+- Data-driven retraining decisions.
+- Long-term model reliability.
