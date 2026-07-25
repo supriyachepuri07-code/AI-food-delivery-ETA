@@ -8741,3 +8741,187 @@ Model performance monitoring provides:
 - Better business decision-making.
 - Data-driven retraining decisions.
 - Long-term model reliability.
+## 8.7 Data Quality Monitoring
+
+Data Quality Monitoring continuously evaluates the quality of data entering the ETA prediction system. It ensures that production data remains accurate, complete, consistent, valid, and timely before it is used for feature generation and model inference.
+
+The monitoring framework detects data quality issues early, preventing unreliable inputs from degrading prediction performance and supporting trustworthy machine learning operations.
+
+### Objectives
+
+The data quality monitoring process aims to:
+
+- Ensure data accuracy.
+- Maintain data completeness.
+- Detect invalid records.
+- Monitor schema consistency.
+- Identify duplicate records.
+- Verify feature quality.
+- Support reliable model predictions.
+
+---
+
+### Data Completeness Monitoring
+
+The monitoring system verifies that:
+
+- Required fields are present.
+- Mandatory features are available.
+- Records contain sufficient information.
+- Critical business attributes are populated.
+
+Missing critical information is flagged for investigation.
+
+---
+
+### Missing Value Monitoring
+
+The system continuously monitors:
+
+- Missing feature values.
+- Missing location information.
+- Missing timestamps.
+- Missing identifiers.
+- Missing external service data.
+
+Missing values exceeding predefined thresholds trigger alerts.
+
+---
+
+### Schema Validation
+
+Incoming data is validated against predefined schemas by checking:
+
+- Column names.
+- Data types.
+- Required fields.
+- Allowed value formats.
+- Field constraints.
+
+Schema changes are detected and reported immediately.
+
+---
+
+### Duplicate Record Monitoring
+
+The framework identifies:
+
+- Duplicate orders.
+- Duplicate delivery events.
+- Repeated customer requests.
+- Duplicate feature records.
+
+Duplicate detection helps maintain dataset integrity.
+
+---
+
+### Data Consistency Monitoring
+
+Consistency checks verify:
+
+- Relationships between fields.
+- Valid coordinate values.
+- Timestamp sequencing.
+- Business rule compliance.
+- Cross-system consistency.
+
+Inconsistent records are logged for review.
+
+---
+
+### Feature Quality Monitoring
+
+Feature quality monitoring evaluates:
+
+- Feature availability.
+- Feature ranges.
+- Feature distributions.
+- Derived feature validity.
+- Feature freshness.
+
+These checks ensure reliable model inputs.
+
+---
+
+### Data Freshness Monitoring
+
+The monitoring system tracks:
+
+- Data ingestion delays.
+- Feature update frequency.
+- External API update times.
+- Timestamp recency.
+- Streaming data latency.
+
+Outdated data is identified and reported.
+
+---
+
+### Invalid Data Detection
+
+The framework detects:
+
+- Invalid coordinates.
+- Negative delivery distances.
+- Impossible timestamps.
+- Invalid categorical values.
+- Out-of-range numerical values.
+
+Invalid records are isolated and investigated.
+
+---
+
+### Data Quality Metrics
+
+Key metrics include:
+
+- Completeness rate.
+- Missing value percentage.
+- Duplicate rate.
+- Schema validation success rate.
+- Data freshness.
+- Invalid record rate.
+- Feature availability.
+
+These metrics help evaluate overall data health.
+
+---
+
+### Alerting
+
+Alerts are generated when:
+
+- Missing values exceed thresholds.
+- Schema changes occur.
+- Duplicate records increase.
+- Invalid records are detected.
+- Data freshness decreases.
+- Feature quality deteriorates.
+
+Alerts enable timely corrective actions.
+
+---
+
+### Reporting
+
+Regular reports summarize:
+
+- Data quality status.
+- Validation results.
+- Missing value trends.
+- Duplicate statistics.
+- Schema changes.
+- Data freshness metrics.
+- Operational recommendations.
+
+---
+
+### Benefits
+
+Data quality monitoring provides:
+
+- Reliable model inputs.
+- Improved prediction accuracy.
+- Early detection of data issues.
+- Better operational stability.
+- Increased confidence in machine learning outcomes.
