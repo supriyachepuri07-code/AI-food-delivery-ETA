@@ -8118,3 +8118,135 @@ Clearly defined monitoring objectives provide:
 - Higher prediction quality.
 - Enhanced customer experience.
 - Continuous operational improvement.
+## 8.3 Monitoring Architecture
+
+The Monitoring Architecture defines the end-to-end framework used to collect, process, store, analyze, and visualize operational metrics and events from the production ETA prediction system. It integrates monitoring across infrastructure, applications, APIs, machine learning models, and supporting services to provide complete operational visibility.
+
+The architecture supports real-time monitoring, alert generation, incident response, and long-term performance analysis.
+
+### Objectives
+
+The monitoring architecture aims to:
+
+- Centralize monitoring across all system components.
+- Collect operational metrics and logs.
+- Detect anomalies and failures.
+- Generate actionable alerts.
+- Provide real-time dashboards.
+- Support historical analysis and reporting.
+
+---
+
+### Architecture Components
+
+The monitoring architecture consists of:
+
+- Metrics Collection Service.
+- Log Collection Service.
+- Infrastructure Monitoring.
+- Application Monitoring.
+- API Monitoring.
+- Model Performance Monitoring.
+- Data Quality Monitoring.
+- Alert Management.
+- Dashboard Service.
+- Incident Management Integration.
+
+---
+
+### Metrics Collection
+
+Operational metrics are collected from:
+
+- Compute resources.
+- Containers.
+- APIs.
+- Databases.
+- Message queues.
+- Machine learning services.
+- Feature Store.
+- Model Registry.
+
+These metrics are aggregated and stored for analysis.
+
+---
+
+### Log Aggregation
+
+Logs are collected from:
+
+- Application services.
+- API gateway.
+- Model inference service.
+- Background jobs.
+- Security systems.
+- Infrastructure components.
+
+Logs are centralized to simplify troubleshooting and auditing.
+
+---
+
+### Monitoring Workflow
+
+The monitoring workflow consists of:
+
+1. Collect metrics and logs.
+2. Validate and process monitoring data.
+3. Store metrics in the monitoring database.
+4. Analyze trends and detect anomalies.
+5. Generate alerts when thresholds are exceeded.
+6. Display metrics on operational dashboards.
+7. Trigger incident management workflows if required.
+
+---
+
+### Dashboard Architecture
+
+Dashboards provide visibility into:
+
+- Infrastructure health.
+- Application performance.
+- API metrics.
+- Model performance.
+- Data quality.
+- Security events.
+- Active alerts.
+- Historical trends.
+
+---
+
+### Alerting Integration
+
+The architecture integrates with alerting systems to notify operational teams about:
+
+- Service failures.
+- High latency.
+- Resource exhaustion.
+- Model drift.
+- Data quality issues.
+- Security incidents.
+
+Alerts are categorized by severity and routed to the appropriate teams.
+
+---
+
+### Scalability
+
+The monitoring architecture is designed to:
+
+- Handle increasing metric volumes.
+- Support distributed services.
+- Monitor multiple deployment environments.
+- Scale with business growth.
+
+---
+
+### Benefits
+
+The monitoring architecture provides:
+
+- End-to-end operational visibility.
+- Faster issue detection.
+- Improved troubleshooting.
+- Better system reliability.
+- Continuous operational insights.
