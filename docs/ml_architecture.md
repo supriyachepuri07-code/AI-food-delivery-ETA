@@ -7281,3 +7281,115 @@ Deployment strategies provide:
 - Better operational control.
 - Faster recovery from failures.
 - Improved deployment confidence.
+## 7.15 Rollback Strategy
+
+The Rollback Strategy defines the procedures for reverting the ETA prediction service to a previously stable version when a deployment introduces critical issues. It ensures rapid recovery while minimizing service disruption and maintaining system integrity.
+
+Rollback procedures are integrated into the deployment pipeline and can be initiated automatically or manually based on predefined conditions.
+
+### Objectives
+
+The rollback strategy aims to:
+
+- Minimize service downtime.
+- Restore a stable production environment.
+- Reduce business impact.
+- Preserve data integrity.
+- Support rapid recovery from deployment failures.
+- Ensure traceability of rollback operations.
+
+---
+
+### Rollback Triggers
+
+A rollback may be initiated when:
+
+- Critical application errors occur.
+- Model inference failures increase.
+- API availability drops below acceptable thresholds.
+- Response latency exceeds operational targets.
+- Prediction accuracy degrades significantly.
+- Security vulnerabilities are detected.
+- Infrastructure failures affect service availability.
+
+---
+
+### Rollback Workflow
+
+The rollback process consists of:
+
+1. Detect deployment issue.
+2. Verify rollback conditions.
+3. Select the previous stable release.
+4. Restore the previous application version.
+5. Restore the previous model version.
+6. Restore deployment configuration if required.
+7. Validate service health.
+8. Resume production traffic.
+9. Record rollback activity.
+
+---
+
+### Model Version Restoration
+
+Rollback includes:
+
+- Loading the previous approved model.
+- Restoring associated preprocessing pipelines.
+- Restoring feature metadata.
+- Updating the Model Registry status.
+- Verifying model compatibility.
+
+---
+
+### Configuration Rollback
+
+Where necessary, the system restores:
+
+- Application configuration.
+- Environment variables.
+- Deployment manifests.
+- Infrastructure settings.
+- API configuration.
+
+---
+
+### Validation After Rollback
+
+Following rollback, the system verifies:
+
+- Service availability.
+- API functionality.
+- Model loading.
+- Prediction generation.
+- Health and readiness endpoints.
+- Monitoring and logging.
+
+Only after successful validation is production traffic fully restored.
+
+---
+
+### Monitoring and Audit
+
+All rollback operations are logged, including:
+
+- Rollback timestamp.
+- Deployment version.
+- Restored version.
+- Triggering event.
+- Operator (if manual).
+- Validation results.
+
+These records support auditing and incident analysis.
+
+---
+
+### Benefits
+
+A rollback strategy provides:
+
+- Faster recovery from failures.
+- Reduced service disruption.
+- Improved deployment reliability.
+- Better operational resilience.
+- Enhanced business continuity.
