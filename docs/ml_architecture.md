@@ -9064,3 +9064,159 @@ Data drift detection provides:
 - Improved prediction reliability.
 - Better operational awareness.
 - Data-driven retraining decisions.
+## 8.9 Model Drift Detection
+
+Model Drift Detection continuously evaluates the predictive performance of the deployed ETA prediction model to identify performance degradation caused by changes in real-world conditions. It detects when the relationship between input features and the target variable changes, reducing the effectiveness of the deployed model.
+
+The monitoring framework supports early detection of model degradation and enables timely retraining or deployment of improved models.
+
+### Objectives
+
+The model drift detection process aims to:
+
+- Detect degradation in model performance.
+- Monitor concept drift.
+- Identify prediction anomalies.
+- Protect business performance.
+- Support retraining decisions.
+- Maintain long-term prediction reliability.
+
+---
+
+### Model Drift Scope
+
+The monitoring framework evaluates:
+
+- ETA prediction accuracy.
+- Prediction error trends.
+- Delivery time estimation quality.
+- Customer experience metrics.
+- Business performance indicators.
+- Feature-to-target relationships.
+
+---
+
+### Concept Drift Detection
+
+Concept drift occurs when the relationship between input features and the predicted ETA changes over time.
+
+Possible causes include:
+
+- Changes in traffic patterns.
+- Restaurant operational changes.
+- Driver behavior changes.
+- Seasonal demand variations.
+- New delivery policies.
+- Infrastructure changes.
+
+The monitoring system continuously evaluates these changing relationships.
+
+---
+
+### Prediction Drift Monitoring
+
+The monitoring system tracks:
+
+- Prediction distributions.
+- Prediction error distributions.
+- Average prediction values.
+- Confidence score distributions (if applicable).
+- Unexpected prediction patterns.
+
+Significant deviations may indicate model drift.
+
+---
+
+### Performance Degradation Monitoring
+
+The deployed model is evaluated using:
+
+- Mean Absolute Error (MAE).
+- Root Mean Squared Error (RMSE).
+- Mean Absolute Percentage Error (MAPE).
+- Prediction latency.
+- Business KPI trends.
+
+Performance is compared against the baseline established during model validation.
+
+---
+
+### Drift Detection Methods
+
+Model drift is assessed using:
+
+- Baseline performance comparison.
+- Rolling performance windows.
+- Statistical significance tests.
+- Residual analysis.
+- Prediction error trend analysis.
+
+These methods help identify gradual and sudden performance degradation.
+
+---
+
+### Drift Thresholds
+
+Thresholds define acceptable performance limits.
+
+Monitoring categories include:
+
+- Stable performance.
+- Moderate degradation requiring investigation.
+- Significant degradation requiring corrective action.
+
+Threshold values are configurable based on operational requirements.
+
+---
+
+### Drift Alerts
+
+Alerts are generated when:
+
+- Prediction accuracy decreases significantly.
+- Error metrics exceed acceptable limits.
+- Prediction distributions change unexpectedly.
+- Business KPIs decline.
+- Model performance falls below the approved baseline.
+
+Alerts are prioritized according to severity.
+
+---
+
+### Corrective Actions
+
+When model drift is detected, possible actions include:
+
+- Investigating recent operational changes.
+- Reviewing feature engineering pipelines.
+- Validating production data quality.
+- Collecting additional training data.
+- Retraining the model.
+- Deploying a newer approved model.
+- Rolling back to a previous stable model if required.
+
+---
+
+### Reporting
+
+Regular reports include:
+
+- Model performance trends.
+- Drift severity.
+- Accuracy metrics.
+- Error analysis.
+- Business impact assessment.
+- Recommended corrective actions.
+
+---
+
+### Benefits
+
+Model drift detection provides:
+
+- Continuous prediction reliability.
+- Early detection of model degradation.
+- Better customer experience.
+- Improved business outcomes.
+- Data-driven model maintenance.
+- Support for continuous improvement.
