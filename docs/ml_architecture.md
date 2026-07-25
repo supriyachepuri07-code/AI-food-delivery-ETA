@@ -12671,3 +12671,170 @@ Test Reporting provides:
 - Faster defect resolution.
 - Stronger compliance support.
 - Continuous quality improvement.
+## 9.16 Quality Assurance Metrics
+
+Quality Assurance Metrics define the measurable indicators used to evaluate the effectiveness of testing activities and the overall quality of the ETA prediction system. These metrics support continuous improvement, release readiness assessments, and operational excellence.
+
+Metrics are collected automatically where possible and reviewed regularly to identify trends, risks, and opportunities for improvement.
+
+### Objectives
+
+The QA metrics framework aims to:
+
+- Measure software quality.
+- Monitor testing effectiveness.
+- Evaluate release readiness.
+- Identify quality trends.
+- Reduce production defects.
+- Improve testing efficiency.
+- Support continuous improvement.
+
+---
+
+### Scope
+
+Quality metrics are collected across:
+
+- Unit testing.
+- Integration testing.
+- End-to-End testing.
+- API testing.
+- Data validation testing.
+- Model validation testing.
+- Performance testing.
+- Security testing.
+- Regression testing.
+- User Acceptance Testing.
+
+---
+
+### Test Coverage Metrics
+
+Coverage metrics include:
+
+- Code coverage.
+- Function coverage.
+- Branch coverage.
+- Module coverage.
+- Test case coverage.
+- Requirement coverage.
+
+High coverage reduces the risk of undetected defects.
+
+---
+
+### Test Execution Metrics
+
+Execution metrics include:
+
+- Total tests executed.
+- Passed tests.
+- Failed tests.
+- Skipped tests.
+- Blocked tests.
+- Test execution duration.
+- Test success rate.
+
+These metrics measure testing efficiency and stability.
+
+---
+
+### Defect Metrics
+
+Defect-related metrics include:
+
+- Defect density.
+- Defect severity distribution.
+- Defect leakage.
+- Defect resolution time.
+- Defect reopen rate.
+- Escaped defects.
+
+These metrics help evaluate software quality and development effectiveness.
+
+---
+
+### Automation Metrics
+
+Automation metrics include:
+
+- Automation coverage.
+- Automated test pass rate.
+- Manual versus automated test ratio.
+- Pipeline success rate.
+- Automation execution time.
+
+These metrics evaluate the effectiveness of the automated testing framework.
+
+---
+
+### Model Quality Metrics
+
+Model-related QA metrics include:
+
+- MAE.
+- RMSE.
+- R² Score.
+- Prediction latency.
+- Model drift frequency.
+- Retraining frequency.
+- Model approval rate.
+
+These metrics ensure continued model quality after deployment.
+
+---
+
+### Operational Metrics
+
+Operational quality metrics include:
+
+- Mean Time to Detect (MTTD).
+- Mean Time to Resolve (MTTR).
+- Deployment success rate.
+- Rollback frequency.
+- Production incident count.
+- System availability.
+
+These metrics assess operational reliability.
+
+---
+
+### Review Process
+
+Quality metrics are reviewed:
+
+- After every CI/CD pipeline execution.
+- Before production releases.
+- During sprint reviews.
+- During retrospective meetings.
+- During periodic operational reviews.
+
+Findings drive continuous improvements to testing and development practices.
+
+---
+
+### Reporting
+
+QA metric reports include:
+
+- Current metric values.
+- Historical trends.
+- Threshold comparisons.
+- Improvement recommendations.
+- Release readiness status.
+- Action items.
+
+Reports are shared with development, QA, ML, DevOps, and business stakeholders.
+
+---
+
+### Benefits
+
+Quality Assurance Metrics provide:
+
+- Objective measurement of software quality.
+- Better release decisions.
+- Improved testing efficiency.
+- Reduced production defects.
+- Stronger operational visibility.
+- Continuous quality improvement.
