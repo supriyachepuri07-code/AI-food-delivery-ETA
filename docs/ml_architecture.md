@@ -11518,3 +11518,155 @@ Data Validation Testing provides:
 - Improved business confidence.
 - Better compliance.
 - Enhanced production stability.
+## 9.9 Model Validation Testing
+
+Model Validation Testing evaluates the trained ETA prediction model to ensure it meets predefined performance, quality, and operational requirements before deployment. Validation verifies that the model performs reliably on unseen data, produces accurate predictions, and satisfies business objectives.
+
+The validation framework combines statistical evaluation, business KPI assessment, robustness testing, and operational readiness checks to ensure only approved models are promoted to production.
+
+### Objectives
+
+The model validation testing process aims to:
+
+- Verify prediction accuracy.
+- Evaluate model generalization.
+- Prevent overfitting.
+- Validate business requirements.
+- Ensure production readiness.
+- Support safe deployment.
+- Improve model reliability.
+
+---
+
+### Scope
+
+Model validation testing covers:
+
+- Trained models.
+- Validation datasets.
+- Test datasets.
+- Feature inputs.
+- Prediction outputs.
+- Inference services.
+- Model artifacts.
+- Model metadata.
+
+---
+
+### Performance Evaluation
+
+The model is evaluated using metrics such as:
+
+- Mean Absolute Error (MAE).
+- Root Mean Squared Error (RMSE).
+- Mean Absolute Percentage Error (MAPE), where appropriate.
+- R² Score.
+- Prediction error distribution.
+
+Performance must satisfy predefined acceptance thresholds.
+
+---
+
+### Generalization Testing
+
+Validation confirms that the model:
+
+- Performs consistently on unseen data.
+- Does not overfit the training dataset.
+- Maintains stable accuracy across validation and test datasets.
+- Produces reliable predictions under different operating conditions.
+
+---
+
+### Robustness Testing
+
+The model is tested against:
+
+- Missing feature values.
+- Extreme but valid inputs.
+- High-demand scenarios.
+- Unusual traffic conditions.
+- Diverse weather conditions.
+- Different delivery distances.
+- Peak and non-peak operating periods.
+
+---
+
+### Business Validation
+
+Testing verifies that:
+
+- ETA predictions align with business expectations.
+- Prediction errors remain within acceptable limits.
+- Business KPIs improve compared to baseline models.
+- The model supports operational decision-making.
+
+---
+
+### Inference Validation
+
+Inference testing evaluates:
+
+- Prediction latency.
+- Throughput.
+- Resource utilization.
+- Response consistency.
+- Scalability under concurrent requests.
+
+The deployed model must meet operational performance targets.
+
+---
+
+### Model Acceptance Criteria
+
+A model is approved only if it:
+
+- Meets required accuracy thresholds.
+- Passes validation on unseen data.
+- Satisfies latency requirements.
+- Completes robustness testing successfully.
+- Passes business validation.
+- Receives deployment approval.
+
+---
+
+### Validation Execution
+
+Model validation is performed:
+
+- After training.
+- After hyperparameter tuning.
+- Before model registration.
+- Before deployment.
+- After major feature engineering updates.
+- During retraining cycles.
+
+---
+
+### Reporting
+
+Validation reports include:
+
+- Model version.
+- Dataset version.
+- Evaluation metrics.
+- Acceptance status.
+- Validation date.
+- Resource utilization.
+- Observed limitations.
+- Approval decision.
+
+Reports are stored for auditing and model governance.
+
+---
+
+### Benefits
+
+Model Validation Testing provides:
+
+- Reliable production models.
+- Higher prediction accuracy.
+- Reduced deployment risk.
+- Better business outcomes.
+- Improved customer satisfaction.
+- Stronger model governance.
