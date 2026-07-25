@@ -8418,3 +8418,169 @@ Infrastructure monitoring provides:
 - Reduced operational downtime.
 - Enhanced scalability.
 - Reliable production operations.
+## 8.5 Application Monitoring
+
+Application Monitoring continuously observes the operational health, availability, and performance of the ETA prediction application. It ensures that application services, APIs, business workflows, and background processes function reliably under production workloads.
+
+The monitoring framework enables rapid detection of application failures, performance degradation, and operational anomalies.
+
+### Objectives
+
+The application monitoring process aims to:
+
+- Ensure application availability.
+- Monitor API responsiveness.
+- Detect application errors.
+- Track request processing performance.
+- Monitor background services.
+- Improve user experience.
+- Support rapid incident resolution.
+
+---
+
+### Service Availability Monitoring
+
+Application monitoring verifies:
+
+- Service uptime.
+- Application startup status.
+- Service health.
+- Dependency availability.
+- Scheduled job execution.
+- Runtime stability.
+
+Continuous monitoring ensures that application services remain available.
+
+---
+
+### API Performance Monitoring
+
+The monitoring system tracks:
+
+- API response time.
+- Request latency.
+- Request throughput.
+- Success rate.
+- Error rate.
+- Endpoint availability.
+
+These metrics help maintain a responsive prediction service.
+
+---
+
+### Request Processing Monitoring
+
+The application tracks:
+
+- Number of incoming requests.
+- Active requests.
+- Request processing duration.
+- Queue length.
+- Failed requests.
+- Timeout occurrences.
+
+Monitoring request flow helps identify bottlenecks.
+
+---
+
+### Error Monitoring
+
+The system records:
+
+- Application exceptions.
+- HTTP error responses.
+- Validation failures.
+- Internal server errors.
+- Dependency failures.
+- Unexpected application crashes.
+
+Errors are categorized by severity and prioritized for resolution.
+
+---
+
+### Background Service Monitoring
+
+The monitoring framework observes:
+
+- Scheduled tasks.
+- Batch processing jobs.
+- Queue workers.
+- Data synchronization services.
+- Notification services.
+- Maintenance processes.
+
+Failures are detected and reported immediately.
+
+---
+
+### Dependency Monitoring
+
+Application dependencies include:
+
+- Databases.
+- Feature Store.
+- Model Registry.
+- External APIs.
+- Authentication services.
+- Message queues.
+
+Monitoring ensures that dependent services remain available.
+
+---
+
+### Business Workflow Monitoring
+
+Critical business workflows are monitored, including:
+
+- ETA prediction requests.
+- Order processing.
+- Driver assignment updates.
+- Feature retrieval.
+- Model inference execution.
+- Response delivery.
+
+Monitoring ensures end-to-end workflow reliability.
+
+---
+
+### Performance Metrics
+
+Key performance indicators include:
+
+- Average response time.
+- Requests per second.
+- Success rate.
+- Error rate.
+- Active sessions.
+- Queue processing time.
+
+These metrics support performance optimization.
+
+---
+
+### Alerting
+
+Application alerts are generated for:
+
+- Service downtime.
+- High response latency.
+- Increased error rates.
+- Failed background jobs.
+- Dependency failures.
+- Queue backlogs.
+- Abnormal request volumes.
+
+Alerts are prioritized and routed to the operations team.
+
+---
+
+### Benefits
+
+Application monitoring provides:
+
+- Improved application reliability.
+- Faster issue detection.
+- Better user experience.
+- Enhanced operational visibility.
+- Reduced service disruptions.
+- Continuous application optimization.
