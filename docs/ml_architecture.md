@@ -11069,3 +11069,156 @@ The testing strategy provides:
 - Better machine learning performance.
 - Safer production deployments.
 - Higher customer satisfaction.
+## 9.4 Unit Testing
+
+Unit Testing verifies the correctness of individual software components in isolation before they are integrated with other parts of the system. Each function, class, or module is tested independently to ensure it behaves according to its design and business requirements.
+
+The ETA prediction system uses automated unit tests to validate data processing logic, feature engineering, machine learning utilities, API helper functions, and shared utilities. Unit tests are executed automatically during development and as part of the Continuous Integration (CI) pipeline.
+
+### Objectives
+
+The unit testing process aims to:
+
+- Verify individual components.
+- Detect defects early.
+- Prevent regression issues.
+- Improve code reliability.
+- Simplify debugging.
+- Support safe refactoring.
+- Increase development confidence.
+
+---
+
+### Scope
+
+Unit testing covers:
+
+- Data ingestion functions.
+- Data validation functions.
+- Data preprocessing modules.
+- Feature engineering functions.
+- Model utility functions.
+- Prediction helper functions.
+- API helper methods.
+- Database utility functions.
+- Configuration loaders.
+- Logging utilities.
+
+Each component is tested independently from external systems.
+
+---
+
+### Testing Framework
+
+The project uses the following tools:
+
+- pytest
+- unittest (where appropriate)
+- unittest.mock
+- pytest fixtures
+- Coverage.py
+
+These tools support automated execution, mocking, reporting, and coverage analysis.
+
+---
+
+### Test Case Design
+
+Each unit test should verify:
+
+- Expected inputs.
+- Expected outputs.
+- Boundary conditions.
+- Invalid inputs.
+- Error handling.
+- Exception handling.
+- Edge cases.
+
+Test cases should be deterministic and repeatable.
+
+---
+
+### Mocking and Fixtures
+
+External dependencies are isolated using:
+
+- Mock APIs.
+- Mock databases.
+- Mock cloud services.
+- Mock file systems.
+- Mock model artifacts.
+- Test fixtures.
+- Sample datasets.
+
+This ensures that tests remain independent and fast.
+
+---
+
+### Code Coverage
+
+Coverage metrics include:
+
+- Function coverage.
+- Statement coverage.
+- Branch coverage.
+- Class coverage.
+- Module coverage.
+
+Critical business logic should achieve high coverage according to project quality standards.
+
+---
+
+### Test Execution
+
+Unit tests are executed:
+
+- During local development.
+- On every Git commit (where configured).
+- Within CI pipelines.
+- Before deployment.
+- Before release approval.
+
+Automated execution helps detect defects early.
+
+---
+
+### Test Reporting
+
+Execution reports include:
+
+- Total tests executed.
+- Passed tests.
+- Failed tests.
+- Skipped tests.
+- Coverage percentage.
+- Execution duration.
+- Failure summaries.
+
+Reports are archived for quality tracking.
+
+---
+
+### Maintenance
+
+Unit tests are updated whenever:
+
+- Business logic changes.
+- New features are added.
+- Bugs are fixed.
+- APIs are modified.
+- Refactoring occurs.
+
+Keeping tests synchronized with the codebase ensures long-term reliability.
+
+---
+
+### Benefits
+
+Unit Testing provides:
+
+- Early defect detection.
+- Improved code quality.
+- Faster debugging.
+- Safer code changes.
+- Better maintainability.
+- Strong foundation for higher-level testing.
