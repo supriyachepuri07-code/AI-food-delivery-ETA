@@ -9400,3 +9400,215 @@ The logging strategy provides:
 - Better compliance support.
 - Reliable incident investigation.
 - Long-term operational insights.
+## 8.11 Alerting & Notifications
+
+The Alerting & Notifications framework continuously monitors operational events and automatically notifies the appropriate teams when predefined thresholds or abnormal conditions are detected. It ensures rapid awareness of incidents, enabling timely investigation and resolution.
+
+The framework integrates with monitoring systems, logging platforms, and incident management processes to maintain production reliability.
+
+### Objectives
+
+The alerting and notification framework aims to:
+
+- Detect operational issues quickly.
+- Notify responsible teams promptly.
+- Reduce incident response time.
+- Prioritize alerts by severity.
+- Minimize alert fatigue.
+- Support business continuity.
+- Improve system reliability.
+
+---
+
+### Alert Sources
+
+Alerts may originate from:
+
+- Infrastructure monitoring.
+- Application monitoring.
+- API monitoring.
+- Model performance monitoring.
+- Data quality monitoring.
+- Data drift detection.
+- Model drift detection.
+- Security monitoring.
+- CI/CD pipeline failures.
+- Backup and recovery processes.
+
+---
+
+### Alert Severity Levels
+
+Alerts are classified into four levels:
+
+#### Critical
+
+Requires immediate action.
+
+Examples:
+
+- Production outage.
+- API unavailable.
+- Model inference failure.
+- Database outage.
+- Security breach.
+
+---
+
+#### High
+
+Requires urgent investigation.
+
+Examples:
+
+- High API latency.
+- Significant model drift.
+- Data pipeline failures.
+- Infrastructure resource exhaustion.
+
+---
+
+#### Medium
+
+Requires scheduled investigation.
+
+Examples:
+
+- Increasing error rates.
+- Moderate data drift.
+- Background job failures.
+- Storage utilization warnings.
+
+---
+
+#### Low
+
+Informational alerts.
+
+Examples:
+
+- Successful deployments.
+- Scheduled maintenance completion.
+- Backup completion.
+- Configuration updates.
+
+---
+
+### Alert Rules
+
+Alerts are generated when:
+
+- Metric thresholds are exceeded.
+- Error rates increase.
+- Services become unavailable.
+- Performance degrades.
+- Security policies are violated.
+- Data quality issues occur.
+- Model accuracy decreases.
+- Drift thresholds are exceeded.
+
+Alert rules should be configurable and reviewed regularly.
+
+---
+
+### Notification Channels
+
+Notifications can be delivered through:
+
+- Email.
+- SMS.
+- Microsoft Teams.
+- Slack.
+- PagerDuty.
+- Mobile push notifications.
+- Incident management platforms.
+
+Multiple channels may be used for critical alerts.
+
+---
+
+### Escalation Policy
+
+If an alert is not acknowledged within the defined time, it is escalated to higher support levels.
+
+Example escalation path:
+
+1. On-call engineer.
+2. Operations team lead.
+3. Engineering manager.
+4. Incident response team.
+
+Escalation timelines depend on the alert severity.
+
+---
+
+### Alert Acknowledgement
+
+Each alert should support:
+
+- Acknowledgement.
+- Assignment.
+- Status tracking.
+- Resolution notes.
+- Closure verification.
+
+This helps prevent duplicate work and improves accountability.
+
+---
+
+### Alert Resolution Workflow
+
+The alert lifecycle includes:
+
+1. Alert generation.
+2. Notification delivery.
+3. Alert acknowledgement.
+4. Incident investigation.
+5. Root cause identification.
+6. Corrective action.
+7. Resolution verification.
+8. Alert closure.
+
+---
+
+### Notification Logging
+
+The framework records:
+
+- Alert identifier.
+- Alert source.
+- Severity level.
+- Notification recipients.
+- Delivery status.
+- Acknowledgement time.
+- Resolution time.
+- Closure status.
+
+These records support auditing and performance analysis.
+
+---
+
+### Reporting
+
+Regular reports summarize:
+
+- Total alerts generated.
+- Alerts by severity.
+- Mean Time to Acknowledge (MTTA).
+- Mean Time to Resolve (MTTR).
+- Escalation statistics.
+- Notification delivery success.
+- Recurring alert patterns.
+
+---
+
+### Benefits
+
+The alerting and notification framework provides:
+
+- Faster incident detection.
+- Improved operational awareness.
+- Reduced downtime.
+- Better incident management.
+- Increased system reliability.
+- Enhanced business continuity.
