@@ -7142,3 +7142,142 @@ Deployment validation provides:
 - Reliable prediction services.
 - Improved system stability.
 - Better operational readiness.
+## 7.14 Deployment Strategies
+
+Deployment strategies define the controlled methods used to release new versions of the ETA prediction service into production. These strategies help minimize downtime, reduce deployment risks, and ensure service continuity during application and model updates.
+
+The appropriate deployment strategy is selected based on business requirements, system criticality, user impact, and operational constraints.
+
+### Objectives
+
+The deployment strategies aim to:
+
+- Minimize service interruptions.
+- Reduce deployment risk.
+- Support gradual rollouts.
+- Enable rapid rollback.
+- Improve deployment reliability.
+- Validate new releases under production conditions.
+
+---
+
+### Rolling Deployment
+
+In a rolling deployment, application instances are updated gradually while existing instances continue serving requests.
+
+Characteristics:
+
+- Minimal downtime.
+- Incremental updates.
+- Continuous service availability.
+- Easy monitoring during rollout.
+
+Suitable for:
+
+- Regular application updates.
+- Minor model improvements.
+- Large-scale production environments.
+
+---
+
+### Blue-Green Deployment
+
+Blue-Green deployment maintains two identical production environments:
+
+- Blue Environment (current production)
+- Green Environment (new release)
+
+Traffic is switched to the Green environment only after successful validation.
+
+Benefits:
+
+- Near-zero downtime.
+- Easy rollback.
+- Safe production validation.
+- Reduced deployment risk.
+
+---
+
+### Canary Deployment
+
+A Canary deployment releases the new version to a small percentage of users before full rollout.
+
+Typical rollout stages:
+
+- 5% of traffic.
+- 25% of traffic.
+- 50% of traffic.
+- 100% production traffic.
+
+Benefits:
+
+- Early issue detection.
+- Controlled exposure.
+- Lower operational risk.
+- Data-driven rollout decisions.
+
+---
+
+### Shadow Deployment
+
+In a Shadow deployment, production traffic is duplicated to the new version without affecting user responses.
+
+The new deployment processes requests silently while results are compared with the current production system.
+
+Benefits:
+
+- Production validation.
+- Performance comparison.
+- Safe testing under real workloads.
+
+---
+
+### A/B Testing
+
+A/B testing routes different groups of users to different model versions.
+
+This strategy enables comparison of:
+
+- Prediction quality.
+- User experience.
+- Business metrics.
+- Operational performance.
+
+Results help determine the best-performing model before full deployment.
+
+---
+
+### Strategy Selection
+
+Deployment strategy selection depends on:
+
+- System criticality.
+- User impact.
+- Deployment frequency.
+- Infrastructure capacity.
+- Rollback requirements.
+- Business objectives.
+
+---
+
+### Rollback Considerations
+
+Each deployment strategy must support:
+
+- Immediate rollback.
+- Previous model restoration.
+- Configuration recovery.
+- Traffic redirection.
+- Deployment audit logging.
+
+---
+
+### Benefits
+
+Deployment strategies provide:
+
+- Safer production releases.
+- Reduced downtime.
+- Better operational control.
+- Faster recovery from failures.
+- Improved deployment confidence.
