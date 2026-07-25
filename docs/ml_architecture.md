@@ -12838,3 +12838,157 @@ Quality Assurance Metrics provide:
 - Reduced production defects.
 - Stronger operational visibility.
 - Continuous quality improvement.
+# Chapter 10 – Project Management & Governance
+
+## 10.1 Project Management & Governance Overview
+
+Project Management & Governance defines the framework used to successfully plan, execute, monitor, control, and continuously improve the ETA Prediction System throughout its lifecycle. It establishes standardized processes, governance structures, decision-making mechanisms, communication channels, and project controls to ensure successful delivery and long-term operational excellence.
+
+The governance framework aligns business objectives, machine learning development, software engineering, DevOps, MLOps, and operational teams to deliver a secure, scalable, reliable, and maintainable AI-powered ETA prediction platform.
+
+### Objectives
+
+The Project Management & Governance framework aims to:
+
+- Ensure successful project delivery.
+- Align technical implementation with business goals.
+- Define governance policies.
+- Improve project visibility.
+- Manage project risks.
+- Optimize resource utilization.
+- Support continuous improvement.
+- Ensure operational sustainability.
+
+---
+
+### Scope
+
+Project governance covers:
+
+- Project planning.
+- Requirement management.
+- Stakeholder management.
+- Team coordination.
+- Risk management.
+- Quality management.
+- Change management.
+- Communication management.
+- Compliance.
+- Project monitoring.
+- Project closure.
+
+---
+
+### Governance Principles
+
+The project follows these governance principles:
+
+- Clear ownership.
+- Defined responsibilities.
+- Transparency.
+- Accountability.
+- Continuous monitoring.
+- Data-driven decision making.
+- Security by design.
+- Quality-first development.
+- Continuous delivery.
+- Continuous improvement.
+
+---
+
+### Governance Structure
+
+The governance framework includes:
+
+- Business stakeholders.
+- Product owners.
+- Project managers.
+- Solution architects.
+- Data engineers.
+- ML engineers.
+- Software engineers.
+- DevOps engineers.
+- QA engineers.
+- Operations teams.
+
+Each group contributes to successful project delivery according to its responsibilities.
+
+---
+
+### Management Areas
+
+Project management includes:
+
+- Scope management.
+- Schedule management.
+- Cost management.
+- Resource management.
+- Risk management.
+- Quality management.
+- Communication management.
+- Procurement management (if applicable).
+- Stakeholder management.
+- Release management.
+
+---
+
+### Governance Activities
+
+Governance activities include:
+
+- Project planning.
+- Sprint planning.
+- Requirement reviews.
+- Architecture reviews.
+- Risk assessments.
+- Progress tracking.
+- Quality reviews.
+- Release approvals.
+- Operational reviews.
+- Post-release evaluations.
+
+---
+
+### Monitoring and Control
+
+Project progress is monitored through:
+
+- Milestone tracking.
+- Sprint reviews.
+- KPI monitoring.
+- Risk dashboards.
+- Quality dashboards.
+- Budget tracking.
+- Resource utilization.
+- Issue tracking.
+
+---
+
+### Documentation
+
+Project documentation includes:
+
+- Project charter.
+- Project plan.
+- Governance policies.
+- Risk register.
+- Communication plan.
+- Architecture documents.
+- Technical specifications.
+- Meeting records.
+- Release documentation.
+- Lessons learned.
+
+---
+
+### Benefits
+
+The governance framework provides:
+
+- Better project control.
+- Improved stakeholder alignment.
+- Reduced project risks.
+- Higher delivery quality.
+- Improved communication.
+- Stronger operational governance.
+- Better long-term maintainability.
