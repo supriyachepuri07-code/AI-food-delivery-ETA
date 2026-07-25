@@ -10875,3 +10875,197 @@ Clearly defined testing objectives provide:
 - Reduced production incidents.
 - Faster and safer deployments.
 - Continuous quality improvement.
+## 9.3 Testing Strategy
+
+The Testing Strategy defines the methodologies, processes, tools, environments, and responsibilities used to validate the ETA prediction system throughout its development and operational lifecycle. The strategy ensures that all components are tested systematically before deployment to production.
+
+Testing is integrated into every stage of the Software Development Life Cycle (SDLC) and Machine Learning Operations (MLOps) lifecycle, enabling continuous quality assurance and reliable system releases.
+
+### Objectives
+
+The testing strategy aims to:
+
+- Detect defects early.
+- Validate system functionality.
+- Verify data quality.
+- Ensure model reliability.
+- Improve software quality.
+- Support continuous delivery.
+- Reduce deployment risks.
+
+---
+
+### Testing Approach
+
+The project follows a multi-layered testing approach consisting of:
+
+- Unit Testing
+- Integration Testing
+- End-to-End Testing
+- API Testing
+- Data Validation Testing
+- Model Validation Testing
+- Performance Testing
+- Security Testing
+- Regression Testing
+- User Acceptance Testing (UAT)
+
+Each testing level focuses on different aspects of system quality.
+
+---
+
+### Shift-Left Testing
+
+Testing begins as early as possible in the development lifecycle.
+
+This includes:
+
+- Code reviews.
+- Static code analysis.
+- Unit testing during development.
+- Early data validation.
+- Continuous integration testing.
+
+Early testing reduces the cost of fixing defects.
+
+---
+
+### Test Automation Strategy
+
+Automation is used whenever practical for:
+
+- Unit tests.
+- Integration tests.
+- API tests.
+- Regression tests.
+- CI/CD validation.
+- Model validation.
+- Data quality validation.
+
+Automated testing provides fast and repeatable feedback.
+
+---
+
+### Test Environments
+
+Testing is performed in dedicated environments:
+
+- Local development.
+- Development.
+- Integration.
+- Staging.
+- Pre-production.
+- Production smoke testing.
+
+Each environment is configured to closely resemble production.
+
+---
+
+### Test Data Management
+
+Testing uses:
+
+- Synthetic datasets.
+- Historical production datasets (where permitted).
+- Anonymized data.
+- Edge-case datasets.
+- Invalid input datasets.
+- Performance testing datasets.
+
+Test data is version-controlled and documented.
+
+---
+
+### CI/CD Integration
+
+Testing is integrated into the deployment pipeline by automatically executing:
+
+- Code quality checks.
+- Unit tests.
+- Integration tests.
+- API tests.
+- Model validation.
+- Security scans.
+- Performance checks.
+- Deployment smoke tests.
+
+A deployment proceeds only if all mandatory tests pass.
+
+---
+
+### Risk-Based Testing
+
+Testing effort is prioritized based on business risk.
+
+High-priority areas include:
+
+- ETA prediction accuracy.
+- API availability.
+- Data pipelines.
+- Feature engineering.
+- Authentication and authorization.
+- Production deployment.
+
+Critical components receive the highest testing coverage.
+
+---
+
+### Quality Gates
+
+Before release, the following quality gates must be satisfied:
+
+- Successful build.
+- Code review approval.
+- Required test pass rate.
+- Model performance thresholds.
+- Security scan completion.
+- Performance benchmark compliance.
+- Documentation updates.
+- Deployment readiness verification.
+
+Only builds meeting all quality gates are approved.
+
+---
+
+### Roles and Responsibilities
+
+The testing process involves:
+
+- Developers writing unit tests.
+- QA engineers performing integration and system testing.
+- Data engineers validating pipelines.
+- ML engineers validating model performance.
+- DevOps engineers maintaining CI/CD testing.
+- Product stakeholders conducting User Acceptance Testing (UAT).
+
+Collaboration ensures comprehensive quality assurance.
+
+---
+
+### Documentation
+
+Testing documentation includes:
+
+- Test strategy.
+- Test plans.
+- Test cases.
+- Test datasets.
+- Test execution reports.
+- Defect reports.
+- Coverage reports.
+- Release approval records.
+
+Documentation supports traceability and continuous improvement.
+
+---
+
+### Benefits
+
+The testing strategy provides:
+
+- Consistent testing practices.
+- Early defect detection.
+- Improved software reliability.
+- Better machine learning performance.
+- Safer production deployments.
+- Higher customer satisfaction.
