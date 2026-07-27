@@ -15223,3 +15223,83 @@ The ETA Prediction System delivers value by:
 ### Summary
 
 The ETA Prediction System demonstrates the complete lifecycle of developing, deploying, monitoring, and maintaining a production-grade machine learning application. It integrates business objectives with modern software engineering and MLOps practices to create a scalable and maintainable solution capable of supporting future growth and continuous innovation.
+## 11.2 Business Problem Summary
+
+Accurate Estimated Time of Arrival (ETA) prediction is one of the most important factors influencing customer satisfaction and operational efficiency in food delivery services. Traditional ETA estimation methods often rely on static rules or limited real-time information, making them less effective in handling dynamic delivery conditions.
+
+Factors such as traffic congestion, weather conditions, restaurant preparation delays, delivery partner availability, route complexity, and demand fluctuations can significantly impact delivery times. When these factors are not adequately considered, ETA predictions become inaccurate, leading to customer dissatisfaction, increased order cancellations, inefficient delivery operations, and reduced trust in the platform.
+
+The ETA Prediction System addresses these challenges by leveraging historical delivery data, real-time operational data, and machine learning techniques to generate more accurate and adaptive ETA predictions.
+
+### Business Challenges
+
+The project addresses the following challenges:
+
+- Inaccurate delivery time estimates.
+- Frequent delivery delays.
+- Customer dissatisfaction.
+- Order cancellations due to unreliable ETAs.
+- Inefficient delivery partner utilization.
+- Difficulty adapting to changing traffic and weather conditions.
+- Limited visibility into operational performance.
+
+---
+
+### Root Causes
+
+Key factors contributing to ETA inaccuracies include:
+
+- Dynamic traffic conditions.
+- Restaurant preparation variability.
+- Weather disruptions.
+- Route complexity.
+- Delivery partner behavior.
+- Peak-hour demand fluctuations.
+- Data quality inconsistencies.
+
+---
+
+### Business Impact
+
+Without accurate ETA predictions, organizations may experience:
+
+- Reduced customer trust.
+- Lower customer retention.
+- Increased operational costs.
+- Higher cancellation rates.
+- Reduced delivery efficiency.
+- Poor resource utilization.
+- Negative brand reputation.
+
+---
+
+### Solution Approach
+
+The ETA Prediction System addresses these issues by:
+
+- Using machine learning for ETA prediction.
+- Incorporating historical and real-time data.
+- Continuously monitoring model performance.
+- Automating model retraining.
+- Providing scalable API-based predictions.
+- Supporting continuous operational improvements.
+
+---
+
+### Expected Business Benefits
+
+The proposed solution is expected to provide:
+
+- Improved ETA accuracy.
+- Better customer experience.
+- Reduced delivery delays.
+- Lower order cancellation rates.
+- Improved operational efficiency.
+- Better utilization of delivery resources.
+- Increased business competitiveness.
+
+---
+
+### Summary
+
+The Business Problem Summary highlights the operational and customer challenges associated with inaccurate ETA estimation. By integrating machine learning, modern software engineering, and MLOps practices, the ETA Prediction System delivers a scalable and intelligent solution that improves prediction accuracy, enhances customer satisfaction, and supports long-term business growth.
