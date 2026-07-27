@@ -15623,3 +15623,173 @@ The ETA Prediction System successfully delivers:
 ### Summary
 
 The project demonstrates the successful integration of business analysis, data engineering, machine learning, software engineering, cloud deployment, monitoring, testing, and governance into a unified production-ready platform. It provides a strong foundation for accurate ETA prediction and future business expansion.
+## 11.5 Technical Architecture Summary
+
+The ETA Prediction System is built using a modular, scalable, and production-ready architecture that integrates data engineering, machine learning, software engineering, cloud infrastructure, and MLOps practices. Each component is designed to operate independently while working together to provide accurate ETA predictions and reliable production operations.
+
+The architecture emphasizes scalability, maintainability, automation, security, and continuous improvement.
+
+### Architecture Objectives
+
+The technical architecture aims to:
+
+- Build a scalable system.
+- Improve maintainability.
+- Support modular development.
+- Enable production deployment.
+- Automate machine learning workflows.
+- Improve operational reliability.
+- Ensure system security.
+
+---
+
+### Architecture Layers
+
+The solution consists of the following layers:
+
+- Business Layer
+- Data Layer
+- Data Engineering Layer
+- Feature Engineering Layer
+- Machine Learning Layer
+- API Layer
+- Deployment Layer
+- Monitoring Layer
+- Governance Layer
+
+Each layer has clearly defined responsibilities and interfaces.
+
+---
+
+### Data Layer
+
+The Data Layer is responsible for:
+
+- Data collection.
+- Data storage.
+- Data validation.
+- Data preprocessing.
+- Data quality management.
+- Data versioning.
+
+This layer ensures reliable and high-quality input for machine learning.
+
+---
+
+### Machine Learning Layer
+
+The Machine Learning Layer provides:
+
+- Feature engineering.
+- Model training.
+- Model evaluation.
+- Hyperparameter tuning.
+- Model registry.
+- Model versioning.
+- Model inference.
+- Model monitoring.
+- Automated retraining.
+
+These components support the complete ML lifecycle.
+
+---
+
+### API Layer
+
+The API Layer provides:
+
+- REST API endpoints.
+- Real-time ETA prediction.
+- Input validation.
+- Authentication.
+- Authorization.
+- Error handling.
+- Logging.
+- Response formatting.
+
+This layer exposes prediction services to client applications.
+
+---
+
+### Deployment Layer
+
+The Deployment Layer manages:
+
+- Docker containerization.
+- CI/CD pipelines.
+- Cloud deployment.
+- Environment management.
+- Release automation.
+- Rollback mechanisms.
+- Deployment validation.
+
+This layer supports reliable software delivery.
+
+---
+
+### Monitoring Layer
+
+The Monitoring Layer includes:
+
+- Infrastructure monitoring.
+- Application monitoring.
+- Model performance monitoring.
+- Data quality monitoring.
+- Logging.
+- Alerting.
+- Incident management.
+
+Continuous monitoring ensures production reliability.
+
+---
+
+### Security Layer
+
+Security mechanisms include:
+
+- Authentication.
+- Authorization.
+- Encryption.
+- Secure API communication.
+- Secret management.
+- Vulnerability monitoring.
+- Audit logging.
+
+Security is integrated throughout the architecture.
+
+---
+
+### Governance Layer
+
+The Governance Layer manages:
+
+- Documentation.
+- Risk management.
+- Change management.
+- Compliance.
+- Stakeholder communication.
+- Project governance.
+- Continuous improvement.
+
+This layer ensures long-term sustainability and accountability.
+
+---
+
+### Scalability
+
+The architecture supports:
+
+- Horizontal scaling.
+- Cloud-native deployment.
+- Modular services.
+- Automated infrastructure management.
+- Increasing workloads.
+- Future feature expansion.
+
+This enables long-term platform growth.
+
+---
+
+### Summary
+
+The Technical Architecture combines modern software engineering, machine learning, cloud computing, and MLOps into a unified production-ready platform. Its modular design ensures scalability, reliability, security, maintainability, and adaptability, providing a strong technical foundation for accurate ETA prediction and future enhancements.
