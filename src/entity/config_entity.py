@@ -11,3 +11,11 @@ class DataIngestionConfig:
     raw_data_path: Path
     train_data_path: Path
     test_data_path: Path
+@dataclass(frozen=True)
+class DataValidationConfig:
+    """
+    Configuration for the Data Validation component.
+    """
+
+    train_data_path: Path
+    test_data_path: Path
